@@ -57,6 +57,10 @@
     margin-left: 0px;
     }
 
+    #st-10 {
+        display: none !important;
+    }
+
     /*
 </style>
 @stack('styles')

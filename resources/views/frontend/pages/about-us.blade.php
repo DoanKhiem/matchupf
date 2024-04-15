@@ -97,5 +97,4 @@
 	</section>
 	<!-- End Shop Services Area -->
 
-	@include('frontend.layouts.newsletter')
 @endsection
