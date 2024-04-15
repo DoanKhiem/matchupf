@@ -57,7 +57,7 @@
     margin-left: 0px;
     }
 
-    #st-10 {
+    .st-sticky-share-buttons {
         display: none !important;
     }
 
