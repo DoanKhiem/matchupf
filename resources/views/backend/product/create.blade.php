@@ -106,13 +106,13 @@
 {{--          </select>--}}
 {{--        </div>--}}
 
-{{--        <div class="form-group">--}}
-{{--          <label for="stock">Quantity <span class="text-danger">*</span></label>--}}
-{{--          <input id="quantity" type="number" name="stock" min="0" placeholder="Enter quantity"  value="{{old('stock')}}" class="form-control">--}}
-{{--          @error('stock')--}}
-{{--          <span class="text-danger">{{$message}}</span>--}}
-{{--          @enderror--}}
-{{--        </div>--}}
+        <div class="form-group">
+          <label for="stock">Quantity <span class="text-danger">*</span></label>
+          <input id="quantity" type="number" name="stock" min="0" placeholder="Enter quantity"  value="{{old('stock')}}" class="form-control">
+          @error('stock')
+          <span class="text-danger">{{$message}}</span>
+          @enderror
+        </div>
         <div class="form-group">
           <label for="inputPhoto" class="col-form-label">Photo <span class="text-danger">*</span></label>
           <div class="input-group">
@@ -129,16 +129,16 @@
           @enderror
         </div>
 
-{{--        <div class="form-group">--}}
-{{--          <label for="status" class="col-form-label">Status <span class="text-danger">*</span></label>--}}
-{{--          <select name="status" class="form-control">--}}
-{{--              <option value="active">Active</option>--}}
-{{--              <option value="inactive">Inactive</option>--}}
-{{--          </select>--}}
-{{--          @error('status')--}}
-{{--          <span class="text-danger">{{$message}}</span>--}}
-{{--          @enderror--}}
-{{--        </div>--}}
+        <div class="form-group">
+          <label for="status" class="col-form-label">Status <span class="text-danger">*</span></label>
+          <select name="status" class="form-control">
+              <option value="active">Active</option>
+              <option value="inactive">Inactive</option>
+          </select>
+          @error('status')
+          <span class="text-danger">{{$message}}</span>
+          @enderror
+        </div>
         <div class="form-group mb-3">
           <button type="reset" class="btn btn-warning">Reset</button>
            <button class="btn btn-success" type="submit">Submit</button>

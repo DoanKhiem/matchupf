@@ -22,7 +22,7 @@
                                 <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item {{$product->cat_id}}">
                                     <div class="single-product">
                                         <div class="product-img">
-                                            <a href="{{route('product-detail',$product->slug)}}">
+                                            <a href="#">
                                                 @php
                                                     $photo=explode(',',$product->photo);
                                                 // dd($photo);
@@ -110,19 +110,19 @@
                                                     <i class="yellow fa fa-star"></i>
                                                     <i class="yellow fa fa-star"></i>
                                                     <i class="fa fa-star"></i> --}}
-                                                    @php
-                                                        $rate=DB::table('product_reviews')->where('product_id',$product->id)->avg('rate');
-                                                        $rate_count=DB::table('product_reviews')->where('product_id',$product->id)->count();
-                                                    @endphp
-                                                    @for($i=1; $i<=5; $i++)
-                                                        @if($rate>=$i)
-                                                            <i class="yellow fa fa-star"></i>
-                                                        @else
-                                                        <i class="fa fa-star"></i>
-                                                        @endif
-                                                    @endfor
+{{--                                                    @php--}}
+{{--                                                        $rate=DB::table('product_reviews')->where('product_id',$product->id)->avg('rate');--}}
+{{--                                                        $rate_count=DB::table('product_reviews')->where('product_id',$product->id)->count();--}}
+{{--                                                    @endphp--}}
+{{--                                                    @for($i=1; $i<=5; $i++)--}}
+{{--                                                        @if($rate>=$i)--}}
+{{--                                                            <i class="yellow fa fa-star"></i>--}}
+{{--                                                        @else--}}
+{{--                                                        <i class="fa fa-star"></i>--}}
+{{--                                                        @endif--}}
+{{--                                                    @endfor--}}
                                                 </div>
-                                                <a href="#"> ({{$rate_count}} customer review)</a>
+{{--                                                <a href="#"> ({{$rate_count}} customer review)</a>--}}
                                             </div>
                                             <div class="quickview-stock">
                                                 @if($product->stock >0)
