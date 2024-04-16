@@ -32,14 +32,16 @@
 
                                             </a>
                                             <div class="button-head">
-
+                                                <div class="product-action">
+                                                    <a data-toggle="modal" data-target="#{{$product->id}}" title="Quick View" href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
+                                                </div>
                                                 <div class="product-action-2">
                                                     <a title="Add to cart" href="{{route('add-to-cart',$product->slug)}}">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="product-content">
-                                            <h3><a href="#">{{$product->title}}</a></h3>
+                                            <h3><a href="#" data-toggle="modal" data-target="#{{$product->id}}">{{$product->title}}</a></h3>
                                             <div class="product-price">
                                                 @php
                                                     $after_discount=($product->price-($product->price*$product->discount)/100);
@@ -88,7 +90,7 @@
                                             <div class="quickview-slider-active">
                                                 @php
                                                     $photo=explode(',',$product->photo);
-                                                // dd($photo);
+//                                                 dd($photo);
                                                 @endphp
                                                 @foreach($photo as $data)
                                                     <div class="single-slider">
@@ -139,33 +141,36 @@
                                         <div class="quickview-peragraph">
                                             <p>{!! html_entity_decode($product->summary) !!}</p>
                                         </div>
-                                        @if($product->size)
-                                            <div class="size">
-                                                <div class="row">
-                                                    <div class="col-lg-6 col-12">
-                                                        <h5 class="title">Size</h5>
-                                                        <select>
-                                                            @php
-                                                            $sizes=explode(',',$product->size);
-                                                            // dd($sizes);
-                                                            @endphp
-                                                            @foreach($sizes as $size)
-                                                                <option>{{$size}}</option>
-                                                            @endforeach
-                                                        </select>
-                                                    </div>
-                                                    {{-- <div class="col-lg-6 col-12">
-                                                        <h5 class="title">Color</h5>
-                                                        <select>
-                                                            <option selected="selected">orange</option>
-                                                            <option>purple</option>
-                                                            <option>black</option>
-                                                            <option>pink</option>
-                                                        </select>
-                                                    </div> --}}
-                                                </div>
-                                            </div>
-                                        @endif
+                                        <div class="quickview-peragraph">
+                                            <p>{!! html_entity_decode($product->description) !!}</p>
+                                        </div>
+{{--                                        @if($product->size)--}}
+{{--                                            <div class="size">--}}
+{{--                                                <div class="row">--}}
+{{--                                                    <div class="col-lg-6 col-12">--}}
+{{--                                                        <h5 class="title">Size</h5>--}}
+{{--                                                        <select>--}}
+{{--                                                            @php--}}
+{{--                                                            $sizes=explode(',',$product->size);--}}
+{{--                                                            // dd($sizes);--}}
+{{--                                                            @endphp--}}
+{{--                                                            @foreach($sizes as $size)--}}
+{{--                                                                <option>{{$size}}</option>--}}
+{{--                                                            @endforeach--}}
+{{--                                                        </select>--}}
+{{--                                                    </div>--}}
+{{--                                                    <div class="col-lg-6 col-12">--}}
+{{--                                                        <h5 class="title">Color</h5>--}}
+{{--                                                        <select>--}}
+{{--                                                            <option selected="selected">orange</option>--}}
+{{--                                                            <option>purple</option>--}}
+{{--                                                            <option>black</option>--}}
+{{--                                                            <option>pink</option>--}}
+{{--                                                        </select>--}}
+{{--                                                    </div>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                        @endif--}}
                                         <form action="{{route('single-add-to-cart')}}" method="POST" class="mt-4">
                                             @csrf
                                             <div class="quantity">
@@ -188,12 +193,12 @@
                                             </div>
                                             <div class="add-to-cart">
                                                 <button type="submit" class="btn">Add to cart</button>
-                                                <a href="{{route('add-to-wishlist',$product->slug)}}" class="btn min"><i class="ti-heart"></i></a>
+{{--                                                <a href="{{route('add-to-wishlist',$product->slug)}}" class="btn min"><i class="ti-heart"></i></a>--}}
                                             </div>
                                         </form>
-                                        <div class="default-social">
-                                        <!-- ShareThis BEGIN --><div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
-                                        </div>
+{{--                                        <div class="default-social">--}}
+{{--                                        <!-- ShareThis BEGIN --><div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->--}}
+{{--                                        </div>--}}
                                     </div>
                                 </div>
                             </div>

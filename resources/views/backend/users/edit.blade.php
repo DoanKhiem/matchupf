@@ -6,7 +6,7 @@
     <h5 class="card-header">Edit User</h5>
     <div class="card-body">
       <form method="post" action="{{route('users.update',$user->id)}}">
-        @csrf 
+        @csrf
         @method('PATCH')
         <div class="form-group">
           <label for="inputTitle" class="col-form-label">Name</label>
@@ -42,12 +42,12 @@
             </span>
             <input id="thumbnail" class="form-control" type="text" name="photo" value="{{$user->photo}}">
         </div>
-        <img id="holder" style="margin-top:15px;max-height:100px;">
-          @error('photo')
-          <span class="text-danger">{{$message}}</span>
-          @enderror
+        <div id="holder" style="margin-top:15px;max-height:100px;"></div>
+        @error('photo')
+        <span class="text-danger">{{$message}}</span>
+        @enderror
         </div>
-        @php 
+        @php
         $roles=DB::table('users')->select('role')->where('id',$user->id)->get();
         // dd($roles);
         @endphp
