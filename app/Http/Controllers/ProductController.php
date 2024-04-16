@@ -106,14 +106,15 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        $brand=Brand::get();
+//        $brand=Brand::get();
         $product=Product::findOrFail($id);
-        $category=Category::where('is_parent',1)->get();
+//        $category=Category::where('is_parent',1)->get();
         $items=Product::where('id',$id)->get();
         // return $items;
         return view('backend.product.edit')->with('product',$product)
-                    ->with('brands',$brand)
-                    ->with('categories',$category)->with('items',$items);
+//                    ->with('brands',$brand)
+//                    ->with('categories',$category)
+            ->with('items',$items);
     }
 
     /**
@@ -131,27 +132,27 @@ class ProductController extends Controller
             'summary'=>'string|required',
             'description'=>'string|nullable',
             'photo'=>'string|required',
-            'size'=>'nullable',
+//            'size'=>'nullable',
             'stock'=>"required|numeric",
-            'cat_id'=>'required|exists:categories,id',
-            'child_cat_id'=>'nullable|exists:categories,id',
-            'is_featured'=>'sometimes|in:1',
-            'brand_id'=>'nullable|exists:brands,id',
+//            'cat_id'=>'required|exists:categories,id',
+//            'child_cat_id'=>'nullable|exists:categories,id',
+//            'is_featured'=>'sometimes|in:1',
+//            'brand_id'=>'nullable|exists:brands,id',
             'status'=>'required|in:active,inactive',
-            'condition'=>'required|in:default,new,hot',
+//            'condition'=>'required|in:default,new,hot',
             'price'=>'required|numeric',
             'discount'=>'nullable|numeric'
         ]);
 
         $data=$request->all();
-        $data['is_featured']=$request->input('is_featured',0);
-        $size=$request->input('size');
-        if($size){
-            $data['size']=implode(',',$size);
-        }
-        else{
-            $data['size']='';
-        }
+//        $data['is_featured']=$request->input('is_featured',0);
+//        $size=$request->input('size');
+//        if($size){
+//            $data['size']=implode(',',$size);
+//        }
+//        else{
+//            $data['size']='';
+//        }
         // return $data;
         $status=$product->fill($data)->save();
         if($status){
