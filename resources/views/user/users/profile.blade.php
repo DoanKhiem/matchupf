@@ -24,7 +24,7 @@
                     <div class="image">
                         @if($profile->photo)
                         <img class="card-img-top img-fluid roundend-circle mt-4" style="border-radius:50%;height:80px;width:80px;margin:auto;" src="{{$profile->photo}}" alt="profile picture">
-                        @else 
+                        @else
                         <img class="card-img-top img-fluid roundend-circle mt-4" style="border-radius:50%;height:80px;width:80px;margin:auto;" src="{{asset('backend/img/avatar.png')}}" alt="profile picture">
                         @endif
                     </div>
@@ -45,7 +45,7 @@
                       <span class="text-danger">{{$message}}</span>
                       @enderror
                       </div>
-              
+
                       <div class="form-group">
                           <label for="inputEmail" class="col-form-label">Email</label>
                         <input id="inputEmail" disabled type="email" name="email" placeholder="Enter email"  value="{{$profile->email}}" class="form-control">
@@ -53,7 +53,7 @@
                         <span class="text-danger">{{$message}}</span>
                         @enderror
                       </div>
-              
+
                       <div class="form-group">
                       <label for="inputPhoto" class="col-form-label">Photo</label>
                       <div class="input-group">
@@ -64,21 +64,22 @@
                           </span>
                           <input id="thumbnail" class="form-control" type="text" name="photo" value="{{$profile->photo}}">
                       </div>
+                          <div id="holder" style="margin-top:15px;max-height:100px;"></div>
                         @error('photo')
                         <span class="text-danger">{{$message}}</span>
                         @enderror
                       </div>
-                      <div class="form-group">
-                          <label for="role" class="col-form-label">Role</label>
-                          <select name="role" class="form-control">
-                              <option value="">-----Select Role-----</option>
-                                  <option value="admin" {{(($profile->role=='admin')? 'selected' : '')}}>Admin</option>
-                                  <option value="user" {{(($profile->role=='user')? 'selected' : '')}}>User</option>
-                          </select>
-                        @error('role')
-                        <span class="text-danger">{{$message}}</span>
-                        @enderror
-                        </div>
+{{--                      <div class="form-group">--}}
+{{--                          <label for="role" class="col-form-label">Role</label>--}}
+{{--                          <select name="role" class="form-control">--}}
+{{--                              <option value="">-----Select Role-----</option>--}}
+{{--                                  <option value="admin" {{(($profile->role=='admin')? 'selected' : '')}}>Admin</option>--}}
+{{--                                  <option value="user" {{(($profile->role=='user')? 'selected' : '')}}>User</option>--}}
+{{--                          </select>--}}
+{{--                        @error('role')--}}
+{{--                        <span class="text-danger">{{$message}}</span>--}}
+{{--                        @enderror--}}
+{{--                        </div>--}}
 
                         <button type="submit" class="btn btn-success btn-sm">Update</button>
                 </form>
@@ -123,7 +124,7 @@
         font-size: 14px;
         padding-right:8px;
     }
-  </style> 
+  </style>
 
 @push('scripts')
 <script src="/vendor/laravel-filemanager/js/stand-alone-button.js"></script>
