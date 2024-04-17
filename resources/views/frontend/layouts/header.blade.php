@@ -7,6 +7,8 @@
                     <!-- Top Left -->
                     <div class="top-left">
 
+                            <a href="{{route('home')}}"><img style="width: 60px" src="{{asset('/images/logo.png')}}" alt="logo"></a>
+
                     </div>
                     <!--/ End Top Left -->
                 </div>
