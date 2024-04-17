@@ -118,7 +118,7 @@
                     </tr>
                     <tr>
                         <td>Address</td>
-                        <td> : {{$order->address1}}, {{$order->address2}}</td>
+                        <td> : {{$order->address}}</td>
                     </tr>
                     <tr>
                         <td>Country</td>
