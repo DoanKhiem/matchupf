@@ -41,12 +41,12 @@
             </span>
             <input id="thumbnail" class="form-control" type="text" name="photo" value="{{old('photo')}}">
         </div>
-        <img id="holder" style="margin-top:15px;max-height:100px;">
+            <div id="holder" style="margin-top:15px;max-height:100px;"></div>
           @error('photo')
           <span class="text-danger">{{$message}}</span>
           @enderror
         </div>
-        @php 
+        @php
         $roles=DB::table('users')->select('role')->get();
         @endphp
         <div class="form-group">

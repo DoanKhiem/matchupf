@@ -17,7 +17,7 @@
             <th>Name</th>
             <th>Email</th>
             <th>Quantity</th>
-            <th>Charge</th>
+{{--            <th>Charge</th>--}}
             <th>Total Amount</th>
             <th>Status</th>
             <th>Action</th>
@@ -30,7 +30,7 @@
             <td>{{$order->first_name}} {{$order->last_name}}</td>
             <td>{{$order->email}}</td>
             <td>{{$order->quantity}}</td>
-            <td>${{$order->shipping->price}}</td>
+{{--            <td>${{$order->shipping->price}}</td>--}}
             <td>${{number_format($order->total_amount,2)}}</td>
             <td>
                 @if($order->status=='new')
@@ -48,7 +48,7 @@
                 <form method="POST" action="{{route('order.destroy',[$order->id])}}">
                   @csrf
                   @method('delete')
-                      <button class="btn btn-danger btn-sm dltBtn" data-id={{$order->id}} style="height:30px; width:30px;border-radius:50%" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="fas fa-trash-alt"></i></button>
+                      <button class="btn btn-danger btn-sm dltBtn" data-id="{{$order->id}}" style="height:30px; width:30px;border-radius:50%" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="fas fa-trash-alt"></i></button>
                 </form>
             </td>
 
@@ -79,14 +79,14 @@
                         <td>Order Status</td>
                         <td> : {{$order->status}}</td>
                     </tr>
-                    <tr>
-                        <td>Shipping Charge</td>
-                        <td> : $ {{$order->shipping->price}}</td>
-                    </tr>
-                    <tr>
-                      <td>Coupon</td>
-                      <td> : $ {{number_format($order->coupon,2)}}</td>
-                    </tr>
+{{--                    <tr>--}}
+{{--                        <td>Shipping Charge</td>--}}
+{{--                        <td> : $ {{$order->shipping->price}}</td>--}}
+{{--                    </tr>--}}
+{{--                    <tr>--}}
+{{--                      <td>Coupon</td>--}}
+{{--                      <td> : $ {{number_format($order->coupon,2)}}</td>--}}
+{{--                    </tr>--}}
                     <tr>
                         <td>Total Amount</td>
                         <td> : $ {{number_format($order->total_amount,2)}}</td>
@@ -127,10 +127,10 @@
                         <td>Country</td>
                         <td> : {{$order->country}}</td>
                     </tr>
-                    <tr>
-                        <td>Post Code</td>
-                        <td> : {{$order->post_code}}</td>
-                    </tr>
+{{--                    <tr>--}}
+{{--                        <td>Post Code</td>--}}
+{{--                        <td> : {{$order->post_code}}</td>--}}
+{{--                    </tr>--}}
               </table>
             </div>
           </div>
