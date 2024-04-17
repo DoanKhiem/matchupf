@@ -17,7 +17,7 @@
 
 
                             @auth
-                                @if(Auth::user()->role=='admin')
+                                @if(Auth::user()->role=='admin' || Auth::user()->role=='manager')
                                     <li><i class="ti-user"></i> <a href="{{route('admin')}}"  target="_blank">Dashboard</a></li>
                                 @else
                                     <li><i class="ti-user"></i> <a href="{{route('user')}}"  target="_blank">Dashboard</a></li>

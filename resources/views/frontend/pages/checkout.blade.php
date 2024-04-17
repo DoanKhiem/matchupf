@@ -324,14 +324,14 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="form-group">
-                                            <label>Address Line 1<span>*</span></label>
-                                            <input type="text" name="address1" placeholder="" value="{{old('address1')}}">
-                                            @error('address1')
+                                            <label>Address<span>*</span></label>
+                                            <input type="text" name="address" placeholder="" value="{{old('address')}}">
+                                            @error('address')
                                                 <span class='text-danger'>{{$message}}</span>
                                             @enderror
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 col-md-6 col-12">
+                                    <!-- <div class="col-lg-6 col-md-6 col-12">
                                         <div class="form-group">
                                             <label>Address Line 2</label>
                                             <input type="text" name="address2" placeholder="" value="{{old('address2')}}">
@@ -339,8 +339,8 @@
                                                 <span class='text-danger'>{{$message}}</span>
                                             @enderror
                                         </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-12">
+                                    </div> -->
+                                    <!-- <div class="col-lg-6 col-md-6 col-12">
                                         <div class="form-group">
                                             <label>Postal Code</label>
                                             <input type="text" name="post_code" placeholder="" value="{{old('post_code')}}">
@@ -348,7 +348,7 @@
                                                 <span class='text-danger'>{{$message}}</span>
                                             @enderror
                                         </div>
-                                    </div>
+                                    </div> -->
 
                                 </div>
                                 <!--/ End Form -->
@@ -401,8 +401,7 @@
                                         <div class="checkbox">
                                             {{-- <label class="checkbox-inline" for="1"><input name="updates" id="1" type="checkbox"> Check Payments</label> --}}
                                             <form-group>
-                                                <input name="payment_method"  type="radio" value="cod"> <label> Cash On Delivery</label><br>
-                                                <input name="payment_method"  type="radio" value="paypal"> <label> PayPal</label>
+                                                <input name="payment_method" checked  type="radio" value="cod"> <label> Cash On Delivery</label><br>
                                             </form-group>
 
                                         </div>
@@ -410,11 +409,11 @@
                                 </div>
                                 <!--/ End Order Widget -->
                                 <!-- Payment Method Widget -->
-                                <div class="single-widget payement">
+                                <!-- <div class="single-widget payement">
                                     <div class="content">
                                         <img src="{{('backend/img/payment-method.png')}}" alt="#">
                                     </div>
-                                </div>
+                                </div> -->
                                 <!--/ End Payment Method Widget -->
                                 <!-- Button Widget -->
                                 <div class="single-widget get-button">
