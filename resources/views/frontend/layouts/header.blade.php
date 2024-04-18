@@ -7,6 +7,9 @@
                     <!-- Top Left -->
                     <div class="top-left">
 
+                        <a href="{{route('home')}}"><img style="width: 60px" src="{{asset('/images/logo.png')}}"
+                                alt="logo"></a>
+
                     </div>
                     <!--/ End Top Left -->
                 </div>
@@ -17,15 +20,16 @@
 
 
                             @auth
-                                @if(Auth::user()->role=='admin' || Auth::user()->role=='manager')
-                                    <li><i class="ti-user"></i> <a href="{{route('admin')}}"  target="_blank">Dashboard</a></li>
-                                @else
-                                    <li><i class="ti-user"></i> <a href="{{route('user')}}"  target="_blank">Dashboard</a></li>
-                                @endif
-                                <li><i class="ti-power-off"></i> <a href="{{route('user.logout')}}">Logout</a></li>
+                            @if(Auth::user()->role=='admin' || Auth::user()->role=='manager')
+                            <li><i class="ti-user"></i> <a href="{{route('admin')}}" target="_blank">Dashboard</a></li>
+                            @else
+                            <li><i class="ti-user"></i> <a href="{{route('user')}}" target="_blank">Dashboard</a></li>
+                            @endif
+                            <li><i class="ti-power-off"></i> <a href="{{route('user.logout')}}">Logout</a></li>
 
                             @else
-                                <li><i class="ti-power-off"></i><a href="{{route('login.form')}}">Login /</a> <a href="{{route('register.form')}}">Register</a></li>
+                            <li><i class="ti-power-off"></i><a href="{{route('login.form')}}">Login /</a> <a
+                                    href="{{route('register.form')}}">Register</a></li>
                             @endauth
                         </ul>
                     </div>
@@ -41,10 +45,11 @@
                 <div class="col-lg-2 col-md-2 col-12">
                     <!-- Logo -->
                     <div class="logo">
-{{--                        @php--}}
-{{--                            $settings=DB::table('settings')->get();--}}
-{{--                        @endphp--}}
-{{--                        <a href="{{route('home')}}"><img src="@foreach($settings as $data) {{$data->logo}} @endforeach" alt="logo"></a>--}}
+                        {{--                        @php--}}
+                        {{--                            $settings=DB::table('settings')->get();--}}
+                        {{--                        @endphp--}}
+                        {{--                        <a href="{{route('home')}}"><img
+                            src="@foreach($settings as $data) {{$data->logo}} @endforeach" alt="logo"></a>--}}
                     </div>
                     <!--/ End Logo -->
                     <!-- Search Form -->
@@ -70,45 +75,50 @@
                         <!-- Search Form -->
 
                         {{-- <div class="sinlge-bar">
-                            <a href="{{route('wishlist')}}" class="single-icon"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-                        </div> --}}
-                        <div class="sinlge-bar shopping">
-                            <a href="{{route('cart')}}" class="single-icon"><i class="ti-bag"></i> <span class="total-count">{{Helper::cartCount()}}</span></a>
-                            <!-- Shopping Item -->
-                            @auth
-                                <div class="shopping-item">
-                                    <div class="dropdown-cart-header">
-                                        <span>{{count(Helper::getAllProductFromCart())}} Items</span>
-                                        <a href="{{route('cart')}}">View Cart</a>
-                                    </div>
-                                    <ul class="shopping-list">
-                                        {{-- {{Helper::getAllProductFromCart()}} --}}
-                                            @foreach(Helper::getAllProductFromCart() as $data)
-                                                    @php
-                                                        $photo=explode(',',$data->product['photo']);
-                                                    @endphp
-                                                    <li>
-                                                        <a href="{{route('cart-delete',$data->id)}}" class="remove" title="Remove this item"><i class="fa fa-remove"></i></a>
-                                                        <a class="cart-img" href="#"><img src="{{$photo[0]}}" alt="{{$photo[0]}}"></a>
-                                                        <h4><a href="{{route('product-detail',$data->product['slug'])}}" target="_blank">{{$data->product['title']}}</a></h4>
-                                                        <p class="quantity">{{$data->quantity}} x - <span class="amount">${{number_format($data->price,2)}}</span></p>
-                                                    </li>
-                                            @endforeach
-                                    </ul>
-                                    <div class="bottom">
-                                        <div class="total">
-                                            <span>Total</span>
-                                            <span class="total-amount">${{number_format(Helper::totalCartPrice(),2)}}</span>
-                                        </div>
-                                        <a href="{{route('checkout')}}" class="btn animate">Checkout</a>
-                                    </div>
+                            <a href="{{route('wishlist')}}" class="single-icon"><i class="fa fa-heart-o"
+                            aria-hidden="true"></i></a>
+                    </div> --}}
+                    <div class="sinlge-bar shopping">
+                        <a href="{{route('cart')}}" class="single-icon"><i class="ti-bag"></i> <span
+                                class="total-count">{{Helper::cartCount()}}</span></a>
+                        <!-- Shopping Item -->
+                        @auth
+                        <div class="shopping-item">
+                            <div class="dropdown-cart-header">
+                                <span>{{count(Helper::getAllProductFromCart())}} Items</span>
+                                <a href="{{route('cart')}}">View Cart</a>
+                            </div>
+                            <ul class="shopping-list">
+                                {{-- {{Helper::getAllProductFromCart()}} --}}
+                                @foreach(Helper::getAllProductFromCart() as $data)
+                                @php
+                                $photo=explode(',',$data->product['photo']);
+                                @endphp
+                                <li>
+                                    <a href="{{route('cart-delete',$data->id)}}" class="remove"
+                                        title="Remove this item"><i class="fa fa-remove"></i></a>
+                                    <a class="cart-img" href="#"><img src="{{$photo[0]}}" alt="{{$photo[0]}}"></a>
+                                    <h4><a href="{{route('product-detail',$data->product['slug'])}}"
+                                            target="_blank">{{$data->product['title']}}</a></h4>
+                                    <p class="quantity">{{$data->quantity}} x - <span
+                                            class="amount">${{number_format($data->price,2)}}</span></p>
+                                </li>
+                                @endforeach
+                            </ul>
+                            <div class="bottom">
+                                <div class="total">
+                                    <span>Total</span>
+                                    <span class="total-amount">${{number_format(Helper::totalCartPrice(),2)}}</span>
                                 </div>
-                            @endauth
-                            <!--/ End Shopping Item -->
+                                <a href="{{route('checkout')}}" class="btn animate">Checkout</a>
+                            </div>
                         </div>
+                        @endauth
+                        <!--/ End Shopping Item -->
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </header>
