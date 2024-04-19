@@ -60,33 +60,7 @@ class OrderController extends Controller
             request()->session()->flash('error','Cart is Empty !');
             return back();
         }
-        // $cart=Cart::get();
-        // // return $cart;
-        // $cart_index='ORD-'.strtoupper(uniqid());
-        // $sub_total=0;
-        // foreach($cart as $cart_item){
-        //     $sub_total+=$cart_item['amount'];
-        //     $data=array(
-        //         'cart_id'=>$cart_index,
-        //         'user_id'=>$request->user()->id,
-        //         'product_id'=>$cart_item['id'],
-        //         'quantity'=>$cart_item['quantity'],
-        //         'amount'=>$cart_item['amount'],
-        //         'status'=>'new',
-        //         'price'=>$cart_item['price'],
-        //     );
 
-        //     $cart=new Cart();
-        //     $cart->fill($data);
-        //     $cart->save();
-        // }
-
-        // $total_prod=0;
-        // if(session('cart')){
-        //         foreach(session('cart') as $cart_items){
-        //             $total_prod+=$cart_items['quantity'];
-        //         }
-        // }
 
         $order=new Order();
         $order_data=$request->all();
@@ -100,22 +74,8 @@ class OrderController extends Controller
         if(session('coupon')){
             $order_data['coupon']=session('coupon')['value'];
         }
-//        if($request->shipping){
-//            if(session('coupon')){
-//                $order_data['total_amount']=Helper::totalCartPrice()+$shipping[0]-session('coupon')['value'];
-//            }
-//            else{
-//                $order_data['total_amount']=Helper::totalCartPrice()+$shipping[0];
-//            }
-//        }
-//        else{
-//            if(session('coupon')){
-//                $order_data['total_amount']=Helper::totalCartPrice()-session('coupon')['value'];
-//            }
-//            else{
+
                 $order_data['total_amount']=Helper::totalCartPrice();
-//            }
-//        }
         // return $order_data['total_amount'];
         $order_data['status']="new";
         if(request('payment_method')=='paypal'){
@@ -269,38 +229,30 @@ class OrderController extends Controller
         }
     }
 
-    // PDF generate
-    public function pdf(Request $request){
-        $order=Order::getAllOrder($request->id);
-        $file_name=$order->order_number.'-'.$order->first_name.'.pdf';
-        // return $file_name;
-        $pdf=PDF::loadview('backend.order.pdf',compact('order'));
-        return $pdf->download($file_name);
-    }
-    // Income chart
-    public function incomeChart(Request $request){
-        $year=\Carbon\Carbon::now()->year;
-        // dd($year);
-        $items=Order::with(['cart_info'])->whereYear('created_at',$year)->where('status','delivered')->get()
-            ->groupBy(function($d){
-                return \Carbon\Carbon::parse($d->created_at)->format('m');
-            });
-            // dd($items);
-        $result=[];
-        foreach($items as $month=>$item_collections){
-            foreach($item_collections as $item){
-                $amount=$item->cart_info->sum('amount');
-                // dd($amount);
-                $m=intval($month);
-                // return $m;
-                isset($result[$m]) ? $result[$m] += $amount :$result[$m]=$amount;
-            }
-        }
-        $data=[];
-        for($i=1; $i <=12; $i++){
-            $monthName=date('F', mktime(0,0,0,$i,1));
-            $data[$monthName] = (!empty($result[$i]))? number_format((float)($result[$i]), 2, '.', '') : 0.0;
-        }
-        return $data;
-    }
+//    // Income chart
+//    public function incomeChart(Request $request){
+//        $year=\Carbon\Carbon::now()->year;
+//        // dd($year);
+//        $items=Order::with(['cart_info'])->whereYear('created_at',$year)->where('status','delivered')->get()
+//            ->groupBy(function($d){
+//                return \Carbon\Carbon::parse($d->created_at)->format('m');
+//            });
+//            // dd($items);
+//        $result=[];
+//        foreach($items as $month=>$item_collections){
+//            foreach($item_collections as $item){
+//                $amount=$item->cart_info->sum('amount');
+//                // dd($amount);
+//                $m=intval($month);
+//                // return $m;
+//                isset($result[$m]) ? $result[$m] += $amount :$result[$m]=$amount;
+//            }
+//        }
+//        $data=[];
+//        for($i=1; $i <=12; $i++){
+//            $monthName=date('F', mktime(0,0,0,$i,1));
+//            $data[$monthName] = (!empty($result[$i]))? number_format((float)($result[$i]), 2, '.', '') : 0.0;
+//        }
+//        return $data;
+//    }
 }

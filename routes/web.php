@@ -83,12 +83,12 @@
 //    Route::get('/wishlist/{slug}', [WishlistController::class, 'wishlist'])->name('add-to-wishlist')->middleware('user');
 //    Route::get('wishlist-delete/{id}', [WishlistController::class, 'wishlistDelete'])->name('wishlist-delete');
     Route::post('cart/order', [OrderController::class, 'store'])->name('cart.order');
-    Route::get('order/pdf/{id}', [OrderController::class, 'pdf'])->name('order.pdf');
-    Route::get('/income', [OrderController::class, 'incomeChart'])->name('product.order.income');
+//    Route::get('order/pdf/{id}', [OrderController::class, 'pdf'])->name('order.pdf');
+//    Route::get('/income', [OrderController::class, 'incomeChart'])->name('product.order.income');
 // Route::get('/user/chart',[AdminController::class, 'userPieChart'])->name('user.piechart');
-    Route::get('/product-grids', [FrontendController::class, 'productGrids'])->name('product-grids');
-    Route::get('/product-lists', [FrontendController::class, 'productLists'])->name('product-lists');
-    Route::match(['get', 'post'], '/filter', [FrontendController::class, 'productFilter'])->name('shop.filter');
+//    Route::get('/product-grids', [FrontendController::class, 'productGrids'])->name('product-grids');
+//    Route::get('/product-lists', [FrontendController::class, 'productLists'])->name('product-lists');
+//    Route::match(['get', 'post'], '/filter', [FrontendController::class, 'productFilter'])->name('shop.filter');
 // Order Track
     Route::get('/product/track', [OrderController::class, 'orderTrack'])->name('order.track');
     Route::post('product/track/order', [OrderController::class, 'productTrackOrder'])->name('product.track.order');

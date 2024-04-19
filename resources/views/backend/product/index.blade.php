@@ -28,7 +28,7 @@
                         {{--              <th>Size</th>--}}
                         {{--              <th>Condition</th>--}}
                         {{--              <th>Brand</th>--}}
-                        {{--              <th>Stock</th>--}}
+                        <th>Stock</th>
                         <th>Photo</th>
                         <th>Status</th>
                         <th>Action</th>
@@ -45,7 +45,7 @@
                         {{--              <th>Size</th>--}}
                         {{--              <th>Condition</th>--}}
                         {{--              <th>Brand</th>--}}
-                        {{--              <th>Stock</th>--}}
+                        <th>Stock</th>
                         <th>Photo</th>
                         <th>Status</th>
                         <th>Action</th>
@@ -69,18 +69,17 @@
                         {{--                    <td>{{$product->size}}</td>--}}
                         {{--                    <td>{{$product->condition}}</td>--}}
                         {{--                    <td> {{ucfirst($product->brand->title)}}</td>--}}
-                        {{--                    <td>--}}
-                        {{--                      @if($product->stock>0)--}}
-                        {{--                      <span class="badge badge-primary">{{$product->stock}}</span>--}}
-                        {{--                      @else--}}
-                        {{--                      <span class="badge badge-danger">{{$product->stock}}</span>--}}
-                        {{--                      @endif--}}
-                        {{--                    </td>--}}
+                        <td>
+                          @if($product->stock>0)
+                          <span class="badge badge-primary">{{$product->stock}}</span>
+                          @else
+                          <span class="badge badge-danger">{{$product->stock}}</span>
+                          @endif
+                        </td>
                         <td>
                             @if($product->photo)
                             @php
                             $photo=explode(',',$product->photo);
-                            // dd($photo);
                             @endphp
                             <img src="{{$photo[0]}}" class="img-fluid zoom" style="max-width:80px"
                                 alt="{{$product->photo}}">
