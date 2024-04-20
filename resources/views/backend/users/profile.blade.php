@@ -80,9 +80,10 @@
                     </div>
                     <div class="form-group">
                         <label for="role" class="col-form-label">Role</label>
-                        <select name="role" class="form-control">
+                        <select name="role" class="form-control" {{auth()->user()->role == 'admin' ? '' : 'disabled'}} >
                             <option value="">-----Select Role-----</option>
                             <option value="admin" {{(($profile->role=='admin')? 'selected' : '')}}>Admin</option>
+                            <option value="admin" {{(($profile->role=='manager')? 'selected' : '')}}>Manager</option>
                             <option value="user" {{(($profile->role=='user')? 'selected' : '')}}>User</option>
                         </select>
                         @error('role')

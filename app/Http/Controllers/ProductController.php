@@ -42,7 +42,7 @@ class ProductController extends Controller
     {
         $this->validate($request,[
             'title'=>'string|required',
-            'summary'=>'string|required',
+//            'summary'=>'string|required',
             'description'=>'string|nullable',
             'photo'=>'string|required',
             'stock'=>"required|numeric",
@@ -105,7 +105,7 @@ class ProductController extends Controller
         $product=Product::findOrFail($id);
         $this->validate($request,[
             'title'=>'string|required',
-            'summary'=>'string|required',
+//            'summary'=>'string|required',
             'description'=>'string|nullable',
             'photo'=>'string|required',
             'stock'=>"required|numeric",

@@ -24,7 +24,7 @@
                         <th>Name</th>
                         <th>Email</th>
                         <th>Photo</th>
-                        <th>Join Date</th>
+{{--                        <th>Join Date</th>--}}
                         <th>Role</th>
                         <th>Status</th>
                         <th>Action</th>
@@ -36,7 +36,7 @@
                         <th>Name</th>
                         <th>Email</th>
                         <th>Photo</th>
-                        <th>Join Date</th>
+{{--                        <th>Join Date</th>--}}
                         <th>Role</th>
                         <th>Status</th>
                         <th>Action</th>
@@ -57,7 +57,7 @@
                                 style="max-width:50px" alt="avatar.png">
                             @endif
                         </td>
-                        <td>{{(($user->created_at)? $user->created_at->diffForHumans() : '')}}</td>
+{{--                        <td>{{(($user->created_at)? $user->created_at->diffForHumans() : '')}}</td>--}}
                         <td>{{$user->role}}</td>
                         <td>
                             @if($user->status=='active')
