@@ -15,6 +15,10 @@
                 data-placement="bottom" title="Add User"><i class="fas fa-plus"></i> Add User</a>
         @endif
     </div>
+    <div class="card-header py-3">
+        <input id="inputSearch" type="text" name="title" placeholder="Enter Search Keywords.."
+               class="form-control">
+    </div>
     <div class="card-body">
         <div class="table-responsive">
             <table class="table table-bordered" id="user-dataTable" width="100%" cellspacing="0">
@@ -172,6 +176,13 @@ $(document).ready(function() {
                 }
             });
     })
+    $("#inputSearch").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        console.log(value)
+        $("#user-dataTable tbody tr").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
 })
 </script>
 @endpush
