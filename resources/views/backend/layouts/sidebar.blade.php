@@ -46,6 +46,14 @@
             <span>Orders</span>
         </a>
     </li>
+
+    <!--Statistical -->
+    <li class="nav-item">
+        <a class="nav-link" href="{{route('statistical')}}">
+            <i class="fas fa-clipboard-list"></i>
+            <span>Statistical</span>
+        </a>
+    </li>
     @endif
 
 

@@ -70,6 +70,7 @@
     })->name('cart');
     Route::get('/checkout', [CartController::class, 'checkout'])->name('checkout')->middleware('user');
     Route::post('cart/order', [OrderController::class, 'store'])->name('cart.order');
+    Route::get('/income', [OrderController::class, 'incomeChart'])->name('product.order.income');
 // Order Track
     Route::get('/product/track', [OrderController::class, 'orderTrack'])->name('order.track');
     Route::post('product/track/order', [OrderController::class, 'productTrackOrder'])->name('product.track.order');
@@ -83,6 +84,7 @@
 
     Route::group(['prefix' => '/admin', 'middleware' => ['auth', 'admin']], function () {
         Route::get('/', [AdminController::class, 'index'])->name('admin');
+        Route::get('/statistical', [AdminController::class, 'statistical'])->name('statistical');
         // user route
         Route::resource('users', 'UsersController');
         // Profile
