@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -14,7 +15,11 @@ class UsersController extends Controller
      */
     public function index()
     {
-        $users=User::orderBy('id','ASC')->paginate(10);
+        if (Auth::user()->role=='manager') {
+            $users=User::where('role','user')->orderBy('id','ASC')->paginate(10);
+        } else {
+            $users=User::orderBy('id','ASC')->paginate(10);
+        }
         return view('backend.users.index')->with('users',$users);
     }
 
