@@ -11,6 +11,10 @@
     <div class="card-header py-3">
         <h6 class="m-0 font-weight-bold text-primary float-left">Order Lists</h6>
     </div>
+    <div class="card-header py-3">
+        <input id="inputSearch" type="text" name="title" placeholder="Enter Search Keywords.."
+               class="form-control">
+    </div>
     <div class="card-body">
         <div class="table-responsive">
             @if(count($orders)>0)
@@ -154,6 +158,13 @@ $(document).ready(function() {
                 }
             });
     })
+    $("#inputSearch").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        console.log(value)
+        $("#order-dataTable tbody tr").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
 })
 </script>
 @endpush

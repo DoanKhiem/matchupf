@@ -17,7 +17,7 @@
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span>Dashboard</span></a>
     </li>
-
+    @if(Auth::user()->role=='manager')
     <!-- Divider -->
     <hr class="sidebar-divider">
         <!-- Heading -->
@@ -39,11 +39,6 @@
           </div>
         </div>
     </li>
-
-
-
-
-
     <!--Orders -->
     <li class="nav-item">
         <a class="nav-link" href="{{route('order.index')}}">
@@ -52,6 +47,14 @@
         </a>
     </li>
 
+    <!--Statistical -->
+    <li class="nav-item">
+        <a class="nav-link" href="{{route('statistical')}}">
+            <i class="fas fa-clipboard-list"></i>
+            <span>Statistical</span>
+        </a>
+    </li>
+    @endif
 
 
 
@@ -64,6 +67,7 @@
 
 
 
+    @if(Auth::user()->role=='admin')
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
      <!-- Heading -->
@@ -77,6 +81,7 @@
             <i class="fas fa-users"></i>
             <span>Users</span></a>
     </li>
+    @endif
 
 
     <!-- Sidebar Toggler (Sidebar) -->

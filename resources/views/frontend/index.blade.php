@@ -91,17 +91,18 @@
                     <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                         <!-- Product Slider -->
                         <div class="product-gallery">
-                            <div class="quickview-slider-active">
-                                @php
-                                $photo=explode(',',$product->photo);
-                                // dd($photo);
-                                @endphp
-                                @foreach($photo as $data)
+{{--                            <div class="quickview-slider-active">--}}
+{{--                                @php--}}
+{{--                                $photo=explode(',',$product->photo);--}}
+{{--                                 dd($photo);--}}
+{{--                                @endphp--}}
+{{--                                @foreach($photo as $data)--}}
+
                                 <div class="single-slider">
-                                    <img src="{{$data}}" alt="{{$data}}">
+                                    <img src="{{$product->photo}}" alt="{{$product->photo}}">
                                 </div>
-                                @endforeach
-                            </div>
+{{--                                @endforeach--}}
+{{--                            </div>--}}
                         </div>
                         <!-- End Product slider -->
                     </div>
