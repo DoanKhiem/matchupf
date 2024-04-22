@@ -10,10 +10,9 @@
     </div>
     <div class="card-header py-3">
         <h6 class="m-0 font-weight-bold text-primary float-left">Users List</h6>
-        @if(auth()->user()->role == 'admin')
             <a href="{{route('users.create')}}" class="btn btn-primary btn-sm float-right" data-toggle="tooltip"
                 data-placement="bottom" title="Add User"><i class="fas fa-plus"></i> Add User</a>
-        @endif
+
     </div>
     <div class="card-header py-3">
         <input id="inputSearch" type="text" name="title" placeholder="Enter Search Keywords.."
@@ -71,7 +70,7 @@
                             @endif
                         </td>
                         <td>
-                            @if(auth()->user()->role == 'admin')
+
                                 <a href="{{route('users.edit',$user->id)}}" class="btn btn-primary btn-sm float-left mr-1"
                                     style="height:30px; width:30px;border-radius:50%" data-toggle="tooltip" title="edit"
                                     data-placement="bottom"><i class="fas fa-edit"></i></a>
@@ -82,7 +81,6 @@
                                         style="height:30px; width:30px;border-radius:50%" data-toggle="tooltip"
                                         data-placement="bottom" title="Delete"><i class="fas fa-trash-alt"></i></button>
                                 </form>
-                            @endif
                         </td>
                         {{-- Delete Modal --}}
                         {{-- <div class="modal fade" id="delModal{{$user->id}}" tabindex="-1" role="dialog"

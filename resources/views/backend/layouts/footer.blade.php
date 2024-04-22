@@ -3,7 +3,7 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; <a href="https://www.facebook.com/profile.php?id=100078099500123" target="_blank">Nguyễn Hoàng Sơn </a> {{date('Y')}}</span>
+            <span>Cocolux &copy; <a href="https://www.facebook.com/profile.php?id=100078099500123" target="_blank">Nguyễn Hoàng Sơn </a> {{date('Y')}}</span>
           </div>
         </div>
       </footer>

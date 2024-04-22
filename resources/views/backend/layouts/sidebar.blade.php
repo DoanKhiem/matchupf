@@ -51,7 +51,7 @@
     <li class="nav-item">
         <a class="nav-link" href="{{route('statistical')}}">
             <i class="fas fa-clipboard-list"></i>
-            <span>Statistical</span>
+            <span>Statistic</span>
         </a>
     </li>
     @endif
@@ -67,7 +67,7 @@
 
 
 
-    @if(Auth::user()->role=='admin')
+
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
      <!-- Heading -->
@@ -81,7 +81,6 @@
             <i class="fas fa-users"></i>
             <span>Users</span></a>
     </li>
-    @endif
 
 
     <!-- Sidebar Toggler (Sidebar) -->

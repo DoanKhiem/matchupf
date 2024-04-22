@@ -54,6 +54,7 @@
     {{--        $roles=DB::table('users')->select('role')->where('id',$user->id)->get();--}}
     {{--         dd($roles);--}}
     {{--        @endphp--}}
+    @if(auth()->user()->role == 'admin')
     <div class="form-group">
         <label for="role" class="col-form-label">Role</label>
         <select name="role" class="form-control">
@@ -69,6 +70,9 @@
         <span class="text-danger">{{$message}}</span>
         @enderror
     </div>
+            @else
+            <input type="hidden" name="role" value="user">
+            @endif
     <div class="form-group">
         <label for="status" class="col-form-label">Status</label>
         <select name="status" class="form-control">
