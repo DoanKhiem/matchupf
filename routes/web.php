@@ -1,53 +1,42 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\ProjectController;
-use App\Http\Controllers\IssueController;
-use App\Http\Controllers\ReportController;
-use App\Http\Controllers\StaffController;
-use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+use Inertia\Inertia;
 
 Route::get('/', function () {
-    return view('auth.login');
-});
+    return Inertia::render('HomeView');
+})->name('home');
 
-Route::get('/page-user', function () {
-    return view('page-user');
-});
+Route::get('dashboard', function () {
+    return Inertia::render('Dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/dashboard', [Controller::class, 'dashboard'])->middleware(['auth', 'verified', 'check.user.status'])->name('dashboard');
+// Blog routes
+Route::get('/blogs', function () {
+    return Inertia::render('Blogs');
+})->name('blogs');
 
-Route::middleware(['auth', 'check.user.status'])->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+Route::get('/blog/{slug}', function ($slug) {
+    return Inertia::render('BlogDetail', ['slug' => $slug]);
+})->name('blog.detail');
 
-    Route::get('edit-profile', [StaffController::class, 'editProfile'])->name('edit-profile');
-    Route::get('update-password', [StaffController::class, 'updatePassword'])->name('update-password');
+// Job routes
+Route::get('/jobs', function () {
+    return Inertia::render('Jobs');
+})->name('jobs');
 
-    // Project
-    Route::resource('project', ProjectController::class);
+Route::get('/job/{slug}', function ($slug) {
+    return Inertia::render('JobDetail', ['slug' => $slug]);
+})->name('job.detail');
 
-    // Issue
-    Route::resource('issue', IssueController::class);
+Route::get('/post-job', function () {
+    return Inertia::render('PostAJob');
+})->name('post.job');
 
-    // Report
-    Route::resource('report', ReportController::class);
+// Auth routes
+Route::get('/login', function () {
+    return Inertia::render('Login');
+})->name('login');
 
-    // Staff
-    Route::resource('staff', StaffController::class);
-});
-
+require __DIR__.'/settings.php';
 require __DIR__.'/auth.php';
