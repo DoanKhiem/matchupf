@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\JobController;
+use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\HomeController;
 
 Route::get('/', function () {
     return Inertia::render('HomeView');
@@ -21,9 +24,7 @@ Route::get('/blog/{slug}', function ($slug) {
 })->name('blog.detail');
 
 // Job routes
-Route::get('/jobs', function () {
-    return Inertia::render('Jobs');
-})->name('jobs');
+Route::get('/jobs', [HomeController::class, 'jobs'])->name('jobs');
 
 Route::get('/job/{slug}', function ($slug) {
     return Inertia::render('JobDetail', ['slug' => $slug]);
@@ -37,6 +38,15 @@ Route::get('/post-job', function () {
 Route::get('/login', function () {
     return Inertia::render('Login');
 })->name('login');
+
+Route::get('/dashboard/jobs', [JobController::class, 'index'])
+    ->middleware(['auth', 'verified'])
+    ->name('dashboard.jobs');
+
+Route::prefix('dashboard')->middleware(['auth', 'verified'])->group(function () {
+    Route::resource('jobs', JobController::class)->except(['index', 'edit', 'show']);
+    Route::resource('companies', CompanyController::class);
+});
 
 require __DIR__.'/settings.php';
 require __DIR__.'/auth.php';
