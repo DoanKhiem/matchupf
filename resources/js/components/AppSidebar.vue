@@ -14,6 +14,11 @@ const mainNavItems: NavItem[] = [
         href: '/dashboard',
         icon: LayoutGrid,
     },
+    {
+        title: 'Quản lý Jobs',
+        href: '/dashboard/jobs',
+        icon: Folder,
+    },
 ];
 
 const footerNavItems: NavItem[] = [
