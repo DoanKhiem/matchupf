@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\HomeController;
 
 Route::get('/', function () {
     return Inertia::render('HomeView');
@@ -23,9 +24,7 @@ Route::get('/blog/{slug}', function ($slug) {
 })->name('blog.detail');
 
 // Job routes
-Route::get('/jobs', function () {
-    return Inertia::render('Jobs');
-})->name('jobs');
+Route::get('/jobs', [HomeController::class, 'jobs'])->name('jobs');
 
 Route::get('/job/{slug}', function ($slug) {
     return Inertia::render('JobDetail', ['slug' => $slug]);

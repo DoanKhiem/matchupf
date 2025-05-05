@@ -66,201 +66,41 @@
                         <div class="full-width">
                             <div class="full-width w-dyn-list">
                                 <div role="list" class="jobs-grid w-dyn-items">
-                                    <div role="listitem" class="full-width w-dyn-item" data-aos="fade-up" data-aos-delay="400">
-                                        <div
-                                            id="w-node-_682c5bf2-4926-dbc3-1ac5-f2a02042f823-704c5045"
-                                            data-w-id="682c5bf2-4926-dbc3-1ac5-f2a02042f823"
-                                            class="job-grid-card"
-                                        >
+                                    <div v-for="job in props.jobs" :key="job.id" role="listitem" class="full-width w-dyn-item" data-aos="fade-up">
+                                        <div class="job-grid-card">
                                             <div class="w-layout-hflex job-grid-header">
-                                                <img loading="lazy" src="/images/Group103.webp" alt="" class="image-80px" />
+                                                <img loading="lazy" :src="job.company?.logo || '/images/Group103.webp'" alt="" class="image-80px" />
                                                 <div class="w-layout-vflex center-align-job-card">
-                                                    <Link
-                                                        :href="route('job.detail', { slug: 'senior-frontend-engineer' })"
-                                                        class="margin-bottom-12px w-inline-block"
-                                                    >
-                                                        <h6 class="heading">SENIOR FRONTEND ENGINEER</h6>
+                                                    <Link :href="route('job.detail', { slug: job.id })" class="margin-bottom-12px w-inline-block">
+                                                        <h6 class="heading">{{ job.title }}</h6>
                                                     </Link>
                                                     <div class="w-layout-hflex job-location-salary-wrapper">
                                                         <div class="w-layout-hflex horizontal-left-center-8px-gap">
                                                             <div class="_18px-icon-neutral-200">place</div>
-                                                            <div class="_14px-400-neutral-200">ThaiLand</div>
+                                                            <div class="_14px-400-neutral-200">{{ job.location }}</div>
                                                         </div>
                                                         <div class="w-layout-hflex horizontal-left-center-8px-gap">
                                                             <div class="_18px-icon-neutral-200">payments</div>
-                                                            <div class="_14px-400-neutral-200">$35K</div>
+                                                            <div class="_14px-400-neutral-200">{{ job.salary }}</div>
                                                         </div>
                                                     </div>
                                                     <div class="margin-top-30px">
                                                         <div class="w-layout-hflex _10px-gap">
                                                             <div class="w-layout-hflex text-button">
-                                                                <div>Full Time</div>
+                                                                <div>{{ job.type }}</div>
                                                             </div>
                                                             <div class="w-layout-hflex text-button">
-                                                                <div>In house</div>
+                                                                <div>{{ job.experience }}</div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <Link
-                                                :href="route('job.detail', { slug: 'senior-frontend-engineer' })"
-                                                class="apply-button padding-x-38px w-inline-block"
-                                            >
+                                            <Link :href="route('job.detail', { slug: job.id })" class="apply-button padding-x-38px w-inline-block">
                                                 <div>Apply Now</div>
                                                 <div class="icon">chevron_right</div>
                                             </Link>
-                                            <div class="w-layout-hflex featured-tag frid">
-                                                <img src="/images/award-line.svg" loading="lazy" alt="" class="image-18px" />
-                                                <div>Featured</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div role="listitem" class="full-width w-dyn-item" data-aos="fade-up" data-aos-delay="500">
-                                        <div
-                                            id="w-node-_682c5bf2-4926-dbc3-1ac5-f2a02042f823-704c5045"
-                                            data-w-id="682c5bf2-4926-dbc3-1ac5-f2a02042f823"
-                                            class="job-grid-card"
-                                        >
-                                            <div class="w-layout-hflex job-grid-header">
-                                                <img loading="lazy" src="/images/Group103.webp" alt="" class="image-80px" />
-                                                <div class="w-layout-vflex center-align-job-card">
-                                                    <Link
-                                                        :href="route('job.detail', { slug: 'senior-digital-marketing' })"
-                                                        class="margin-bottom-12px w-inline-block"
-                                                    >
-                                                        <h6 class="heading">SENIOR DIGITAL MARKETING</h6>
-                                                    </Link>
-                                                    <div class="w-layout-hflex job-location-salary-wrapper">
-                                                        <div class="w-layout-hflex horizontal-left-center-8px-gap">
-                                                            <div class="_18px-icon-neutral-200">place</div>
-                                                            <div class="_14px-400-neutral-200">ThaiLand</div>
-                                                        </div>
-                                                        <div class="w-layout-hflex horizontal-left-center-8px-gap">
-                                                            <div class="_18px-icon-neutral-200">payments</div>
-                                                            <div class="_14px-400-neutral-200">$35K</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="margin-top-30px">
-                                                        <div class="w-layout-hflex _10px-gap">
-                                                            <div class="w-layout-hflex text-button">
-                                                                <div>Full Time</div>
-                                                            </div>
-                                                            <div class="w-layout-hflex text-button">
-                                                                <div>In house</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <Link
-                                                :href="route('job.detail', { slug: 'senior-digital-marketing' })"
-                                                class="apply-button padding-x-38px w-inline-block"
-                                            >
-                                                <div>Apply Now</div>
-                                                <div class="icon">chevron_right</div>
-                                            </Link>
-                                            <div class="w-layout-hflex featured-tag frid">
-                                                <img src="/images/award-line.svg" loading="lazy" alt="" class="image-18px" />
-                                                <div>Featured</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div role="listitem" class="full-width w-dyn-item" data-aos="fade-up" data-aos-delay="600">
-                                        <div
-                                            id="w-node-_682c5bf2-4926-dbc3-1ac5-f2a02042f823-704c5045"
-                                            data-w-id="682c5bf2-4926-dbc3-1ac5-f2a02042f823"
-                                            class="job-grid-card"
-                                        >
-                                            <div class="w-layout-hflex job-grid-header">
-                                                <img loading="lazy" src="/images/Group103.webp" alt="" class="image-80px" />
-                                                <div class="w-layout-vflex center-align-job-card">
-                                                    <Link
-                                                        :href="route('job.detail', { slug: 'qc-manual' })"
-                                                        class="margin-bottom-12px w-inline-block"
-                                                    >
-                                                        <h6 class="heading">QC MANUAL</h6>
-                                                    </Link>
-                                                    <div class="w-layout-hflex job-location-salary-wrapper">
-                                                        <div class="w-layout-hflex horizontal-left-center-8px-gap">
-                                                            <div class="_18px-icon-neutral-200">place</div>
-                                                            <div class="_14px-400-neutral-200">ThaiLand</div>
-                                                        </div>
-                                                        <div class="w-layout-hflex horizontal-left-center-8px-gap">
-                                                            <div class="_18px-icon-neutral-200">payments</div>
-                                                            <div class="_14px-400-neutral-200">$35K</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="margin-top-30px">
-                                                        <div class="w-layout-hflex _10px-gap">
-                                                            <div class="w-layout-hflex text-button">
-                                                                <div>Full Time</div>
-                                                            </div>
-                                                            <div class="w-layout-hflex text-button">
-                                                                <div>In house</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <Link
-                                                :href="route('job.detail', { slug: 'qc-manual' })"
-                                                class="apply-button padding-x-38px w-inline-block"
-                                            >
-                                                <div>Apply Now</div>
-                                                <div class="icon">chevron_right</div>
-                                            </Link>
-                                            <div class="w-layout-hflex featured-tag frid">
-                                                <img src="/images/award-line.svg" loading="lazy" alt="" class="image-18px" />
-                                                <div>Featured</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div role="listitem" class="full-width w-dyn-item" data-aos="fade-up" data-aos-delay="700">
-                                        <div
-                                            id="w-node-_682c5bf2-4926-dbc3-1ac5-f2a02042f823-704c5045"
-                                            data-w-id="682c5bf2-4926-dbc3-1ac5-f2a02042f823"
-                                            class="job-grid-card"
-                                        >
-                                            <div class="w-layout-hflex job-grid-header">
-                                                <img loading="lazy" src="/images/Group103.webp" alt="" class="image-80px" />
-                                                <div class="w-layout-vflex center-align-job-card">
-                                                    <Link
-                                                        :href="route('job.detail', { slug: 'senior-ux-ui-designer' })"
-                                                        class="margin-bottom-12px w-inline-block"
-                                                    >
-                                                        <h6 class="heading">SENIOR UX/UI DESIGNER</h6>
-                                                    </Link>
-                                                    <div class="w-layout-hflex job-location-salary-wrapper">
-                                                        <div class="w-layout-hflex horizontal-left-center-8px-gap">
-                                                            <div class="_18px-icon-neutral-200">place</div>
-                                                            <div class="_14px-400-neutral-200">ThaiLand</div>
-                                                        </div>
-                                                        <div class="w-layout-hflex horizontal-left-center-8px-gap">
-                                                            <div class="_18px-icon-neutral-200">payments</div>
-                                                            <div class="_14px-400-neutral-200">$35K</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="margin-top-30px">
-                                                        <div class="w-layout-hflex _10px-gap">
-                                                            <div class="w-layout-hflex text-button">
-                                                                <div>Full Time</div>
-                                                            </div>
-                                                            <div class="w-layout-hflex text-button">
-                                                                <div>In house</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <Link
-                                                :href="route('job.detail', { slug: 'senior-ux-ui-designer' })"
-                                                class="apply-button padding-x-38px w-inline-block"
-                                            >
-                                                <div>Apply Now</div>
-                                                <div class="icon">chevron_right</div>
-                                            </Link>
-                                            <div class="w-layout-hflex featured-tag frid">
+                                            <div v-if="job.featured" class="w-layout-hflex featured-tag frid">
                                                 <img src="/images/award-line.svg" loading="lazy" alt="" class="image-18px" />
                                                 <div>Featured</div>
                                             </div>
@@ -282,8 +122,10 @@ import AppLayout from '@/layouts/AppLayout.vue';
 import { Link } from '@inertiajs/vue3';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { onMounted } from 'vue';
+import { defineProps, onMounted } from 'vue';
 import { route } from 'ziggy-js';
+
+const props = defineProps<{ jobs: any[] }>();
 
 onMounted(() => {
     AOS.init({
