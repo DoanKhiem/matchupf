@@ -1,0 +1,38 @@
+name: Deploy to cPanel Hosting
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Deploy to server via SSH
+      uses: appleboy/ssh-action@v0.1.6
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.SSH_KEY }}
+        port: ${{ secrets.PORT }}
+        script: |
+          cd ${{ secrets.DEPLOY_PATH }}
+          git pull origin main
+          # Cài đặt Composer dependencies
+          composer install --no-interaction --prefer-dist --optimize-autoloader
+          # Chạy migrate (nếu cần)
+          php artisan migrate --force
+          # Cài đặt npm dependencies & build frontend
+          npm install
+          npm run build
+          # Clear & cache config, route, view
+          php artisan config:cache
+          php artisan route:cache
+          php artisan view:cache
+          # Restart lại app (pm2 hoặc queue)
+          pm2 restart app
