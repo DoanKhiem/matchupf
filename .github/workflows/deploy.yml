@@ -20,7 +20,7 @@ jobs:
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.SSH_KEY }}
         passphrase: ${{ secrets.PASSPHRASE }}
-        port: ${{ secrets.PORT }}
+        debug: true
         script: |
           cd ${{ secrets.DEPLOY_PATH }}
           git pull origin main
