@@ -1,43 +1,50 @@
-FROM php:8.3-fpm
+# Sử dụng image PHP 8.3 với Apache
+FROM php:8.3-apache
 
-# Cài đặt các phần mềm cần thiết
+# Cài đặt các tiện ích cần thiết
 RUN apt-get update && apt-get install -y \
     git \
-    curl \
-    libpng-dev \
-    libonig-dev \
-    libxml2-dev \
     zip \
     unzip \
-    nginx \
-    supervisor
-
-# Cài đặt PHP extensions
-RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
+    libpng-dev \
+    libjpeg-dev \
+    libfreetype6-dev \
+    libonig-dev \
+    libxml2-dev \
+    default-mysql-client \
+    && docker-php-ext-configure gd --with-freetype --with-jpeg \
+    && docker-php-ext-install pdo pdo_mysql gd mbstring xml
 
 # Cài đặt Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-# Sao chép mã nguồn
-WORKDIR /var/www
+# Cài đặt Node.js và npm
+RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - \
+    && apt-get install -y nodejs \
+    && npm install -g npm
+
+# Sao chép mã nguồn dự án
+WORKDIR /var/www/html
 COPY . .
 
-# Cài đặt dependencies
+# Cài đặt các thư viện PHP qua Composer
 RUN composer install --optimize-autoloader --no-dev
+
+# Cài đặt các thư viện Node.js
 RUN npm install && npm run build
 
-# Cấp quyền
-RUN chown -R www-data:www-data /var/www
-RUN chmod -R 755 /var/www/storage
+# Cấp quyền cho thư mục
+RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
+RUN chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
 
-# Copy file cấu hình Nginx
-COPY ./docker/nginx.conf /etc/nginx/sites-available/default
+# Kích hoạt module rewrite của Apache
+RUN a2enmod rewrite
 
-# Copy file cấu hình Supervisor
-COPY ./docker/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+# Cấu hình Apache
+COPY ./docker/vhost.conf /etc/apache2/sites-available/000-default.conf
 
-# Expose port
+# Mở cổng 80
 EXPOSE 80
 
-# Chạy Supervisor
-CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
+# Khởi động Apache
+CMD ["apache2-foreground"]
