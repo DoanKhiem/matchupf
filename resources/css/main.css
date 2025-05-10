@@ -4330,7 +4330,7 @@ label {
 
 .site-logo {
     object-fit: contain;
-    max-width: 220px;
+    max-width: 95px;
 }
 
 .menu-button {
@@ -8341,7 +8341,7 @@ label {
     }
 
     .site-logo {
-        max-width: 150px;
+        max-width: 65px;
     }
 
     .menu-button.white {
