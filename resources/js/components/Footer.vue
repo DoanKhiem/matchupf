@@ -50,7 +50,9 @@
                 <div class="footer-wrapper">
                     <div class="footer-columns">
                         <div id="w-node-2" class="footer-block _1st-block">
-                            <img src="/images/Logo1.png" loading="lazy" width="70" alt="" class="site-logo" />
+                            <div class="border-white border rounded-md p-2">
+                                <img src="/images/logo.png" loading="lazy" width="70" alt="" class="site-logo " />
+                            </div>
                             <div class="footer-info-block">
                                 <p class="footer-paragraph">4517 Washington Ave. Manchester, Kentucky 39495</p>
                             </div>
@@ -173,4 +175,6 @@
     </footer>
 </template>
 
-<style scoped></style>
+<style scoped>
+@import '@css/main.css';
+</style>

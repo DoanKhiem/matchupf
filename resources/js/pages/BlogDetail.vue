@@ -332,4 +332,6 @@ onMounted(() => {
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+@import '@css/main.css';
+</style>

@@ -1,14 +1,30 @@
 <template>
     <AppLayout>
+        <Head title="Jobs" />
         <section id="hero" class="main-banner">
             <div class="container">
                 <div class="breadcrumb-block" data-aos="fade-up">
-                    <h1 class="_30px-title-white">Jobs</h1>
+                    <h1 class="_30px-title-white">
+                        Jobs
+                        <span v-if="props.selectedCategory">in {{ props.selectedCategory }}</span>
+                    </h1>
                     <div class="text-merge">
                         <a href="/" class="breadcrumb">Home</a>
                         <div class="breadcrumb">/</div>
                         <div class="breadcrumb">Jobs</div>
                     </div>
+                    <form v-if="!props.selectedCategory" class="banner-search-wrapper w-form" @submit.prevent="onSearch">
+                        <input
+                            class="banner-search-input w-input"
+                            maxlength="256"
+                            name="query"
+                            placeholder="Search…"
+                            type="search"
+                            id="search-4"
+                            v-model="search"
+                        />
+                        <input type="submit" class="search-button-material w-button" value="search" />
+                    </form>
                 </div>
             </div>
         </section>
@@ -22,40 +38,20 @@
                                     <div class="widget-title">Categories</div>
                                     <div class="w-dyn-list">
                                         <div role="list" class="job-categories w-dyn-items">
-                                            <div role="listitem" class="w-dyn-item" data-aos="fade-up" data-aos-delay="300">
-                                                <a href="/job-category/ux-ui-designer" class="job-category-link w-inline-block">
-                                                    <div>UX UI Designer</div>
-                                                    <div class="_16px-semibold-primary-200">10</div>
-                                                </a>
-                                            </div>
-                                            <div role="listitem" class="w-dyn-item" data-aos="fade-up" data-aos-delay="400">
-                                                <a href="/job-category/content-writer" class="job-category-link w-inline-block">
-                                                    <div>Content Writer</div>
-                                                    <div class="_16px-semibold-primary-200">21</div>
-                                                </a>
-                                            </div>
-                                            <div role="listitem" class="w-dyn-item" data-aos="fade-up" data-aos-delay="500">
-                                                <a href="/job-category/website-developer" class="job-category-link w-inline-block">
-                                                    <div>Website Developer</div>
-                                                    <div class="_16px-semibold-primary-200">4</div>
-                                                </a>
-                                            </div>
-                                            <div role="listitem" class="w-dyn-item" data-aos="fade-up" data-aos-delay="600">
-                                                <a href="/job-category/hr-executive" class="job-category-link w-inline-block">
-                                                    <div>HR Executive</div>
-                                                    <div class="_16px-semibold-primary-200">2</div>
-                                                </a>
-                                            </div>
-                                            <div role="listitem" class="w-dyn-item" data-aos="fade-up" data-aos-delay="700">
-                                                <a href="/job-category/digital-marketer" class="job-category-link w-inline-block">
-                                                    <div>Digital Marketer</div>
-                                                    <div class="_16px-semibold-primary-200">18</div>
-                                                </a>
-                                            </div>
-                                            <div role="listitem" class="w-dyn-item" data-aos="fade-up" data-aos-delay="800">
-                                                <a href="/job-category/accounting-expert" class="job-category-link w-inline-block">
-                                                    <div>Accounting Expert</div>
-                                                    <div class="_16px-semibold-primary-200">8</div>
+                                            <div
+                                                v-for="category in props.categories"
+                                                :key="category.id"
+                                                role="listitem"
+                                                class="w-dyn-item"
+                                                data-aos="fade-up"
+                                            >
+                                                <a
+                                                    :href="`/job-category/${category.title.toLowerCase().replace(/\s+/g, '-')}`"
+                                                    class="job-category-link w-inline-block"
+                                                    :class="{ 'w--current': category.title === props.selectedCategory }"
+                                                >
+                                                    <div>{{ category.title }}</div>
+                                                    <div class="_16px-semibold-primary-200">{{ category.jobs_count }}</div>
                                                 </a>
                                             </div>
                                         </div>
@@ -71,7 +67,7 @@
                                             <div class="w-layout-hflex job-grid-header">
                                                 <img loading="lazy" :src="job.company?.logo || '/images/Group103.webp'" alt="" class="image-80px" />
                                                 <div class="w-layout-vflex center-align-job-card">
-                                                    <Link :href="route('job.detail', { slug: job.id })" class="margin-bottom-12px w-inline-block">
+                                                    <Link :href="route('job.detail', { id: job.id })" class="margin-bottom-12px w-inline-block">
                                                         <h6 class="heading">{{ job.title }}</h6>
                                                     </Link>
                                                     <div class="w-layout-hflex job-location-salary-wrapper">
@@ -90,13 +86,13 @@
                                                                 <div>{{ job.type }}</div>
                                                             </div>
                                                             <div class="w-layout-hflex text-button">
-                                                                <div>{{ job.experience }}</div>
+                                                                <div>{{ job.experience }} Experience</div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <Link :href="route('job.detail', { slug: job.id })" class="apply-button padding-x-38px w-inline-block">
+                                            <Link :href="route('job.detail', { id: job.id })" class="apply-button padding-x-38px w-inline-block">
                                                 <div>Apply Now</div>
                                                 <div class="icon">chevron_right</div>
                                             </Link>
@@ -119,13 +115,15 @@
 
 <script setup lang="ts">
 import AppLayout from '@/layouts/AppLayout.vue';
-import { Link } from '@inertiajs/vue3';
+import { Head, Link } from '@inertiajs/vue3';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { defineProps, onMounted } from 'vue';
+import { defineProps, onMounted, ref } from 'vue';
 import { route } from 'ziggy-js';
+import { router } from '@inertiajs/vue3';
 
-const props = defineProps<{ jobs: any[] }>();
+const props = defineProps<{ jobs: any[]; categories: any[]; selectedCategory?: string; searchQuery?: string }>();
+const search = ref(props.searchQuery || '');
 
 onMounted(() => {
     AOS.init({
@@ -135,6 +133,12 @@ onMounted(() => {
         mirror: false,
     });
 });
+
+const onSearch = () => {
+    router.get('/jobs', { query: search.value });
+}
 </script>
 
-<style></style>
+<style scoped>
+@import '@css/main.css';
+</style>

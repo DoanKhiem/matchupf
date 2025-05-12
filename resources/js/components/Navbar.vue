@@ -26,7 +26,7 @@
                             </li>
                             <li class="nav-list">
                                 <div class="nav-icon-and-text-wrapper">
-                                    <Link :href="route('jobs')" class="nav-link" :class="{ 'w--current': $page.url === '/jobs' }">Jobs</Link>
+                                    <Link :href="route('jobs')" class="nav-link" :class="{ 'w--current': $page.url.startsWith('/jobs') }">Jobs</Link>
                                 </div>
                             </li>
                             <!-- <li class="nav-list">
@@ -120,7 +120,7 @@
                             </li>
                             <li class="nav-list">
                                 <div class="nav-icon-and-text-wrapper">
-                                    <Link :href="route('blogs')" class="nav-link" :class="{ 'w--current': $page.url === '/blogs' }">Blog</Link>
+                                    <Link :href="route('blogs')" class="nav-link" :class="{ 'w--current': $page.url.startsWith('/blogs') }">Blogs</Link>
                                 </div>
                             </li>
                             <!-- <li class="list-for-button-icon"><a data-w-id="d8d360e1-f645-321f-d65f-94a46da5403d"
@@ -136,11 +136,11 @@
                     </nav>
                 </div>
                 <div class="hide-from-tablet-horizontal">
-                    <Link :href="route('login')" class="login-link w-inline-block"
+                    <!-- <Link :href="route('login')" class="login-link w-inline-block"
                         ><img src="/images/user-line.svg" loading="lazy" alt="" class="image-16px" />
                         <div>Log in</div>
-                    </Link>
-                    <Link data-w-id="d8d360e1-f645-321f-d65f-94a46da5403d" :href="route('post.job')" class="nav-button w-inline-block"
+                    </Link> -->
+                    <Link data-w-id="d8d360e1-f645-321f-d65f-94a46da5403d" :href="route('login')" class="nav-button w-inline-block"
                         ><img src="/images/edit-line.svg" loading="lazy" alt="" height="Auto" class="image-24px" />
                         <div class="button-text-wrapper">
                             <div
@@ -279,14 +279,14 @@
                             <Link :href="route('blogs')" class="nav-link" :class="{ 'w--current': $page.url === '/blogs' }">Blog</Link>
                         </div>
                     </li>
-                    <li class="nav-list">
+                    <!-- <li class="nav-list">
                         <Link :href="route('login')" class="login-link w-inline-block">
                             <img src="/images/user-line.svg" loading="lazy" alt="" class="image-16px" />
                             <div>Log in</div>
                         </Link>
-                    </li>
+                    </li> -->
                     <li class="list-for-button-icon">
-                        <Link data-w-id="d8d360e1-f645-321f-d65f-94a46da5403d" :href="route('post.job')" class="nav-button w-inline-block">
+                        <Link data-w-id="d8d360e1-f645-321f-d65f-94a46da5403d" :href="route('login')" class="nav-button w-inline-block">
                             <img src="/images/edit-line.svg" loading="lazy" alt="" height="Auto" class="image-24px" />
                             <div class="button-text-wrapper">
                                 <div class="default-text">Post A Job</div>
@@ -309,12 +309,16 @@ const isMenuOpen = ref<boolean>(false);
 
 <style scoped>
 .nav-link.w--current {
-    color: var(--1-main-colors--secondary);
+    color: #36c2ce;
     font-weight: bold;
 }
 
 .submenu-link.w--current {
-    color: var(--1-main-colors--secondary);
+    color: #36c2ce;
     font-weight: bold;
 }
+</style>
+
+<style scoped>
+@import '@css/main.css';
 </style>
