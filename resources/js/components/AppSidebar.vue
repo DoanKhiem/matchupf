@@ -15,8 +15,18 @@ const mainNavItems: NavItem[] = [
         icon: LayoutGrid,
     },
     {
-        title: 'Quản lý Jobs',
+        title: 'Manage Categories',
+        href: '/dashboard/categories',
+        icon: Folder,
+    },
+    {
+        title: 'Manage Jobs',
         href: '/dashboard/jobs',
+        icon: Folder,
+    },
+    {
+        title: 'Manage Blogs',
+        href: '/dashboard/blogs',
         icon: Folder,
     },
 ];
