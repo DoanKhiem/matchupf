@@ -19,9 +19,7 @@ Route::get('dashboard', function () {
 // Blog routes
 Route::get('/blogs', [HomeController::class, 'blogs'])->name('blogs');
 
-Route::get('/blog/{slug}', function ($slug) {
-    return Inertia::render('BlogDetail', ['slug' => $slug]);
-})->name('blog.detail');
+Route::get('/blog/{slug}', [HomeController::class, 'blogDetail'])->name('blog.detail');
 
 // Job routes
 Route::get('/jobs', [HomeController::class, 'jobs'])->name('jobs');

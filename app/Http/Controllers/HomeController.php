@@ -56,9 +56,72 @@ class HomeController extends Controller
 
     public function blogs()
     {
-        $blogs = Blog::all();
+        $blogs = Blog::select('id', 'title', 'slug', 'image', 'content', 'created_at')
+            ->latest()
+            ->get()
+            ->map(function ($blog) {
+                // Extract a short description from content
+                $desc = substr(strip_tags($blog->content), 0, 120) . '...';
+                
+                return [
+                    'id' => $blog->id,
+                    'title' => $blog->title,
+                    'img' => $blog->image,
+                    'desc' => $desc,
+                    'slug' => $blog->slug,
+                    'created_at' => $blog->created_at,
+                ];
+            });
+        
+        // Get 5 popular blogs for sidebar
+        $popularBlogs = Blog::select('id', 'title', 'slug', 'image')
+            ->latest()
+            ->take(5)
+            ->get()
+            ->map(function ($blog) {
+                return [
+                    'id' => $blog->id,
+                    'title' => $blog->title,
+                    'image' => $blog->image,
+                    'slug' => $blog->slug,
+                ];
+            });
+        
         return Inertia::render('Blogs', [
-            'blogs' => $blogs
+            'blogs' => $blogs,
+            'popularBlogs' => $popularBlogs
+        ]);
+    }
+
+    public function blogDetail($slug)
+    {
+        $blog = Blog::where('slug', $slug)->firstOrFail();
+        
+        // Get popular blogs for sidebar
+        $popularBlogs = Blog::select('id', 'title', 'slug', 'image')
+            ->where('id', '!=', $blog->id)  // Exclude current blog
+            ->latest()
+            ->take(5)
+            ->get()
+            ->map(function ($blog) {
+                return [
+                    'id' => $blog->id,
+                    'title' => $blog->title,
+                    'image' => $blog->image,
+                    'slug' => $blog->slug,
+                ];
+            });
+        
+        return Inertia::render('BlogDetail', [
+            'blog' => [
+                'id' => $blog->id,
+                'title' => $blog->title,
+                'image' => $blog->image,
+                'content' => $blog->content,
+                'created_at' => $blog->created_at->format('M d, Y'),
+                'slug' => $blog->slug,
+            ],
+            'popularBlogs' => $popularBlogs
         ]);
     }
 }
