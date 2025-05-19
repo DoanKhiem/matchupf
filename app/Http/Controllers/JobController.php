@@ -61,7 +61,7 @@ class JobController extends Controller
                 $validated['logo'] = Storage::url($path);
             }
             Job::create($validated);
-            return redirect()->route('dashboard.jobs')->with('success', 'Job created!');
+            return redirect()->route('jobs.index')->with('success', 'Job created!');
         } catch (ValidationException $e) {
             if ($request->wantsJson()) {
                 return response()->json(['errors' => $e->errors()], 422);
@@ -124,7 +124,7 @@ class JobController extends Controller
             }
 
             $job->update($validated);
-            return redirect()->route('dashboard.jobs')->with('success', 'Job updated!');
+            return redirect()->route('jobs.index')->with('success', 'Job updated!');
         } catch (ValidationException $e) {
             if ($request->wantsJson()) {
                 return response()->json(['errors' => $e->errors()], 422);
@@ -144,6 +144,6 @@ class JobController extends Controller
         }
         
         $job->delete();
-        return redirect()->route('dashboard.jobs')->with('success', 'Job deleted!');
+        return redirect()->route('jobs.index')->with('success', 'Job deleted!');
     }
 } 

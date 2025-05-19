@@ -267,7 +267,11 @@ const deleteJob = (id: number) => {
                         <AInput v-model:value="form.location" placeholder="Location" />
                     </Form.Item>
                     <Form.Item label="Type" required :validate-status="form.errors.type ? 'error' : ''" :help="form.errors.type">
-                        <AInput v-model:value="form.type" placeholder="Job Type" />
+                        <Select v-model:value="form.type">
+                            <Select.Option value="Full Time">Full Time</Select.Option>
+                            <Select.Option value="Part Time">Part Time</Select.Option>
+                            <Select.Option value="Remote">Remote</Select.Option>
+                        </Select>
                     </Form.Item>
                     <Form.Item label="Salary" required :validate-status="form.errors.salary ? 'error' : ''" :help="form.errors.salary">
                         <AInput v-model:value="form.salary" placeholder="Salary" />

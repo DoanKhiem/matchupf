@@ -17,24 +17,20 @@ Route::get('dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 // Blog routes
-Route::get('/blogs', function () {
-    return Inertia::render('dashboard/blogs');
-})->name('blogs');
+Route::get('/blogs', [HomeController::class, 'blogs'])->name('blogs');
 
-Route::get('/blog/{slug}', function ($slug) {
-    return Inertia::render('BlogDetail', ['slug' => $slug]);
-})->name('blog.detail');
+Route::get('/blog/{slug}', [HomeController::class, 'blogDetail'])->name('blog.detail');
 
 // Job routes
 Route::get('/jobs', [HomeController::class, 'jobs'])->name('jobs');
+Route::get('/job-category/{slug}', [HomeController::class, 'jobsByCategory'])->name('job.category');
+// Route::get('/search-jobs', [HomeController::class, 'searchJobs'])->name('jobs.search');
 
-Route::get('/job/{slug}', function ($slug) {
-    return Inertia::render('JobDetail', ['slug' => $slug]);
-})->name('job.detail');
+Route::get('/job/{id}', [HomeController::class, 'jobDetail'])->name('job.detail');
 
-Route::get('/post-job', function () {
-    return Inertia::render('PostAJob');
-})->name('post.job');
+// Route::get('/post-job', function () {
+//     return Inertia::render('PostAJob');
+// })->name('post.job');
 
 // Auth routes
 Route::get('/login', function () {
