@@ -54,16 +54,16 @@
                                 <img src="/images/logo.png" loading="lazy" width="70" alt="" class="site-logo " />
                             </div>
                             <div class="footer-info-block">
-                                <p class="footer-paragraph">4517 Washington Ave. Manchester, Kentucky 39495</p>
+                                <p class="footer-paragraph">68 Nguyễn Huệ, phường Bến Nghé, Quận 1, thành phố Hồ Chí Minh, Việt Nam.</p>
                             </div>
                             <div class="w-layout-vflex _11px-gap">
                                 <div class="w-layout-hflex left-center-12px-gap">
                                     <img src="/images/customer-service-line.svg" loading="lazy" alt="" class="image-24px" />
-                                    <div class="_20px-title-neutral-100">Call: (480) 555-0103</div>
+                                    <div class="_20px-title-neutral-100">Call: 0703066003</div>
                                 </div>
                                 <div class="w-layout-hflex left-center-12px-gap">
                                     <img src="/images/mail-send-line.svg" loading="lazy" alt="" class="image-24px" />
-                                    <div class="_20px-title-neutral-100">hello@yourdomain.com</div>
+                                    <div class="_20px-title-neutral-100">matchupfast@matchupf.com</div>
                                 </div>
                             </div>
                         </div>
@@ -118,11 +118,11 @@
                                 <div class="_20px-title-white">Social Community</div>
                                 <div class="margin-top-14px">
                                     <div class="footer-social-icon-contianer">
-                                        <a href="https://twitter.com/ThemeNcode" target="_blank" class="social-icon-transparent"></a
-                                        ><a href="https://twitter.com/ThemeNcode" target="_blank" class="social-icon-transparent twitter"></a
-                                        ><a href="https://pinterest.com/ThemeNcode" target="_blank" class="social-icon-transparent pinterest"></a
-                                        ><a
-                                            href="https://www.linkedin.com/company/themencode"
+                                        <a href="https://www.facebook.com/profile.php?id=61575035703640" target="_blank" class="social-icon-transparent"></a>
+                                        <!-- <a href="https://twitter.com/ThemeNcode" target="_blank" class="social-icon-transparent twitter"></a>
+                                        <a href="https://pinterest.com/ThemeNcode" target="_blank" class="social-icon-transparent pinterest"></a> -->
+                                        <a
+                                            href="https://www.linkedin.com/company/matchupfast"
                                             target="_blank"
                                             class="social-icon-transparent linkedin"
                                             ></a
@@ -137,13 +137,13 @@
             <div class="footer-bottom">
                 <div class="container">
                     <div class="footer-copyright">
-                        <div class="footer-copyright-text">Copyright © 2025 JobX TNC</div>
-                        <div class="copyrights-divider white">|</div>
+                        <div class="footer-copyright-text">Copyright © 2025 TNHH MATCHUPFAST</div>
+                        <!-- <div class="copyrights-divider white">|</div>
                         <a href="https://webflow.com/templates/designers/themencode" target="_blank" class="footer-copyright-text with-hover"
                             >Designed by ThemeNcode LLC</a
                         >
                         <div class="copyrights-divider white">|</div>
-                        <a href="https://webflow.com/" target="_blank" class="footer-copyright-text with-hover">Powered By Webflow</a>
+                        <a href="https://webflow.com/" target="_blank" class="footer-copyright-text with-hover">Powered By Webflow</a> -->
                     </div>
                 </div>
             </div>
