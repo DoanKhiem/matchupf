@@ -21,6 +21,10 @@ Route::get('/blogs', [HomeController::class, 'blogs'])->name('blogs');
 
 Route::get('/blog/{slug}', [HomeController::class, 'blogDetail'])->name('blog.detail');
 
+Route::get('/about', function () {
+    return Inertia::render('About');
+})->name('about');
+
 // Job routes
 Route::get('/jobs', [HomeController::class, 'jobs'])->name('jobs');
 Route::get('/job-category/{slug}', [HomeController::class, 'jobsByCategory'])->name('job.category');
