@@ -102,18 +102,18 @@
                             "
                             class="contents"
                         >
-                            <div class="margin-bottom-6px"><div class="_20px-title-secondary">Giới thiệu Công ty TNHH MATCHUPFAST</div></div>
-                            <h2 class="heading">Giới thiệu chung</h2>
+                            <div class="margin-bottom-6px"><div class="_20px-title-secondary">About MATCHUPFAST Co., Ltd.</div></div>
+                            <h2 class="heading">General Introduction</h2>
                             <div class="margin-top-40px-bottom-50px">
                                 <p>
-                                    MATCHUPFAST là nơi kết nối những tài năng xuất sắc với những cơ hội nghề nghiệp đầy hứa hẹn! Tại MATCHUPFAST,
-                                    chúng tôi mang đến giải pháp tuyển dụng tối ưu cho khách hàng.<br /><br />
-                                    Với đội ngũ chuyên gia giàu kinh nghiệm trong lĩnh vực nhân sự, MATCHUPFAST không ngừng nỗ lực để nắm bắt và phân
-                                    tích thị trường lao động, từ đó trở thành đối tác trong hành trình tìm kiếm nhân tài.<br /><br />
-                                    Chúng tôi sở hữu một mạng lưới ứng viên đa dạng trên nhiều lĩnh vực, tự tin mang đến dịch vụ tư vấn chuyên nghiệp.
-                                    Phương châm "Chất lượng là ưu tiên hàng đầu", chúng tôi cam kết mang lại sự hài lòng tối đa cho cả ứng viên và nhà
-                                    tuyển dụng với quy trình tuyển dụng chặt chẽ và bài bản, từ việc xem xét kỹ lưỡng hồ sơ ứng viên, cho đến kiểm tra
-                                    trình độ chuyên môn.
+                                    MATCHUPFAST is a place where outstanding talent with promising career opportunities! At MATCHUPFAST, we bring the
+                                    optimal recruitment solution to our customers.<br /><br />
+                                    With a team of experienced experts in the field of human resources, MATCHUPFAST is constantly striving to capture
+                                    and analyze the labor market, thereby becoming a partner in the journey of finding talent.<br /><br />
+                                    We own a diverse network of candidates in many fields, confident to provide professional consulting services. With
+                                    the motto "Quality is the top priority", we are committed to bringing maximum satisfaction to both candidates and
+                                    employers with a rigorous and methodical recruitment process, from thorough review of candidate profiles, to
+                                    professional qualification checks.
                                 </p>
                             </div>
                             <!-- <h2 class="heading">II. Sứ mệnh và tầm nhìn</h2>
@@ -144,12 +144,12 @@
                                     tin cậy trên mọi hành trình.
                                 </p>
                             </div> -->
-                            <h2 class="heading">Liên hệ</h2>
+                            <h2 class="heading">Contact</h2>
                             <div class="margin-top-40px-bottom-50px">
                                 <p>
                                     <b>MATCHUPFAST COMPANY LIMITED</b><br />
-                                    Địa chỉ: 68 Nguyễn Huệ, Phường Bến Nghé, Quận 1, Thành phố Hồ Chí Minh, Việt Nam<br />
-                                    Số điện thoại: 0703066003<br />
+                                    Address: 68 Nguyen Hue, Ben Nghe Ward, District 1, Ho Chi Minh City, Vietnam<br />
+                                    Phone: 0703066003<br />
                                     Email: matchupfast@matchupf.com<br />
                                     Website: <a href="https://www.matchupf.com/" target="_blank">https://www.matchupf.com/</a>
                                 </p>
@@ -164,7 +164,7 @@
                                             transform-style: preserve-3d;
                                         "
                                     >
-                                        Liên hệ ngay
+                                        Contact now
                                     </div>
                                     <div
                                         class="hover-text"
@@ -174,7 +174,7 @@
                                             transform-style: preserve-3d;
                                         "
                                     >
-                                        Liên hệ ngay
+                                        Contact now
                                     </div>
                                 </div>
                                 <div class="icon-18px">chevron_right</div></a
@@ -195,18 +195,18 @@
                             "
                             class="contents-40"
                         >
-                            <div class="margin-bottom-6px"><div class="_20px-title-secondary">Sứ mệnh và tầm nhìn</div></div>
+                            <div class="margin-bottom-6px"><div class="_20px-title-secondary">Mission and Vision</div></div>
                             <!-- <h2 class="heading">Our vision is simple yet profound</h2> -->
                             <div class="margin-top-40px">
                                 <p>
-                                    <b>1. Sứ mệnh</b><br />
-                                    Sứ mệnh của chúng tôi là kết nối đúng người tuyển dụng đúng lúc.<br />
-                                    Mang đến giải pháp tuyển dụng phù hợp với từng doanh nghiệp và đồng hành cùng doanh nghiệp trong quá trình phát
-                                    triển đội ngũ nhân sự lâu dài.<br /><br />
-                                    <b>2. Tầm nhìn</b><br />
-                                    Chúng tôi hướng tới việc trở thành công ty tuyển dụng hàng đầu tại Việt Nam, nổi bật với sự đổi mới và chất lượng
-                                    dịch vụ. Chúng tôi mong muốn kết nối những ứng viên xuất sắc với các doanh nghiệp, góp phần phát triển nguồn nhân
-                                    lực chất lượng.
+                                    <b>1. Mission</b><br />
+                                    Our mission is to connect the right recruiters at the right time.<br />
+                                    Bringing recruitment solutions that are suitable for each business and accompanying businesses in the process of
+                                    developing a long-term human resource team.<br /><br />
+                                    <b>2. Vision</b><br />
+                                    We aim to become the leading recruitment company in Vietnam, outstanding for innovation and quality of service. We
+                                    look forward to connecting excellent candidates with businesses, contributing to the development of quality human
+                                    resources.
                                 </p>
                             </div>
 
@@ -307,20 +307,19 @@
                             "
                             class="contents-40"
                         >
-                            <div class="margin-bottom-6px"><div class="_20px-title-secondary">Giá trị cốt lõi</div></div>
+                            <div class="margin-bottom-6px"><div class="_20px-title-secondary">Core Values</div></div>
                             <!-- <h2 class="heading">Our vision is simple yet profound</h2> -->
                             <div class="margin-top-40px">
                                 <p>
-                                    <b>1. Trách nhiệm</b><br />
-                                    Chúng tôi xây dựng niềm tin dựa trên những cam kết rõ ràng minh bạch, thể hiện trách nhiệm qua mỗi hành động đảm
-                                    bảo mang lại giá trị bền vững cho khách hàng.<br /><br />
-                                    <b>2. Sáng tạo</b><br />
-                                    Quá trình phát triển phải không ngừng sáng tạo để tạo ra giá trị mới. Chúng tôi không chỉ tìm người phù hợp mà còn
-                                    tìm những người có tư duy mở sẳn sàng học hỏi góp phần xây dựng đội ngũ tiềm năng.<br /><br />
-                                    <b>3. Kết nối</b><br />
-                                    Sự lắng nghe thấu hiểu khách hàng trở thành cầu nối đáng tin cậy đối với công ty. Chúng tôi luôn không chỉ đáp ứng
-                                    mà còn vượt lên trên những kỳ vọng, mang đến những giải pháp tối ưu và dịch vụ tận tâm để trở thành đối tác đáng
-                                    tin cậy trên mọi hành trình.
+                                    <b>1. Responsibility</b><br />
+                                    We build trust based on clear and transparent commitments, demonstrating responsibility through each action to
+                                    ensure sustainable value for customers.<br /><br />
+                                    <b>2. Creative</b><br />
+                                    The development process must be constantly creative to create new value. We are not only looking for the right
+                                    people, but also people who are open-minded, willing to learn, and contribute to building a potential team.<br /><br />
+                                    <b>3. Connect</b><br />
+                                    Listening to customers becomes a reliable bridge for the company. We always not only meet but also exceed
+                                    expectations, bringing optimal solutions and dedicated services to become a reliable partner on every journey.
                                 </p>
                             </div>
                         </div>
