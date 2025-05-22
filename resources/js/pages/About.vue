@@ -102,7 +102,7 @@
                             "
                             class="contents"
                         >
-                            <div class="margin-bottom-6px"><div class="_20px-title-secondary">About MATCHUPFAST Co., Ltd.</div></div>
+                            <div class="margin-bottom-6px"><div class="_20px-title-secondary">About MATCHUPFAST COMPANY LIMITED.</div></div>
                             <h2 class="heading">General Introduction</h2>
                             <div class="margin-top-40px-bottom-50px">
                                 <p>
@@ -151,7 +151,7 @@
                                     Address: 68 Nguyen Hue, Ben Nghe Ward, District 1, Ho Chi Minh City, Vietnam<br />
                                     Phone: 0703066003<br />
                                     Email: matchupfast@matchupf.com<br />
-                                    Website: <a href="https://www.matchupf.com/" target="_blank">https://www.matchupf.com/</a>
+                                    Website: <a href="https://www.matchupf.com" target="_blank">https://www.matchupf.com</a>
                                 </p>
                             </div>
                             <a data-w-id="6bcc436e-f391-e4e1-1e4d-674835ea7bde" href="/contact" class="primary-button w-inline-block"

@@ -54,7 +54,7 @@
                                 <img src="/images/logo.png" loading="lazy" width="70" alt="" class="site-logo " />
                             </div>
                             <div class="footer-info-block">
-                                <p class="footer-paragraph">68 Nguyễn Huệ, phường Bến Nghé, Quận 1, thành phố Hồ Chí Minh, Việt Nam.</p>
+                                <p class="footer-paragraph">68 Nguyen Hue, Ben Nghe Ward, District 1, Ho Chi Minh City, Vietnam.</p>
                             </div>
                             <div class="w-layout-vflex _11px-gap">
                                 <div class="w-layout-hflex left-center-12px-gap">
@@ -137,7 +137,7 @@
             <div class="footer-bottom">
                 <div class="container">
                     <div class="footer-copyright">
-                        <div class="footer-copyright-text">Copyright © 2025 TNHH MATCHUPFAST</div>
+                        <div class="footer-copyright-text">Copyright © 2025 MATCHUPFAST COMPANY LIMITED</div>
                         <!-- <div class="copyrights-divider white">|</div>
                         <a href="https://webflow.com/templates/designers/themencode" target="_blank" class="footer-copyright-text with-hover"
                             >Designed by ThemeNcode LLC</a
