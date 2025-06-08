@@ -1,14 +1,14 @@
 <template>
     <AppLayout>
-        <Head title="Blogs" />
+        <Head title="News & Events" />
         <section id="hero" class="main-banner">
             <div class="container">
                 <div class="breadcrumb-block" data-aos="fade-up">
-                    <h1 class="_30px-title-white">Blog</h1>
+                    <h1 class="_30px-title-white">News & Events</h1>
                     <div class="text-merge">
                         <a href="/" class="breadcrumb">Home</a>
                         <div class="breadcrumb">/</div>
-                        <div class="breadcrumb">Blog</div>
+                        <div class="breadcrumb">News & Events</div>
                     </div>
                 </div>
             </div>
