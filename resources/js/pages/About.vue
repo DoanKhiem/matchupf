@@ -1,6 +1,6 @@
 <template>
     <AppLayout>
-        <Head title="Blogs" />
+        <Head title="About" />
         <section id="hero" class="main-banner">
             <div class="container">
                 <div class="breadcrumb-block">

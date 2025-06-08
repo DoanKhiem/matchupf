@@ -36,6 +36,11 @@ Route::get('/job/{id}', [HomeController::class, 'jobDetail'])->name('job.detail'
 //     return Inertia::render('PostAJob');
 // })->name('post.job');
 
+// Contact routes
+Route::get('/contact', function () {
+    return Inertia::render('Contact');
+})->name('contact');
+
 // Auth routes
 Route::get('/login', function () {
     return Inertia::render('Login');

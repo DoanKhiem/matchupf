@@ -43,7 +43,7 @@
                                     <div
                                         class="nav-link w-dropdown-toggle"
                                         :class="{
-                                            'w--current': ['/about', '/pricing', '/faq', '/contact', '/post-a-job-restricted'].includes($page.url),
+                                            'w--current': ['/about', '/pricing', '/faq', '/post-a-job-restricted'].includes($page.url),
                                         }"
                                         id="w-dropdown-toggle-1"
                                         aria-controls="w-dropdown-list-1"
@@ -120,7 +120,12 @@
                             </li>
                             <li class="nav-list">
                                 <div class="nav-icon-and-text-wrapper">
-                                    <Link :href="route('blogs')" class="nav-link" :class="{ 'w--current': $page.url.startsWith('/blogs') }">Blogs</Link>
+                                    <Link :href="route('blogs')" class="nav-link" :class="{ 'w--current': $page.url.startsWith('/blogs') }">News & Events</Link>
+                                </div>
+                            </li>
+                            <li class="nav-list">
+                                <div class="nav-icon-and-text-wrapper">
+                                    <Link :href="route('contact')" class="nav-link" :class="{ 'w--current': $page.url.startsWith('/contact') }">Contact Us</Link>
                                 </div>
                             </li>
                             <!-- <li class="list-for-button-icon"><a data-w-id="d8d360e1-f645-321f-d65f-94a46da5403d"
@@ -211,7 +216,7 @@
                             <div
                                 class="nav-link w-dropdown-toggle"
                                 :class="{
-                                    'w--current': ['/about', '/pricing', '/faq', '/contact', '/post-a-job-restricted'].includes($page.url),
+                                    'w--current': ['/about', '/pricing', '/faq', '/post-a-job-restricted'].includes($page.url),
                                 }"
                                 id="w-dropdown-toggle-1-mobile"
                                 aria-controls="w-dropdown-list-1-mobile"
@@ -276,7 +281,12 @@
                     </li>
                     <li class="nav-list">
                         <div class="nav-icon-and-text-wrapper">
-                            <Link :href="route('blogs')" class="nav-link" :class="{ 'w--current': $page.url === '/blogs' }">Blog</Link>
+                            <Link :href="route('blogs')" class="nav-link" :class="{ 'w--current': $page.url === '/blogs' }">News & Events</Link>
+                        </div>
+                    </li>
+                    <li class="nav-list">
+                        <div class="nav-icon-and-text-wrapper">
+                            <Link :href="route('contact')" class="nav-link" :class="{ 'w--current': $page.url === '/contact' }">Contact Us</Link>
                         </div>
                     </li>
                     <!-- <li class="nav-list">
@@ -309,13 +319,13 @@ const isMenuOpen = ref<boolean>(false);
 
 <style scoped>
 .nav-link.w--current {
-    color: #36c2ce;
-    font-weight: bold;
+    /* color: #36c2ce; */
+    font-weight: 500;
 }
 
 .submenu-link.w--current {
-    color: #36c2ce;
-    font-weight: bold;
+    /* color: #36c2ce; */
+    font-weight: 500;
 }
 </style>
 

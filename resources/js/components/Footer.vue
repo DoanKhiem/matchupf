@@ -22,7 +22,7 @@
                                 a journey of growth and success.
                             </p>
                         </div>
-                        <a href="/contact" class="secondary-button w-inline-block">
+                        <a href="/contact" class="primary-button w-inline-block">
                             <div class="button-text-wrapper">
                                 <div class="default-text">Join us</div>
                                 <div class="hover-text">Join us</div>

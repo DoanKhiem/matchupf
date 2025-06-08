@@ -3316,12 +3316,12 @@ label {
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     border-radius: 6px;
-    background-color: #000d83;
+    background-color: #000000;
     color: #fff;
     justify-content: center;
     align-items: center;
     padding: 14px 24px;
-    font-weight: 400;
+    font-weight: 500;
     transition:
         color 1s ease-out,
         background-color 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -3331,7 +3331,7 @@ label {
 
 .nav-button:hover,
 .nav-button.reverse {
-    background-color: #36c2ce;
+    background-color: #5e5e5e;
 }
 
 .nav-button.reverse:hover {
@@ -4036,7 +4036,7 @@ label {
 
 .nav-link:hover,
 .nav-link:focus {
-    color: #36c2ce;
+    /* color: #36c2ce; */
 }
 
 .nav-link:focus-visible {
@@ -4050,7 +4050,7 @@ label {
 }
 
 .nav-link.w--current {
-    color: #36c2ce;
+    /* color: #36c2ce; */
 }
 
 .submenu-link {
@@ -4162,7 +4162,7 @@ label {
 
 .site-logo {
     object-fit: contain;
-    max-width: 95px;
+    max-width: 150px;
 }
 
 .menu-button {
@@ -4270,14 +4270,14 @@ label {
 }
 
 .footer-link {
-    color: #b1b2b8;
+    color: #525255;
     font-family: Montserrat, sans-serif;
     font-weight: 600;
     transition: color 0.2s;
 }
 
 .footer-link:hover {
-    color: #fff;
+    color: #1f1e1e;
 }
 
 .newsletter-form {
@@ -4403,7 +4403,7 @@ label {
 
 .footer-paragraph {
     font-family: 'Space Grotesk', sans-serif;
-    color: #e6e7f3;
+    color: #2e2e30;
     font-size: 20px;
     line-height: 30px;
 }
@@ -4417,7 +4417,7 @@ label {
 }
 
 .footer {
-    background-color: #04081b;
+    /* background-color: #04081b; */
 }
 
 .footer.with-margin {
@@ -4477,7 +4477,7 @@ label {
 
 ._20px-title-neutral-100 {
     font-family: 'Space Grotesk', sans-serif;
-    color: #b1b2b8;
+    color: #616164;
     font-size: 20px;
     font-weight: 500;
     line-height: 30px;
@@ -4490,7 +4490,7 @@ label {
 
 .footer-title-24px-white {
     font-family: 'Space Grotesk', sans-serif;
-    color: #fff;
+    /* color: #fff; */
     font-size: 24px;
     font-weight: 700;
     line-height: 36px;
@@ -4498,7 +4498,7 @@ label {
 
 ._20px-title-white {
     font-family: 'Space Grotesk', sans-serif;
-    color: #fff;
+    /* color: #fff; */
     font-size: 20px;
     font-weight: 500;
     line-height: 30px;
@@ -4543,7 +4543,7 @@ label {
 }
 
 .hero-section {
-    background-color: #000d83;
+    /* background-color: #000d83; */
     padding-top: 24px;
     padding-bottom: 120px;
     overflow: hidden;
@@ -4611,7 +4611,7 @@ label {
 }
 
 .find-job-form-wrapper {
-    background-color: #fff;
+    background-color: #d7d7d7;
     box-shadow: 0 10px 20px 0 #ffffff0d;
     border-radius: 10px;
     width: 100%;
@@ -4674,7 +4674,7 @@ label {
     padding: 13px 45px 13px 18px;
     display: flex;
     position: absolute;
-    inset: 20% auto auto -60px;
+    inset: 5% auto auto -100px;
     box-shadow: -9px 10px 50px #9087ff33;
 }
 
@@ -4690,9 +4690,9 @@ label {
 
 .floating-card.top-right {
     padding-right: 25px;
-    top: 36%;
+    top: 15%;
     left: auto;
-    right: -47px;
+    right: -60px;
 }
 
 .floating-card.top-left {
@@ -4883,6 +4883,7 @@ label {
     grid-row-gap: 20px;
     background-color: #fff;
     border-radius: 10px;
+    border: 1px solid #e6e7f3;
     flex-flow: wrap;
     justify-content: space-between;
     align-items: center;
@@ -5077,7 +5078,7 @@ label {
     padding: 32px 42px 40px;
     display: flex;
     position: absolute;
-    inset: 28% auto auto -52px;
+    inset: 60% auto auto -52px;
     box-shadow: 0 10px 20px #9087ff33;
 }
 
@@ -5303,7 +5304,7 @@ label {
 }
 
 .cta-banner {
-    background-color: #000d83;
+    background-color: #f13400;
     background-image: url('/images/Bg_Vector_4.png');
     background-position: 50%;
     background-repeat: no-repeat;
@@ -5813,7 +5814,7 @@ label {
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     border-radius: 6px;
-    background-color: #000d83;
+    background-color: #000;
     color: #fff;
     justify-content: center;
     align-items: center;
@@ -5827,7 +5828,7 @@ label {
 }
 
 .primary-button:hover {
-    background-color: #36c2ce;
+    background-color: #5e5e5e;
 }
 
 .primary-button.full-button {
@@ -8173,7 +8174,7 @@ label {
     }
 
     .site-logo {
-        max-width: 65px;
+        max-width: 95px;
     }
 
     .menu-button.white {

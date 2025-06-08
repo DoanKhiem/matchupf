@@ -25,7 +25,7 @@ onMounted(() => {
                         <div class="margin-bottom-10px">
                             <div class="_20px-title-secondary">Your Path to Success Starts Here</div>
                         </div>
-                        <h1 class="heading white">Discover Exciting Job Openings with Us</h1>
+                        <h1 class="heading black">Discover Exciting Job Openings with Us</h1>
                         <div class="find-job-form-wrapper">
                             <div class="job-form-block">
                                 <form action="/search" class="job-form-wrapper w-form">
@@ -55,7 +55,7 @@ onMounted(() => {
                                     transform-style: preserve-3d;
                                 "
                             >
-                                <div class="_16px-500 white">Popular:</div>
+                                <div class="_16px-500 black">Popular:</div>
                                 <p class="neutral-100">Digital Marketer, Web Designer</p>
                             </div>
                         </div>
@@ -96,7 +96,7 @@ onMounted(() => {
                     </div>
                     <div data-aos="fade-left" data-aos-delay="200" class="image-wrapper-40">
                         <img
-                            src="/images/MqN1.png"
+                            src="/images/banner.jpg"
                             loading="lazy"
                             sizes="(max-width: 479px) 93vw, (max-width: 991px) 95vw, 39vw"
                             alt=""
@@ -105,37 +105,16 @@ onMounted(() => {
                         <div
                             data-w-id="f9e01134-9500-fcd2-017e-10e2a476cf65"
                             class="w-layout-hflex floating-card top-left"
-                            style="
-                                opacity: 1;
-                                transform: translate3d(0px, 0.15465px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg)
-                                    skew(0deg, 0deg);
-                                transform-style: preserve-3d;
-                                will-change: transform;
-                            "
                         >
-                            <img src="/images/Group129.png" loading="lazy" alt="" class="image-height-85px" />
+                            <img src="/images/icon.png" loading="lazy" alt="" class="image-50px" />
                             <div class="w-layout-vflex">
-                                <h5 class="heading">500 +</h5>
-                                <p class="_14px-500">5 Star Reviews</p>
-                                <div class="rating-wrapper-with-margin-both-sides">
-                                    <div class="rating-icon"></div>
-                                    <div class="rating-icon"></div>
-                                    <div class="rating-icon"></div>
-                                    <div class="rating-icon"></div>
-                                    <div class="rating-icon"></div>
-                                </div>
+                                <h5 class="heading">30 +</h5>
+                                <p class="_14px-500">Daily Job Post</p>
                             </div>
                         </div>
                         <div
                             data-w-id="7603802c-4780-245c-99c4-f7fdc89ff8c8"
                             class="w-layout-hflex floating-card bottom-right"
-                            style="
-                                opacity: 1;
-                                transform: translate3d(0px, 0.15465px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg)
-                                    skew(0deg, 0deg);
-                                transform-style: preserve-3d;
-                                will-change: transform;
-                            "
                         >
                             <img src="/images/icon(1).png" loading="lazy" alt="" class="image-50px" />
                             <div class="w-layout-vflex">
@@ -146,13 +125,6 @@ onMounted(() => {
                         <div
                             data-w-id="234285d1-2181-ca9d-640b-821702c79ec7"
                             class="w-layout-hflex floating-card bottom-left"
-                            style="
-                                opacity: 1;
-                                transform: translate3d(0px, -5.35065px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg)
-                                    skew(0deg, 0deg);
-                                transform-style: preserve-3d;
-                                will-change: transform;
-                            "
                         >
                             <img src="/images/icon(2).png" loading="lazy" alt="" class="image-50px" />
                             <div class="w-layout-vflex">
@@ -163,18 +135,18 @@ onMounted(() => {
                         <div
                             data-w-id="789e92cf-4119-e257-814f-0b3eaa68cf9a"
                             class="w-layout-hflex floating-card top-right"
-                            style="
-                                opacity: 1;
-                                transform: translate3d(0px, -5.35065px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg)
-                                    skew(0deg, 0deg);
-                                transform-style: preserve-3d;
-                                will-change: transform;
-                            "
                         >
-                            <img src="/images/icon.png" loading="lazy" alt="" class="image-50px" />
+                        <img src="/images/Group129.png" loading="lazy" alt="" class="image-height-85px" />
                             <div class="w-layout-vflex">
-                                <h5 class="heading">30 +</h5>
-                                <p class="_14px-500">Daily Job Post</p>
+                                <h5 class="heading">500 +</h5>
+                                <p class="_14px-500">5 Star Reviews</p>
+                                <div class="rating-wrapper-with-margin-both-sides">
+                                    <div class="rating-icon"></div>
+                                    <div class="rating-icon"></div>
+                                    <div class="rating-icon"></div>
+                                    <div class="rating-icon"></div>
+                                    <div class="rating-icon"></div>
+                                </div>
                             </div>
                         </div>
                         <div
@@ -955,7 +927,7 @@ onMounted(() => {
                 </div>
             </section>
 
-            <section class="primary-bg-section">
+            <!-- <section class="primary-bg-section">
                 <div class="container">
                     <div data-aos="fade-up" class="title-wrapper">
                         <div class="mask">
@@ -1038,7 +1010,7 @@ onMounted(() => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
             <section class="section">
                 <div class="container">
@@ -1054,7 +1026,7 @@ onMounted(() => {
                                 "
                             >
                                 <img
-                                    src="/images/Hwp1.png"
+                                    src="/images/banner-2.png"
                                     loading="lazy"
                                     sizes="(max-width: 479px) 93vw, (max-width: 991px) 95vw, 43vw"
                                     alt=""
@@ -1088,12 +1060,7 @@ onMounted(() => {
                             </div>
                             <div
                                 class="floating-card-vertical"
-                                style="
-                                    transform: translate3d(0px, 7.8048px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg)
-                                        skew(0deg, 0deg);
-                                    transform-style: preserve-3d;
-                                    will-change: transform;
-                                "
+                                
                             >
                                 <img src="/images/process1.svg" loading="lazy" alt="" class="image-50px" />
                                 <h6 class="heading">Cutting-Edge Job <br />Matching Technology</h6>
@@ -1123,7 +1090,7 @@ onMounted(() => {
                 </div>
             </section>
 
-            <section class="section">
+            <!-- <section class="section">
                 <div class="container">
                     <div data-aos="fade-up" class="title-wrapper _10px">
                         <div class="_24px-title-secondary">Success Stories</div>
@@ -1136,7 +1103,7 @@ onMounted(() => {
                                 aria-label="1 of 6"
                                 role="group"
                                 aria-hidden="true"
-                                style="transition: all; transform: translateX(-450.094px); opacity: 1"
+                                style="transition: all; opacity: 1"
                             >
                                 <div class="testiimonial-wrapper" aria-hidden="true">
                                     <div class="testimonial-card-med" aria-hidden="true">
@@ -1177,7 +1144,7 @@ onMounted(() => {
                                 class="margin-right-30px w-slide"
                                 aria-label="2 of 6"
                                 role="group"
-                                style="transition: all; transform: translateX(-450.094px); opacity: 1"
+                                style="transition: all; opacity: 1"
                             >
                                 <div class="testiimonial-wrapper">
                                     <div class="testimonial-card-med" style="background-color: rgb(255, 255, 255)">
@@ -1211,7 +1178,7 @@ onMounted(() => {
                                 aria-label="3 of 6"
                                 role="group"
                                 aria-hidden="true"
-                                style="transition: all; transform: translateX(-450.094px); opacity: 1"
+                                style="transition: all; opacity: 1"
                             >
                                 <div class="testiimonial-wrapper" aria-hidden="true">
                                     <div class="testimonial-card-med" aria-hidden="true" style="background-color: rgb(255, 255, 255)">
@@ -1247,217 +1214,19 @@ onMounted(() => {
                                     </div>
                                 </div>
                             </div>
-                            <div
-                                class="margin-right-30px w-slide"
-                                aria-label="4 of 6"
-                                role="group"
-                                aria-hidden="true"
-                                style="transition: all; transform: translateX(-450.094px); opacity: 1"
-                            >
-                                <div class="testiimonial-wrapper" aria-hidden="true">
-                                    <div class="testimonial-card-med" aria-hidden="true" style="background-color: rgb(255, 255, 255)">
-                                        <div class="_20px-500" aria-hidden="true" style="color: rgb(4, 8, 27)">Excellent User Support</div>
-                                        <p class="_16px-500" aria-hidden="true" style="color: rgb(87, 90, 102)">
-                                            The platform's robust search filters and real-time updates make job hunting seamless, ensuring users find
-                                            relevant opportunities quickly and efficiently.
-                                        </p>
-                                        <div class="star-wrapper-margin-top-18px" aria-hidden="true">
-                                            <div class="star-icofont" aria-hidden="true"></div>
-                                            <div class="star-icofont" aria-hidden="true"></div>
-                                            <div class="star-icofont" aria-hidden="true"></div>
-                                            <div class="star-icofont" aria-hidden="true"></div>
-                                            <div class="star-icofont" aria-hidden="true"></div>
-                                        </div>
-                                        <div class="polygon-arrow" aria-hidden="true" style="background-color: rgb(255, 255, 255)"></div>
-                                    </div>
-                                    <div class="testimonial-author-block" aria-hidden="true">
-                                        <img
-                                            width="70"
-                                            sizes="40px"
-                                            alt=""
-                                            src="/images/Ellipse21.webp"
-                                            loading="lazy"
-                                            class="testimonial-author"
-                                            aria-hidden="true"
-                                        />
-                                        <div aria-hidden="true">
-                                            <div class="_16px-500 _0-8-opacity" aria-hidden="true">Cameron Williamson</div>
-                                            <div class="margin-top-2px" aria-hidden="true">
-                                                <div class="_14px-text" aria-hidden="true">UI Designer</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                class="margin-right-30px w-slide"
-                                aria-label="5 of 6"
-                                role="group"
-                                aria-hidden="true"
-                                style="transition: all; transform: translateX(-450.094px); opacity: 1"
-                            >
-                                <div class="testiimonial-wrapper" aria-hidden="true">
-                                    <div class="testimonial-card-med" aria-hidden="true">
-                                        <div class="_20px-500" aria-hidden="true">User-Friendly Job Finder</div>
-                                        <p class="_16px-500" aria-hidden="true">
-                                            Job TNC's customer service is top-notch. The responsive support team assists users promptly queries and
-                                            providing guidance throughout search process.
-                                        </p>
-                                        <div class="star-wrapper-margin-top-18px" aria-hidden="true">
-                                            <div class="star-icofont" aria-hidden="true"></div>
-                                            <div class="star-icofont" aria-hidden="true"></div>
-                                            <div class="star-icofont" aria-hidden="true"></div>
-                                            <div class="star-icofont" aria-hidden="true"></div>
-                                            <div class="star-icofont" aria-hidden="true"></div>
-                                        </div>
-                                        <div class="polygon-arrow" aria-hidden="true"></div>
-                                    </div>
-                                    <div class="testimonial-author-block" aria-hidden="true">
-                                        <img
-                                            width="70"
-                                            loading="lazy"
-                                            alt=""
-                                            src="/images/Ellipse21.png"
-                                            class="testimonial-author"
-                                            aria-hidden="true"
-                                        />
-                                        <div aria-hidden="true">
-                                            <div class="_16px-500 _0-8-opacity" aria-hidden="true">Jenny Wilson</div>
-                                            <div class="margin-top-2px" aria-hidden="true">
-                                                <div class="_14px-text" aria-hidden="true">UI Designer</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                class="margin-right-30px w-slide"
-                                aria-label="6 of 6"
-                                role="group"
-                                aria-hidden="true"
-                                style="transition: all; transform: translateX(-450.094px); opacity: 1"
-                            >
-                                <div class="testiimonial-wrapper" aria-hidden="true">
-                                    <div class="testimonial-card-med" aria-hidden="true">
-                                        <div class="_20px-500" aria-hidden="true">Exceptional Job Matching Service</div>
-                                        <p class="_16px-500" aria-hidden="true">
-                                            Job TNC excels at matching users with suitable positions. The platform's algorithm considers user
-                                            qualifications, delivering highly relevant job suggestions.
-                                        </p>
-                                        <div class="star-wrapper-margin-top-18px" aria-hidden="true">
-                                            <div class="star-icofont" aria-hidden="true"></div>
-                                            <div class="star-icofont" aria-hidden="true"></div>
-                                            <div class="star-icofont" aria-hidden="true"></div>
-                                            <div class="star-icofont" aria-hidden="true"></div>
-                                            <div class="star-icofont" aria-hidden="true"></div>
-                                            <div class="polygon-arrow" aria-hidden="true"></div>
-                                        </div>
-                                    </div>
-                                    <div class="testimonial-author-block" aria-hidden="true">
-                                        <img
-                                            width="70"
-                                            loading="lazy"
-                                            alt=""
-                                            src="/images/Ellipse21(1).png"
-                                            class="testimonial-author"
-                                            aria-hidden="true"
-                                        />
-                                        <div aria-hidden="true">
-                                            <div class="_16px-500 _0-8-opacity" aria-hidden="true">Ronald Richards</div>
-                                            <div class="margin-top-2px" aria-hidden="true">
-                                                <div class="_14px-text" aria-hidden="true">UI Designer</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div aria-live="off" aria-atomic="true" class="w-slider-aria-label" data-wf-ignore="">Slide 2 of 6.</div>
-                        </div>
-                        <div
-                            class="w-slider-arrow-left hidden"
-                            role="button"
-                            tabindex="0"
-                            aria-controls="w-slider-mask-1"
-                            aria-label="previous slide"
-                        >
-                            <div class="w-icon-slider-left"></div>
-                        </div>
-                        <div class="w-slider-arrow-right hidden" role="button" tabindex="0" aria-controls="w-slider-mask-1" aria-label="next slide">
-                            <div class="w-icon-slider-right"></div>
-                        </div>
-                        <div class="testimonial-navigation w-slider-nav w-round">
-                            <div
-                                class="w-slider-dot"
-                                data-wf-ignore=""
-                                aria-label="Show slide 1 of 6"
-                                aria-pressed="false"
-                                role="button"
-                                tabindex="-1"
-                                style="margin-left: 3px; margin-right: 3px"
-                            ></div>
-                            <div
-                                class="w-slider-dot w-active"
-                                data-wf-ignore=""
-                                aria-label="Show slide 2 of 6"
-                                aria-pressed="true"
-                                role="button"
-                                tabindex="0"
-                                style="margin-left: 3px; margin-right: 3px"
-                            ></div>
-                            <div
-                                class="w-slider-dot"
-                                data-wf-ignore=""
-                                aria-label="Show slide 3 of 6"
-                                aria-pressed="false"
-                                role="button"
-                                tabindex="-1"
-                                style="margin-left: 3px; margin-right: 3px"
-                            ></div>
-                            <div
-                                class="w-slider-dot"
-                                data-wf-ignore=""
-                                aria-label="Show slide 4 of 6"
-                                aria-pressed="false"
-                                role="button"
-                                tabindex="-1"
-                                style="margin-left: 3px; margin-right: 3px"
-                            ></div>
-                            <div
-                                class="w-slider-dot"
-                                data-wf-ignore=""
-                                aria-label="Show slide 5 of 6"
-                                aria-pressed="false"
-                                role="button"
-                                tabindex="-1"
-                                style="margin-left: 3px; margin-right: 3px"
-                            ></div>
-                            <div
-                                class="w-slider-dot"
-                                data-wf-ignore=""
-                                aria-label="Show slide 6 of 6"
-                                aria-pressed="false"
-                                role="button"
-                                tabindex="-1"
-                                style="margin-left: 3px; margin-right: 3px"
-                            ></div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
             <section class="primary-bg-section">
                 <div class="container">
                     <div data-aos="fade-up" class="title-wrapper">
                         <div class="mask">
                             <h2
-                                style="
-                                    opacity: 1;
-                                    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                                    transform-style: preserve-3d;
-                                "
                                 class="white-heading"
                             >
-                                Discover Exceptional Talent
+                            Giá trị cốt lõi
                             </h2>
                         </div>
                         <div class="mask">
@@ -1469,12 +1238,68 @@ onMounted(() => {
                                 "
                                 class="_16px-500-neutral-50"
                             >
-                                Discover Exceptional Talent: Identify, attract, and nurture top-tier professionals to drive innovation and success.
+                            Xây dựng thành công với những giá trị mang lại cho ứng viên
                             </p>
                         </div>
                     </div>
+                    
                     <div data-aos="fade-up" data-aos-delay="100" class="testimonial-slider-3-col">
-                        <div class="mask-23 w-slider-mask" id="w-slider-mask-2">
+                        <div class="mask-31 w-slider-mask" id="w-slider-mask-1">
+                            <div
+                                class="margin-right-30px w-slide"
+                                aria-label="1 of 6"
+                                role="group"
+                                aria-hidden="true"
+                                style="transition: all; opacity: 1"
+                            >
+                                <div class="testiimonial-wrapper" aria-hidden="true">
+                                    <div class="testimonial-card-med" aria-hidden="true" style="padding-top: 70px;">
+                                        <input type="submit" data-wait="Please wait..." class="newsletter-submit-button w-button icon-value" value="💌" />
+                                        <div class="_20px-500" aria-hidden="true">Tận tâm</div>
+                                        <p class="_16px-500" aria-hidden="true">
+                                            HR của Novel Vision hỗ trợ ứng viên 24/7, tư vấn, giải đáp mọi thắc mắc. Theo sát ứng viên từ phỏng vấn đến nhận việc.
+                                        </p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div
+                                class="margin-right-30px w-slide"
+                                aria-label="2 of 6"
+                                role="group"
+                                style="transition: all; opacity: 1"
+                            >
+                                <div class="testiimonial-wrapper">
+                                    <div class="testimonial-card-med" style="padding-top: 70px;">
+                                        <input type="submit" data-wait="Please wait..." class="newsletter-submit-button w-button icon-value" value="📦" />
+                                        <div class="_20px-500" style="color: rgb(4, 8, 27)">Phát triển</div>
+                                        <p class="_16px-500" style="color: rgb(87, 90, 102)">
+                                            Khách hàng của Novel Vision đều là các tập đoàn công nghệ lớn tại Châu Á. Mang đến mức lương & phúc lợi hấp dẫn.
+                                        </p>
+                                       
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div
+                                class="margin-right-30px w-slide"
+                                aria-label="3 of 6"
+                                role="group"
+                                aria-hidden="true"
+                                style="transition: all; opacity: 1"
+                            >
+                                <div class="testiimonial-wrapper" aria-hidden="true">
+                                    <div class="testimonial-card-med" style="padding-top: 70px;">
+                                        <input type="submit" data-wait="Please wait..." class="newsletter-submit-button w-button icon-value" value="⚠️" />
+                                        <div class="_20px-500" aria-hidden="true" style="color: rgb(4, 8, 27)">Chuyên nghiệp</div>
+                                        <p class="_16px-500" aria-hidden="true" style="color: rgb(87, 90, 102)">
+                                            Quy trình chuyên nghiệp, thời gian phỏng vấn & sàng lọc nhanh. Toàn bộ quá trình tuyển dụng chỉ mất 3-7 ngày.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="mask-23 w-slider-mask" id="w-slider-mask-2">
                             <div
                                 class="margin-right-30px w-slide"
                                 aria-label="1 of 8"
@@ -1565,188 +1390,7 @@ onMounted(() => {
                                     </div>
                                 </div>
                             </div>
-                            <div
-                                class="margin-right-30px w-slide"
-                                aria-label="5 of 8"
-                                role="group"
-                                aria-hidden="true"
-                                style="transition: all; transform: translateX(0px); opacity: 1"
-                            >
-                                <div class="team-card" aria-hidden="true">
-                                    <img
-                                        src="/images/Rectangle13.png"
-                                        loading="lazy"
-                                        sizes="(max-width: 479px) 100vw, (max-width: 991px) 45vw, 22vw"
-                                        alt=""
-                                        aria-hidden="true"
-                                    />
-                                    <div class="bottom-lineaer-overlay" aria-hidden="true">
-                                        <div aria-hidden="true">
-                                            <div class="_20px-title-white" aria-hidden="true">Annette Black</div>
-                                            <div class="_14px-primary-100" aria-hidden="true">UI Designer</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                class="margin-right-30px w-slide"
-                                aria-label="6 of 8"
-                                role="group"
-                                aria-hidden="true"
-                                style="transition: all; transform: translateX(0px); opacity: 1"
-                            >
-                                <div class="team-card" aria-hidden="true">
-                                    <img
-                                        src="/images/Rectangle14.png"
-                                        loading="lazy"
-                                        sizes="(max-width: 479px) 100vw, (max-width: 991px) 45vw, 22vw"
-                                        alt=""
-                                        aria-hidden="true"
-                                    />
-                                    <div class="bottom-lineaer-overlay" aria-hidden="true">
-                                        <div aria-hidden="true">
-                                            <div class="_20px-title-white" aria-hidden="true">Ana Mon</div>
-                                            <div class="_14px-primary-100" aria-hidden="true">UI Designer</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                class="margin-right-30px w-slide"
-                                aria-label="7 of 8"
-                                role="group"
-                                aria-hidden="true"
-                                style="transition: all; transform: translateX(0px); opacity: 1"
-                            >
-                                <div class="team-card" aria-hidden="true">
-                                    <img
-                                        src="/images/Rectangle12.png"
-                                        loading="lazy"
-                                        sizes="(max-width: 479px) 100vw, (max-width: 991px) 45vw, 22vw"
-                                        alt=""
-                                        aria-hidden="true"
-                                    />
-                                    <div class="bottom-lineaer-overlay" aria-hidden="true">
-                                        <div aria-hidden="true">
-                                            <div class="_20px-title-white" aria-hidden="true">Darrell Steward</div>
-                                            <div class="_14px-primary-100" aria-hidden="true">UI Designer</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                class="margin-right-30px w-slide"
-                                aria-label="8 of 8"
-                                role="group"
-                                aria-hidden="true"
-                                style="transition: all; transform: translateX(0px); opacity: 1"
-                            >
-                                <div class="team-card" aria-hidden="true">
-                                    <img
-                                        src="/images/Rectangle12.png"
-                                        loading="lazy"
-                                        sizes="(max-width: 479px) 100vw, (max-width: 991px) 45vw, 22vw"
-                                        alt=""
-                                        aria-hidden="true"
-                                    />
-                                    <div class="bottom-lineaer-overlay" aria-hidden="true">
-                                        <div aria-hidden="true">
-                                            <div class="_20px-title-white" aria-hidden="true">Kristin Watson</div>
-                                            <div class="_14px-primary-100" aria-hidden="true">UI Designer</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div aria-live="off" aria-atomic="true" class="w-slider-aria-label" data-wf-ignore=""></div>
-                        </div>
-                        <div
-                            class="w-slider-arrow-left hidden"
-                            role="button"
-                            tabindex="0"
-                            aria-controls="w-slider-mask-2"
-                            aria-label="previous slide"
-                        ></div>
-                        <div
-                            class="w-slider-arrow-right hidden"
-                            role="button"
-                            tabindex="0"
-                            aria-controls="w-slider-mask-2"
-                            aria-label="next slide"
-                        ></div>
-                        <div class="testimonial-navigation w-slider-nav w-round">
-                            <div
-                                class="w-slider-dot w-active"
-                                data-wf-ignore=""
-                                aria-label="Show slide 1 of 8"
-                                aria-pressed="true"
-                                role="button"
-                                tabindex="0"
-                                style="margin-left: 3px; margin-right: 3px"
-                            ></div>
-                            <div
-                                class="w-slider-dot"
-                                data-wf-ignore=""
-                                aria-label="Show slide 2 of 8"
-                                aria-pressed="false"
-                                role="button"
-                                tabindex="-1"
-                                style="margin-left: 3px; margin-right: 3px"
-                            ></div>
-                            <div
-                                class="w-slider-dot"
-                                data-wf-ignore=""
-                                aria-label="Show slide 3 of 8"
-                                aria-pressed="false"
-                                role="button"
-                                tabindex="-1"
-                                style="margin-left: 3px; margin-right: 3px"
-                            ></div>
-                            <div
-                                class="w-slider-dot"
-                                data-wf-ignore=""
-                                aria-label="Show slide 4 of 8"
-                                aria-pressed="false"
-                                role="button"
-                                tabindex="-1"
-                                style="margin-left: 3px; margin-right: 3px"
-                            ></div>
-                            <div
-                                class="w-slider-dot"
-                                data-wf-ignore=""
-                                aria-label="Show slide 5 of 8"
-                                aria-pressed="false"
-                                role="button"
-                                tabindex="-1"
-                                style="margin-left: 3px; margin-right: 3px"
-                            ></div>
-                            <div
-                                class="w-slider-dot"
-                                data-wf-ignore=""
-                                aria-label="Show slide 6 of 8"
-                                aria-pressed="false"
-                                role="button"
-                                tabindex="-1"
-                                style="margin-left: 3px; margin-right: 3px"
-                            ></div>
-                            <div
-                                class="w-slider-dot"
-                                data-wf-ignore=""
-                                aria-label="Show slide 7 of 8"
-                                aria-pressed="false"
-                                role="button"
-                                tabindex="-1"
-                                style="margin-left: 3px; margin-right: 3px"
-                            ></div>
-                            <div
-                                class="w-slider-dot"
-                                data-wf-ignore=""
-                                aria-label="Show slide 8 of 8"
-                                aria-pressed="false"
-                                role="button"
-                                tabindex="-1"
-                                style="margin-left: 3px; margin-right: 3px"
-                            ></div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </section>
@@ -1911,4 +1555,8 @@ onMounted(() => {
 
 <style scoped>
 @import '@css/main.css';
+.icon-value { 
+    inset: 14px auto 0 25px;
+}
+
 </style>
