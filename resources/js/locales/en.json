@@ -61,7 +61,7 @@
         "contact": {
             "address": "68 Nguyen Hue, Ben Nghe Ward, District 1, Ho Chi Minh City, Vietnam.",
             "phone": "Call: 0703066003",
-            "email": "matchupfast@matchupf.com"
+            "email": "{'matchupfast@matchupf.com'}"
         },
         "links": {
             "title": "Helpful Links",
@@ -71,7 +71,7 @@
         },
         "newsletter": {
             "title": "Stay Connected",
-            "placeholder": "example@gmail.com",
+            "placeholder": "{'example@gmail.com'}",
             "success": "You Are Subscribed!",
             "error": "Input Email Carefully!"
         },
@@ -173,7 +173,7 @@
             },
             "email": {
                 "title": "Email:",
-                "address": "matchupfast@matchupf.com"
+                "address": "{'matchupfast@matchupf.com'}"
             }
         },
         "form": {
@@ -252,7 +252,7 @@
             "company": "MATCHUPFAST COMPANY LIMITED",
             "address": "Address: 68 Nguyen Hue, Ben Nghe Ward, District 1, Ho Chi Minh City, Vietnam",
             "phone": "Phone: 0703066003",
-            "email": "Email: matchupfast@matchupf.com",
+            "email": "{'Email: matchupfast@matchupf.com'}",
             "website": "Website: https://www.matchupf.com",
             "button": "Contact now"
         },
