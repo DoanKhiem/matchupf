@@ -1,14 +1,14 @@
 <template>
     <AppLayout>
-        <Head title="News & Events" />
+        <Head :title="t('blogs.title')" />
         <section id="hero" class="main-banner">
             <div class="container">
                 <div class="breadcrumb-block" data-aos="fade-up">
-                    <h1 class="_30px-title-white">News & Events</h1>
+                    <h1 class="_30px-title-white">{{ t('blogs.title') }}</h1>
                     <div class="text-merge">
-                        <a href="/" class="breadcrumb">Home</a>
+                        <a href="/" class="breadcrumb">{{ t('blogs.breadcrumb.home') }}</a>
                         <div class="breadcrumb">/</div>
-                        <div class="breadcrumb">News & Events</div>
+                        <div class="breadcrumb">{{ t('blogs.breadcrumb.blogs') }}</div>
                     </div>
                 </div>
             </div>
@@ -47,7 +47,7 @@
                                             </div>
                                         </div>
                                         <router-link :to="{ name: 'blog-detail', params: { id: blog.slug } }" class="blog-button w-inline-block">
-                                            <div>Read more</div>
+                                            <div>{{ t('blogs.readMore') }}</div>
                                             <div class="_24px-icon" aria-hidden="true">navigate_next</div>
                                         </router-link>
                                     </div>
@@ -76,14 +76,14 @@
                                     class="blog-search-field w-input"
                                     maxlength="256"
                                     name="query"
-                                    placeholder="Search…"
+                                    :placeholder="t('blogs.search.placeholder')"
                                     type="search"
                                     id="search"
                                     required
-                                /><input type="submit" class="search-button w-button" value="" />
+                                /><input type="submit" class="search-button w-button" value="" />
                             </form>
                             <div class="widget">
-                                <div class="sidebar-title">Popular Post</div>
+                                <div class="sidebar-title">{{ t('blogs.sidebar.popularPost') }}</div>
                                 <div class="w-dyn-list">
                                     <div role="list" class="featured-properties-wrapper w-dyn-items">
                                         <div role="listitem" class="w-dyn-item" v-for="blog in popularBlogs" :key="blog.id">
@@ -211,7 +211,7 @@
                                                     }"
                                                     class="blog-button w-inline-block"
                                                 >
-                                                    <div>Read more</div>
+                                                    <div>{{ t('blogs.readMore') }}</div>
                                                     <div class="icon">east</div>
                                                 </router-link>
                                             </div>
@@ -241,6 +241,9 @@ import 'swiper/css/scrollbar';
 import { A11y, Navigation, Pagination, Scrollbar } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { computed, onMounted } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 interface Blog {
     id: number;

@@ -1,24 +1,24 @@
 <template>
     <AppLayout>
-        <Head title="Jobs" />
+        <Head :title="t('jobs.title')" />
         <section id="hero" class="main-banner">
             <div class="container">
                 <div class="breadcrumb-block" data-aos="fade-up">
                     <h1 class="_30px-title-white">
-                        Jobs
-                        <span v-if="props.selectedCategory">in {{ props.selectedCategory }}</span>
+                        {{ t('jobs.title') }}
+                        <span v-if="props.selectedCategory">{{ t('jobs.breadcrumb.in') }} {{ props.selectedCategory }}</span>
                     </h1>
                     <div class="text-merge">
-                        <a href="/" class="breadcrumb">Home</a>
+                        <a href="/" class="breadcrumb">{{ t('jobs.breadcrumb.home') }}</a>
                         <div class="breadcrumb">/</div>
-                        <div class="breadcrumb">Jobs</div>
+                        <div class="breadcrumb">{{ t('jobs.breadcrumb.jobs') }}</div>
                     </div>
                     <form v-if="!props.selectedCategory" class="banner-search-wrapper w-form" @submit.prevent="onSearch">
                         <input
                             class="banner-search-input w-input"
                             maxlength="256"
                             name="query"
-                            placeholder="Search…"
+                            :placeholder="t('jobs.search.placeholder')"
                             type="search"
                             id="search-4"
                             v-model="search"
@@ -35,7 +35,7 @@
                         <div class="sidebar-form" data-aos="fade-right" data-aos-delay="100">
                             <div class="sidebar-wrapper">
                                 <div class="job-widget" data-aos="fade-up" data-aos-delay="200">
-                                    <div class="widget-title">Categories</div>
+                                    <div class="widget-title">{{ t('jobs.sidebar.categories') }}</div>
                                     <div class="w-dyn-list">
                                         <div role="list" class="job-categories w-dyn-items">
                                             <div
@@ -86,19 +86,19 @@
                                                                 <div>{{ job.type }}</div>
                                                             </div>
                                                             <div class="w-layout-hflex text-button">
-                                                                <div>{{ job.experience }} Experience</div>
+                                                                <div>{{ job.experience }} {{ t('jobs.job.experience') }}</div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <Link :href="route('job.detail', { id: job.id })" class="apply-button padding-x-38px w-inline-block">
-                                                <div>Apply Now</div>
+                                                <div>{{ t('jobs.job.apply') }}</div>
                                                 <div class="icon">chevron_right</div>
                                             </Link>
                                             <div v-if="job.featured" class="w-layout-hflex featured-tag frid">
                                                 <img src="/images/award-line.svg" loading="lazy" alt="" class="image-18px" />
-                                                <div>Featured</div>
+                                                <div>{{ t('jobs.job.featured') }}</div>
                                             </div>
                                         </div>
                                     </div>
@@ -121,7 +121,9 @@ import 'aos/dist/aos.css';
 import { defineProps, onMounted, ref } from 'vue';
 import { route } from 'ziggy-js';
 import { router } from '@inertiajs/vue3';
+import { useI18n } from 'vue-i18n';
 
+const { t } = useI18n();
 const props = defineProps<{ jobs: any[]; categories: any[]; selectedCategory?: string; searchQuery?: string }>();
 const search = ref(props.searchQuery || '');
 

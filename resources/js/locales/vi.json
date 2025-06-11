@@ -1,0 +1,274 @@
+{
+    "home": {
+        "hero": {
+            "subtitle": "Con Đường Thành Công Bắt Đầu Từ Đây",
+            "title": "Khám Phá Cơ Hội Việc Làm Hấp Dẫn Cùng Chúng Tôi",
+            "search": {
+                "label": "Tìm kiếm công việc mơ ước",
+                "placeholder": "Tìm kiếm việc làm",
+                "button": "Tìm kiếm",
+                "popular": "Phổ biến:",
+                "popularJobs": "Digital Marketer, Web Designer"
+            }
+        },
+        "join": {
+            "subtitle": "Thu Hút Hơn 5K Nhân Tài Hàng Đầu",
+            "title": "Tham Gia Mạng Lưới TNC Elite Cho Cơ Hội Nghề Nghiệp Ngay Hôm Nay!",
+            "description": "Tham gia Mạng lưới TNC Elite cho Cơ hội Nghề nghiệp Ngay hôm nay: Tiếp cận nền tảng được tuyển chọn cung cấp cơ hội nghề nghiệp phù hợp, chương trình cố vấn, thông tin ngành và các sự kiện kết nối được thiết kế để thúc đẩy hành trình chuyên nghiệp của bạn.",
+            "button": "Tham Gia Jobs TNC"
+        },
+        "coreValues": {
+            "title": "Giá Trị Cốt Lõi",
+            "subtitle": "Xây dựng thành công với những giá trị mang lại cho ứng viên",
+            "dedication": {
+                "title": "Tận Tâm",
+                "description": "HR của Novel Vision hỗ trợ ứng viên 24/7, tư vấn, giải đáp mọi thắc mắc. Theo sát ứng viên từ phỏng vấn đến nhận việc."
+            },
+            "development": {
+                "title": "Phát Triển",
+                "description": "Khách hàng của Novel Vision đều là các tập đoàn công nghệ lớn tại Châu Á. Mang đến mức lương & phúc lợi hấp dẫn."
+            },
+            "professionalism": {
+                "title": "Chuyên Nghiệp",
+                "description": "Quy trình chuyên nghiệp, thời gian phỏng vấn & sàng lọc nhanh. Toàn bộ quá trình tuyển dụng chỉ mất 3-7 ngày."
+            }
+        }
+    },
+    "navbar": {
+        "home": "Trang chủ",
+        "jobs": "Việc làm",
+        "cv": "CV",
+        "news": "Tin tức & Sự kiện",
+        "contact": "Liên hệ",
+        "postJob": "Đăng tin tuyển dụng",
+        "about": "Giới thiệu",
+        "pricing": "Bảng giá",
+        "faq": "Câu hỏi thường gặp",
+        "postJobRestricted": "Đăng tin tuyển dụng - Giới hạn",
+        "language": {
+            "en": "Tiếng Anh",
+            "vi": "Tiếng Việt",
+            "select": "Chọn ngôn ngữ"
+        }
+    },
+    "footer": {
+        "cta": {
+            "subtitle": "Bước Tiếp Theo:",
+            "title": "Tham Gia Cùng Chúng Tôi Ngay Hôm Nay!",
+            "description": "Trở thành một phần của cộng đồng năng động của chúng tôi và bắt đầu hành trình phát triển và thành công.",
+            "button": "Tham gia"
+        },
+        "contact": {
+            "address": "68 Nguyễn Huệ, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh, Việt Nam.",
+            "phone": "Gọi: 0703066003",
+            "email": "matchupfast@matchupf.com"
+        },
+        "links": {
+            "title": "Liên Kết Hữu Ích",
+            "home": "Trang chủ",
+            "about": "Về chúng tôi",
+            "contact": "Liên hệ"
+        },
+        "newsletter": {
+            "title": "Kết Nối",
+            "placeholder": "example@gmail.com",
+            "success": "Bạn Đã Đăng Ký Thành Công!",
+            "error": "Vui lòng nhập email chính xác!"
+        },
+        "social": {
+            "title": "Cộng Đồng Mạng Xã Hội"
+        },
+        "copyright": "Bản quyền © 2025 CÔNG TY TNHH MATCHUPFAST"
+    },
+    "jobs": {
+        "title": "Việc Làm",
+        "breadcrumb": {
+            "home": "Trang chủ",
+            "jobs": "Việc làm",
+            "in": "trong"
+        },
+        "search": {
+            "placeholder": "Tìm kiếm…"
+        },
+        "sidebar": {
+            "categories": "Danh mục"
+        },
+        "job": {
+            "experience": "Kinh nghiệm",
+            "apply": "Ứng tuyển ngay",
+            "featured": "Nổi bật"
+        }
+    },
+    "jobDetail": {
+        "title": "Chi Tiết Công Việc",
+        "breadcrumb": {
+            "home": "Trang chủ",
+            "jobs": "Việc làm"
+        },
+        "info": {
+            "location": "Địa điểm:",
+            "jobType": "Loại công việc:",
+            "salaryRange": "Mức lương:",
+            "experience": "Kinh nghiệm:",
+            "years": "Năm"
+        },
+        "apply": {
+            "button": "Ứng tuyển ngay"
+        },
+        "description": {
+            "title": "Mô tả công việc",
+            "responsibilities": "Trách nhiệm",
+            "requiredSkills": "Kỹ năng yêu cầu",
+            "benefits": "Quyền lợi"
+        }
+    },
+    "blogs": {
+        "title": "Tin Tức & Sự Kiện",
+        "breadcrumb": {
+            "home": "Trang chủ",
+            "blogs": "Tin tức & Sự kiện"
+        },
+        "search": {
+            "placeholder": "Tìm kiếm…"
+        },
+        "sidebar": {
+            "popularPost": "Bài viết phổ biến"
+        },
+        "readMore": "Đọc thêm"
+    },
+    "blogDetail": {
+        "title": "Chi Tiết Bài Viết",
+        "breadcrumb": {
+            "home": "Trang chủ",
+            "blogs": "Tin tức"
+        },
+        "search": {
+            "placeholder": "Tìm kiếm…"
+        },
+        "sidebar": {
+            "popularPost": "Bài viết phổ biến"
+        },
+        "share": {
+            "title": "CHIA SẺ:"
+        }
+    },
+    "contact": {
+        "title": "Liên hệ",
+        "breadcrumb": {
+            "home": "Trang chủ",
+            "contact": "Liên hệ"
+        },
+        "hero": {
+            "title": "Chúng tôi luôn sẵn sàng hỗ trợ!",
+            "description": "Bạn có thắc mắc về dịch vụ của chúng tôi hoặc cần hỗ trợ? Đội ngũ chuyên nghiệp của chúng tôi luôn sẵn sàng giúp bạn tìm kiếm cơ hội việc làm phù hợp hoặc tuyển dụng nhân tài cho công ty của bạn. Hãy liên hệ với chúng tôi ngay hôm nay!"
+        },
+        "info": {
+            "admissions": {
+                "title": "Văn phòng tuyển sinh:",
+                "address": "68 Nguyễn Huệ, Phường Bến Nghé, Quận 1, TP.HCM, Việt Nam."
+            },
+            "contact": {
+                "title": "Liên hệ",
+                "phone": "0703066003"
+            },
+            "email": {
+                "title": "Email:",
+                "address": "matchupfast@matchupf.com"
+            }
+        },
+        "form": {
+            "title": "Liên hệ với chúng tôi",
+            "description": "Điền vào mẫu dưới đây và chúng tôi sẽ liên hệ lại với bạn trong thời gian sớm nhất. Dù bạn đang tìm kiếm việc làm hay muốn tuyển dụng, chúng tôi luôn sẵn sàng hỗ trợ bạn trong mọi bước đi.",
+            "fields": {
+                "name": {
+                    "label": "Họ tên",
+                    "placeholder": "họ tên của bạn"
+                },
+                "email": {
+                    "label": "Email",
+                    "placeholder": "email của bạn"
+                },
+                "phone": {
+                    "label": "Điện thoại",
+                    "placeholder": "số điện thoại của bạn"
+                },
+                "subject": {
+                    "label": "Tiêu đề",
+                    "placeholder": "tiêu đề"
+                },
+                "message": {
+                    "placeholder": "nội dung tin nhắn"
+                }
+            },
+            "submit": {
+                "text": "Gửi tin nhắn",
+                "sending": "Đang gửi tin nhắn"
+            },
+            "messages": {
+                "success": "Cảm ơn bạn! Tin nhắn của bạn đã được gửi thành công!",
+                "error": "Rất tiếc! Đã xảy ra lỗi khi gửi tin nhắn."
+            }
+        }
+    },
+    "about": {
+        "title": "Giới thiệu",
+        "breadcrumb": {
+            "home": "Trang chủ",
+            "about": "Giới thiệu"
+        },
+        "hero": {
+            "title": "Về CÔNG TY TNHH MATCHUPFAST",
+            "subtitle": "Giới thiệu chung",
+            "description": "MATCHUPFAST là nơi kết nối những tài năng xuất sắc với những cơ hội nghề nghiệp đầy hứa hẹn! Tại MATCHUPFAST, chúng tôi mang đến giải pháp tuyển dụng tối ưu cho khách hàng.\n\nVới đội ngũ chuyên gia giàu kinh nghiệm trong lĩnh vực nhân sự, MATCHUPFAST không ngừng nỗ lực nắm bắt và phân tích thị trường lao động, từ đó trở thành đối tác trong hành trình tìm kiếm nhân tài.\n\nChúng tôi sở hữu mạng lưới ứng viên đa dạng trong nhiều lĩnh vực, tự tin cung cấp dịch vụ tư vấn chuyên nghiệp. Với phương châm \"Chất lượng là ưu tiên hàng đầu\", chúng tôi cam kết mang đến sự hài lòng tối đa cho cả ứng viên và nhà tuyển dụng với quy trình tuyển dụng nghiêm ngặt và có phương pháp, từ việc xem xét kỹ lưỡng hồ sơ ứng viên đến kiểm tra trình độ chuyên môn."
+        },
+        "mission": {
+            "title": "Sứ mệnh và tầm nhìn",
+            "mission": {
+                "title": "1. Sứ mệnh",
+                "description": "Sứ mệnh của chúng tôi là kết nối đúng người tuyển dụng đúng lúc.\nMang đến giải pháp tuyển dụng phù hợp với từng doanh nghiệp và đồng hành cùng doanh nghiệp trong quá trình phát triển đội ngũ nhân sự lâu dài."
+            },
+            "vision": {
+                "title": "2. Tầm nhìn",
+                "description": "Chúng tôi hướng tới việc trở thành công ty tuyển dụng hàng đầu tại Việt Nam, nổi bật với sự đổi mới và chất lượng dịch vụ. Chúng tôi mong muốn kết nối những ứng viên xuất sắc với các doanh nghiệp, góp phần phát triển nguồn nhân lực chất lượng."
+            }
+        },
+        "values": {
+            "title": "Giá trị cốt lõi",
+            "responsibility": {
+                "title": "1. Trách nhiệm",
+                "description": "Chúng tôi xây dựng niềm tin dựa trên những cam kết rõ ràng minh bạch, thể hiện trách nhiệm qua mỗi hành động đảm bảo mang lại giá trị bền vững cho khách hàng."
+            },
+            "creative": {
+                "title": "2. Sáng tạo",
+                "description": "Quá trình phát triển phải không ngừng sáng tạo để tạo ra giá trị mới. Chúng tôi không chỉ tìm người phù hợp mà còn tìm những người có tư duy mở sẵn sàng học hỏi góp phần xây dựng đội ngũ tiềm năng."
+            },
+            "connect": {
+                "title": "3. Kết nối",
+                "description": "Sự lắng nghe thấu hiểu khách hàng trở thành cầu nối đáng tin cậy đối với công ty. Chúng tôi luôn không chỉ đáp ứng mà còn vượt lên trên những kỳ vọng, mang đến những giải pháp tối ưu và dịch vụ tận tâm để trở thành đối tác đáng tin cậy trên mọi hành trình."
+            }
+        },
+        "contact": {
+            "title": "Liên hệ",
+            "company": "CÔNG TY TNHH MATCHUPFAST",
+            "address": "Địa chỉ: 68 Nguyễn Huệ, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh, Việt Nam",
+            "phone": "Điện thoại: 0703066003",
+            "email": "Email: matchupfast@matchupf.com",
+            "website": "Website: https://www.matchupf.com",
+            "button": "Liên hệ ngay"
+        },
+        "companies": {
+            "title": "Các công ty hàng đầu",
+            "description": "Khám phá các tổ chức hàng đầu được biết đến với sự xuất sắc và đổi mới trong ngành của họ.",
+            "explore": "Xem tất cả",
+            "jobs": "Việc làm đang mở"
+        },
+        "testimonials": {
+            "title": "Câu chuyện thành công",
+            "subtitle": "Lắng nghe những gì người dùng của chúng tôi nói!"
+        },
+        "talent": {
+            "title": "Khám phá tài năng xuất sắc",
+            "description": "Khám phá tài năng xuất sắc: Xác định, thu hút và nuôi dưỡng các chuyên gia hàng đầu để thúc đẩy đổi mới và thành công."
+        }
+    }
+} 

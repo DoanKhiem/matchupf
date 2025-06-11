@@ -1,13 +1,14 @@
 <template>
     <AppLayout>
-        <Head title="Contact" />
+        <Head :title="t('contact.title')" />
         <section id="hero" class="main-banner">
             <div class="container">
                 <div class="breadcrumb-block left-align-block">
-                    <h1 class="_30px-title-white">Contact us</h1>
-                    <div class="text-merge"><a href="/" class="breadcrumb">Home</a>
+                    <h1 class="_30px-title-white">{{ t('contact.title') }}</h1>
+                    <div class="text-merge">
+                        <a href="/" class="breadcrumb">{{ t('contact.breadcrumb.home') }}</a>
                         <div class="breadcrumb">/</div>
-                        <div class="breadcrumb">Contact us</div>
+                        <div class="breadcrumb">{{ t('contact.breadcrumb.contact') }}</div>
                     </div>
                 </div>
             </div>
@@ -18,18 +19,16 @@
                     <div data-w-id="c1228b0b-6967-9fbf-31c4-dfefec73c3a5"
                         style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
                         class="contact-contents">
-                        <h2 class="_48px-title">We're Here to Help!</h2>
-                        <p>Bold ellipse plugin list flatten. Plugin frame figjam component share variant figjam. Device
-                            horizontal auto draft ellipse outline pen fill. Main polygon vector prototype layer. Polygon
-                            variant create line editor selection.</p>
+                        <h2 class="_48px-title">{{ t('contact.hero.title') }}</h2>
+                        <p>{{ t('contact.hero.description') }}</p>
                         <div class="w-layout-vflex contact-info-block-wrapper">
                             <div class="w-layout-hflex icon-block">
                                 <div class="contact-icon-wrapper-40px">
                                     <div>fmd_good</div>
                                 </div>
                                 <div class="w-layout-vflex _2px-gap">
-                                    <div class="_20px-title">Admissions Office:</div>
-                                    <p>68 Nguyen Hue, Ben Nghe Ward, District 1, Ho Chi Minh City, Vietnam.</p>
+                                    <div class="_20px-title">{{ t('contact.info.admissions.title') }}</div>
+                                    <p>{{ t('contact.info.admissions.address') }}</p>
                                 </div>
                             </div>
                             <div class="w-layout-hflex icon-block">
@@ -37,8 +36,8 @@
                                     <div>local_phone</div>
                                 </div>
                                 <div class="w-layout-vflex _2px-gap">
-                                    <div class="_20px-title">Contact</div>
-                                    <p>0703066003</p>
+                                    <div class="_20px-title">{{ t('contact.info.contact.title') }}</div>
+                                    <p>{{ t('contact.info.contact.phone') }}</p>
                                 </div>
                             </div>
                             <div class="w-layout-hflex icon-block">
@@ -46,8 +45,8 @@
                                     <div>mail_outline</div>
                                 </div>
                                 <div class="w-layout-vflex _2px-gap">
-                                    <div class="_20px-title">Email:</div>
-                                    <p>matchupfast@matchupf.com</p>
+                                    <div class="_20px-title">{{ t('contact.info.email.title') }}</div>
+                                    <p>{{ t('contact.info.email.address') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -59,40 +58,50 @@
                             method="get" class="cotnact-form" data-wf-page-id="6645e06843781558142958fb"
                             data-wf-element-id="c1228b0b-6967-9fbf-31c4-dfefec73c3c9" aria-label="contact form">
                             <div class="vertical-left-top _10px-gap">
-                                <div class="_38px-title">Get in touch</div>
-                                <p>List team variant line style shadow bullet prototype image connection follower.</p>
+                                <div class="_38px-title">{{ t('contact.form.title') }}</div>
+                                <p>{{ t('contact.form.description') }}</p>
                             </div>
                             <div class="w-layout-hflex field-inputs-wrapper">
-                                <div class="w-layout-vflex full-width"><label for="name"
-                                        class="input-label">Name</label><input class="contact-input-field w-input"
-                                        maxlength="256" name="First-Name" data-name="First Name" placeholder="your name"
-                                        type="text" id="name" required=""></div>
-                                <div class="w-layout-vflex full-width"><label for="Email"
-                                        class="input-label">Email</label><input class="contact-input-field w-input"
-                                        maxlength="256" name="Email" data-name="Email" placeholder="your email"
-                                        type="email" id="Email" required=""></div>
+                                <div class="w-layout-vflex full-width">
+                                    <label for="name" class="input-label">{{ t('contact.form.fields.name.label') }}</label>
+                                    <input class="contact-input-field w-input" maxlength="256" name="First-Name"
+                                        data-name="First Name" :placeholder="t('contact.form.fields.name.placeholder')"
+                                        type="text" id="name" required>
+                                </div>
+                                <div class="w-layout-vflex full-width">
+                                    <label for="Email" class="input-label">{{ t('contact.form.fields.email.label') }}</label>
+                                    <input class="contact-input-field w-input" maxlength="256" name="Email"
+                                        data-name="Email" :placeholder="t('contact.form.fields.email.placeholder')"
+                                        type="email" id="Email" required>
+                                </div>
                             </div>
                             <div class="w-layout-hflex field-inputs-wrapper">
-                                <div class="w-layout-vflex full-width"><label for="phone"
-                                        class="input-label">Phone</label><input class="contact-input-field w-input"
-                                        maxlength="256" name="phone" data-name="phone" placeholder="your phone"
-                                        type="tel" id="phone" required=""></div>
-                                <div class="w-layout-vflex full-width"><label for="Subject"
-                                        class="input-label">Subject</label><input class="contact-input-field w-input"
-                                        maxlength="256" name="Subject" data-name="Subject" placeholder="subject"
-                                        type="text" id="Subject"></div>
-                            </div><textarea id="Message-8" name="Message" maxlength="5000" data-name="Message"
-                                placeholder="your message"
-                                class="contact-input-field text-area w-input"></textarea><input type="submit"
-                                data-wait="Messege Sending" class="submit-button w-button" value="Submit Message">
+                                <div class="w-layout-vflex full-width">
+                                    <label for="phone" class="input-label">{{ t('contact.form.fields.phone.label') }}</label>
+                                    <input class="contact-input-field w-input" maxlength="256" name="phone"
+                                        data-name="phone" :placeholder="t('contact.form.fields.phone.placeholder')"
+                                        type="tel" id="phone" required>
+                                </div>
+                                <div class="w-layout-vflex full-width">
+                                    <label for="Subject" class="input-label">{{ t('contact.form.fields.subject.label') }}</label>
+                                    <input class="contact-input-field w-input" maxlength="256" name="Subject"
+                                        data-name="Subject" :placeholder="t('contact.form.fields.subject.placeholder')"
+                                        type="text" id="Subject">
+                                </div>
+                            </div>
+                            <textarea id="Message-8" name="Message" maxlength="5000" data-name="Message"
+                                :placeholder="t('contact.form.fields.message.placeholder')"
+                                class="contact-input-field text-area w-input"></textarea>
+                            <input type="submit" :data-wait="t('contact.form.submit.sending')"
+                                class="submit-button w-button" :value="t('contact.form.submit.text')">
                         </form>
                         <div class="success-message w-form-done" tabindex="-1" role="region"
                             aria-label="contact form success">
-                            <div>Thank you! Your submission has been received!</div>
+                            <div>{{ t('contact.form.messages.success') }}</div>
                         </div>
                         <div class="error-message w-form-fail" tabindex="-1" role="region"
                             aria-label="contact form failure">
-                            <div>Oops! Something went wrong while submitting the form.</div>
+                            <div>{{ t('contact.form.messages.error') }}</div>
                         </div>
                     </div>
                 </div>
@@ -103,36 +112,13 @@
 
 <script setup lang="ts">
 import AppLayout from '@/layouts/AppLayout.vue';
-import { Head, usePage } from '@inertiajs/vue3';
+import { Head } from '@inertiajs/vue3';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-import { A11y, Navigation, Pagination, Scrollbar } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/vue';
-import { computed, onMounted } from 'vue';
+import { onMounted } from 'vue';
+import { useI18n } from 'vue-i18n';
 
-interface Blog {
-    id: number;
-    title: string;
-    img: string;
-    desc: string;
-    slug: string;
-    created_at: string;
-}
-
-interface PopularBlog {
-    id: number;
-    title: string;
-    image: string;
-    slug: string;
-}
-
-const page = usePage();
-const blogs = computed<Blog[]>(() => (page.props.blogs as Blog[]) || []);
-const popularBlogs = computed<PopularBlog[]>(() => (page.props.popularBlogs as PopularBlog[]) || []);
+const { t } = useI18n();
 
 onMounted(() => {
     AOS.init({
@@ -177,13 +163,4 @@ onMounted(() => {
 .swiper-button-prev:hover {
     background-color: var(--secondary-color, #555);
 }
-
-/* Chỉnh vị trí nút */
-/* .swiper-button-next {
-    right: 0px;
-}
-
-.swiper-button-prev {
-    left: 0px;
-} */
 </style>
