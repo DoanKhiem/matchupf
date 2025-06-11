@@ -61,7 +61,7 @@
         "contact": {
             "address": "68 Nguyễn Huệ, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh, Việt Nam.",
             "phone": "Gọi: 0703066003",
-            "email": "matchupfast@matchupf.com"
+            "email": "{'matchupfast@matchupf.com'}"
         },
         "links": {
             "title": "Liên Kết Hữu Ích",
@@ -71,7 +71,7 @@
         },
         "newsletter": {
             "title": "Kết Nối",
-            "placeholder": "example@gmail.com",
+            "placeholder": "{'example@gmail.com'}",
             "success": "Bạn Đã Đăng Ký Thành Công!",
             "error": "Vui lòng nhập email chính xác!"
         },
@@ -173,7 +173,7 @@
             },
             "email": {
                 "title": "Email:",
-                "address": "matchupfast@matchupf.com"
+                "address": "{'matchupfast@matchupf.com'}"
             }
         },
         "form": {
@@ -252,7 +252,7 @@
             "company": "CÔNG TY TNHH MATCHUPFAST",
             "address": "Địa chỉ: 68 Nguyễn Huệ, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh, Việt Nam",
             "phone": "Điện thoại: 0703066003",
-            "email": "Email: matchupfast@matchupf.com",
+            "email": "{'Email: matchupfast@matchupf.com'}",
             "website": "Website: https://www.matchupf.com",
             "button": "Liên hệ ngay"
         },
