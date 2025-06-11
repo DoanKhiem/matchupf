@@ -4,9 +4,12 @@ import { Head } from '@inertiajs/vue3';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { onMounted } from 'vue';
+import { useI18n } from 'vue-i18n';
 import Categories from './home/Categories.vue';
 import Jobs from './home/Jobs.vue';
 import News from './home/News.vue';
+
+const { t } = useI18n();
 
 onMounted(() => {
     AOS.init({
@@ -26,25 +29,25 @@ onMounted(() => {
                 <div class="_2-column-block">
                     <div data-aos="fade-right" data-aos-delay="100" class="hero-contents">
                         <div class="margin-bottom-10px">
-                            <div class="_20px-title-secondary">Your Path to Success Starts Here</div>
+                            <div class="_20px-title-secondary">{{ t('home.hero.subtitle') }}</div>
                         </div>
-                        <h1 class="heading black">Discover Exciting Job Openings with Us</h1>
+                        <h1 class="heading black">{{ t('home.hero.title') }}</h1>
                         <div class="find-job-form-wrapper">
                             <div class="job-form-block">
                                 <form action="/search" class="job-form-wrapper w-form">
                                     <div class="full-width">
-                                        <label for="field" class="_14px-500">Search your dream job</label
-                                        ><input
+                                        <label for="field" class="_14px-500">{{ t('home.hero.search.label') }}</label>
+                                        <input
                                             class="job-search-field w-input"
                                             maxlength="256"
                                             name="query"
-                                            placeholder="Search Job"
+                                            :placeholder="t('home.hero.search.placeholder')"
                                             type="search"
                                             id="search-2"
                                             required
                                         />
                                     </div>
-                                    <input type="submit" class="job-search-absolute-button w-button" value="Search" />
+                                    <input type="submit" class="job-search-absolute-button w-button" :value="t('home.hero.search.button')" />
                                 </form>
                             </div>
                             <div class="pink-blur-block"></div>
@@ -58,8 +61,8 @@ onMounted(() => {
                                     transform-style: preserve-3d;
                                 "
                             >
-                                <div class="_16px-500 black">Popular:</div>
-                                <p class="neutral-100">Digital Marketer, Web Designer</p>
+                                <div class="_16px-500 black">{{ t('home.hero.search.popular') }}</div>
+                                <p class="neutral-100">{{ t('home.hero.search.popularJobs') }}</p>
                             </div>
                         </div>
                         <div data-w-id="5456d97f-c42d-2653-f8f6-615f9178405b" class="logo-slider-wrapper">
@@ -299,18 +302,14 @@ onMounted(() => {
                         </div>
                         <div class="contents">
                             <div class="margin-bottom-20px">
-                                <div class="_24px-title-secondary">Attracting Over 5K Top Talent</div>
+                                <div class="_24px-title-secondary">{{ t('home.join.subtitle') }}</div>
                             </div>
-                            <h2 class="heading">Join TNC Elite Network for Career Opportunities Today!</h2>
-                            <p class="margin-55px">
-                                Join TNC Elite Network for Career Opportunities Today: Gain access to a curated platform offering tailored career
-                                opportunities, mentorship programs, industry insights, and networking events designed to advance your professional
-                                journey.
-                            </p>
+                            <h2 class="heading">{{ t('home.join.title') }}</h2>
+                            <p class="margin-55px">{{ t('home.join.description') }}</p>
                             <a href="/contact" class="primary-button w-inline-block">
                                 <div class="button-text-wrapper">
-                                    <div class="default-text">Join Jobs TNC</div>
-                                    <div class="hover-text">Join Jobs TNC</div>
+                                    <div class="default-text">{{ t('home.join.button') }}</div>
+                                    <div class="hover-text">{{ t('home.join.button') }}</div>
                                 </div>
                                 <div class="icon-18px">chevron_right</div>
                             </a>
@@ -452,78 +451,39 @@ onMounted(() => {
                 <div class="container">
                     <div data-aos="fade-up" class="title-wrapper">
                         <div class="mask">
-                            <h2
-                                class="white-heading"
-                            >
-                            Giá trị cốt lõi
-                            </h2>
+                            <h2 class="white-heading">{{ t('home.coreValues.title') }}</h2>
                         </div>
                         <div class="mask">
-                            <p
-                                style="
-                                    opacity: 1;
-                                    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                                    transform-style: preserve-3d;
-                                "
-                                class="_16px-500-neutral-50"
-                            >
-                            Xây dựng thành công với những giá trị mang lại cho ứng viên
-                            </p>
+                            <p class="_16px-500-neutral-50">{{ t('home.coreValues.subtitle') }}</p>
                         </div>
                     </div>
                     
                     <div data-aos="fade-up" data-aos-delay="100" class="testimonial-slider-3-col">
                         <div class="mask-31 w-slider-mask" id="w-slider-mask-1">
-                            <div
-                                class="margin-right-30px w-slide"
-                                aria-label="1 of 6"
-                                role="group"
-                                aria-hidden="true"
-                                style="transition: all; opacity: 1"
-                            >
-                                <div class="testiimonial-wrapper" aria-hidden="true">
-                                    <div class="testimonial-card-med" aria-hidden="true" style="padding-top: 70px;">
+                            <div class="margin-right-30px w-slide">
+                                <div class="testiimonial-wrapper">
+                                    <div class="testimonial-card-med" style="padding-top: 70px;">
                                         <input type="submit" data-wait="Please wait..." class="newsletter-submit-button w-button icon-value" value="💌" />
-                                        <div class="_20px-500" aria-hidden="true">Tận tâm</div>
-                                        <p class="_16px-500" aria-hidden="true">
-                                            HR của Novel Vision hỗ trợ ứng viên 24/7, tư vấn, giải đáp mọi thắc mắc. Theo sát ứng viên từ phỏng vấn đến nhận việc.
-                                        </p>
+                                        <div class="_20px-500">{{ t('home.coreValues.dedication.title') }}</div>
+                                        <p class="_16px-500">{{ t('home.coreValues.dedication.description') }}</p>
                                     </div>
-                                    
                                 </div>
                             </div>
-                            <div
-                                class="margin-right-30px w-slide"
-                                aria-label="2 of 6"
-                                role="group"
-                                style="transition: all; opacity: 1"
-                            >
+                            <div class="margin-right-30px w-slide">
                                 <div class="testiimonial-wrapper">
                                     <div class="testimonial-card-med" style="padding-top: 70px;">
                                         <input type="submit" data-wait="Please wait..." class="newsletter-submit-button w-button icon-value" value="📦" />
-                                        <div class="_20px-500" style="color: rgb(4, 8, 27)">Phát triển</div>
-                                        <p class="_16px-500" style="color: rgb(87, 90, 102)">
-                                            Khách hàng của Novel Vision đều là các tập đoàn công nghệ lớn tại Châu Á. Mang đến mức lương & phúc lợi hấp dẫn.
-                                        </p>
-                                       
+                                        <div class="_20px-500">{{ t('home.coreValues.development.title') }}</div>
+                                        <p class="_16px-500">{{ t('home.coreValues.development.description') }}</p>
                                     </div>
-                                    
                                 </div>
                             </div>
-                            <div
-                                class="margin-right-30px w-slide"
-                                aria-label="3 of 6"
-                                role="group"
-                                aria-hidden="true"
-                                style="transition: all; opacity: 1"
-                            >
-                                <div class="testiimonial-wrapper" aria-hidden="true">
+                            <div class="margin-right-30px w-slide">
+                                <div class="testiimonial-wrapper">
                                     <div class="testimonial-card-med" style="padding-top: 70px;">
                                         <input type="submit" data-wait="Please wait..." class="newsletter-submit-button w-button icon-value" value="⚠️" />
-                                        <div class="_20px-500" aria-hidden="true" style="color: rgb(4, 8, 27)">Chuyên nghiệp</div>
-                                        <p class="_16px-500" aria-hidden="true" style="color: rgb(87, 90, 102)">
-                                            Quy trình chuyên nghiệp, thời gian phỏng vấn & sàng lọc nhanh. Toàn bộ quá trình tuyển dụng chỉ mất 3-7 ngày.
-                                        </p>
+                                        <div class="_20px-500">{{ t('home.coreValues.professionalism.title') }}</div>
+                                        <p class="_16px-500">{{ t('home.coreValues.professionalism.description') }}</p>
                                     </div>
                                 </div>
                             </div>

@@ -1,0 +1,274 @@
+{
+    "home": {
+        "hero": {
+            "subtitle": "Your Path to Success Starts Here",
+            "title": "Discover Exciting Job Openings with Us",
+            "search": {
+                "label": "Search your dream job",
+                "placeholder": "Search Job",
+                "button": "Search",
+                "popular": "Popular:",
+                "popularJobs": "Digital Marketer, Web Designer"
+            }
+        },
+        "join": {
+            "subtitle": "Attracting Over 5K Top Talent",
+            "title": "Join TNC Elite Network for Career Opportunities Today!",
+            "description": "Join TNC Elite Network for Career Opportunities Today: Gain access to a curated platform offering tailored career opportunities, mentorship programs, industry insights, and networking events designed to advance your professional journey.",
+            "button": "Join Jobs TNC"
+        },
+        "coreValues": {
+            "title": "Core Values",
+            "subtitle": "Building success with values for candidates",
+            "dedication": {
+                "title": "Dedication",
+                "description": "Novel Vision HR supports candidates 24/7, providing consultation and answering all questions. Following candidates from interview to employment."
+            },
+            "development": {
+                "title": "Development",
+                "description": "Novel Vision's clients are major technology corporations in Asia. Offering attractive salaries & benefits."
+            },
+            "professionalism": {
+                "title": "Professionalism",
+                "description": "Professional process, fast interview & screening time. The entire recruitment process takes only 3-7 days."
+            }
+        }
+    },
+    "navbar": {
+        "home": "Home",
+        "jobs": "Jobs",
+        "cv": "CV",
+        "news": "News & Events",
+        "contact": "Contact Us",
+        "postJob": "Post A Job",
+        "about": "About",
+        "pricing": "Pricing",
+        "faq": "FAQ",
+        "postJobRestricted": "Post A Job - Restricted",
+        "language": {
+            "en": "English",
+            "vi": "Vietnamese",
+            "select": "Select language"
+        }
+    },
+    "footer": {
+        "cta": {
+            "subtitle": "Take the Next Step:",
+            "title": "Join Us Today!",
+            "description": "Become a part of our vibrant community and embark on a journey of growth and success.",
+            "button": "Join us"
+        },
+        "contact": {
+            "address": "68 Nguyen Hue, Ben Nghe Ward, District 1, Ho Chi Minh City, Vietnam.",
+            "phone": "Call: 0703066003",
+            "email": "matchupfast@matchupf.com"
+        },
+        "links": {
+            "title": "Helpful Links",
+            "home": "Home",
+            "about": "About Us",
+            "contact": "Contact us"
+        },
+        "newsletter": {
+            "title": "Stay Connected",
+            "placeholder": "example@gmail.com",
+            "success": "You Are Subscribed!",
+            "error": "Input Email Carefully!"
+        },
+        "social": {
+            "title": "Social Community"
+        },
+        "copyright": "Copyright © 2025 MATCHUPFAST COMPANY LIMITED"
+    },
+    "jobs": {
+        "title": "Jobs",
+        "breadcrumb": {
+            "home": "Home",
+            "jobs": "Jobs",
+            "in": "in"
+        },
+        "search": {
+            "placeholder": "Search…"
+        },
+        "sidebar": {
+            "categories": "Categories"
+        },
+        "job": {
+            "experience": "Experience",
+            "apply": "Apply Now",
+            "featured": "Featured"
+        }
+    },
+    "jobDetail": {
+        "title": "Job Details",
+        "breadcrumb": {
+            "home": "Home",
+            "jobs": "Jobs"
+        },
+        "info": {
+            "location": "Location:",
+            "jobType": "Job type:",
+            "salaryRange": "Salary Range:",
+            "experience": "Experience:",
+            "years": "Years"
+        },
+        "apply": {
+            "button": "Apply Now"
+        },
+        "description": {
+            "title": "Job Description",
+            "responsibilities": "Responsibilities",
+            "requiredSkills": "Required Skills",
+            "benefits": "Benefits"
+        }
+    },
+    "blogs": {
+        "title": "News & Events",
+        "breadcrumb": {
+            "home": "Home",
+            "blogs": "News & Events"
+        },
+        "search": {
+            "placeholder": "Search…"
+        },
+        "sidebar": {
+            "popularPost": "Popular Post"
+        },
+        "readMore": "Read more"
+    },
+    "blogDetail": {
+        "title": "Blog Details",
+        "breadcrumb": {
+            "home": "Home",
+            "blogs": "Blog"
+        },
+        "search": {
+            "placeholder": "Search…"
+        },
+        "sidebar": {
+            "popularPost": "Popular Post"
+        },
+        "share": {
+            "title": "SHARE:"
+        }
+    },
+    "contact": {
+        "title": "Contact us",
+        "breadcrumb": {
+            "home": "Home",
+            "contact": "Contact us"
+        },
+        "hero": {
+            "title": "We're Here to Help!",
+            "description": "Have questions about our services or need assistance? Our dedicated team is ready to help you find the perfect job opportunity or hire the best talent for your company. Reach out to us today!"
+        },
+        "info": {
+            "admissions": {
+                "title": "Admissions Office:",
+                "address": "68 Nguyen Hue, Ben Nghe Ward, District 1, Ho Chi Minh City, Vietnam."
+            },
+            "contact": {
+                "title": "Contact",
+                "phone": "0703066003"
+            },
+            "email": {
+                "title": "Email:",
+                "address": "matchupfast@matchupf.com"
+            }
+        },
+        "form": {
+            "title": "Get in touch",
+            "description": "Fill out the form below and we'll get back to you as soon as possible. Whether you're looking for a job or seeking to hire, we're here to assist you every step of the way.",
+            "fields": {
+                "name": {
+                    "label": "Name",
+                    "placeholder": "your name"
+                },
+                "email": {
+                    "label": "Email",
+                    "placeholder": "your email"
+                },
+                "phone": {
+                    "label": "Phone",
+                    "placeholder": "your phone"
+                },
+                "subject": {
+                    "label": "Subject",
+                    "placeholder": "subject"
+                },
+                "message": {
+                    "placeholder": "your message"
+                }
+            },
+            "submit": {
+                "text": "Submit Message",
+                "sending": "Message Sending"
+            },
+            "messages": {
+                "success": "Thank you! Your submission has been received!",
+                "error": "Oops! Something went wrong while submitting the form."
+            }
+        }
+    },
+    "about": {
+        "title": "About",
+        "breadcrumb": {
+            "home": "Home",
+            "about": "About"
+        },
+        "hero": {
+            "title": "About MATCHUPFAST COMPANY LIMITED.",
+            "subtitle": "General Introduction",
+            "description": "MATCHUPFAST is a place where outstanding talent with promising career opportunities! At MATCHUPFAST, we bring the optimal recruitment solution to our customers.\n\nWith a team of experienced experts in the field of human resources, MATCHUPFAST is constantly striving to capture and analyze the labor market, thereby becoming a partner in the journey of finding talent.\n\nWe own a diverse network of candidates in many fields, confident to provide professional consulting services. With the motto \"Quality is the top priority\", we are committed to bringing maximum satisfaction to both candidates and employers with a rigorous and methodical recruitment process, from thorough review of candidate profiles, to professional qualification checks."
+        },
+        "mission": {
+            "title": "Mission and Vision",
+            "mission": {
+                "title": "1. Mission",
+                "description": "Our mission is to connect the right recruiters at the right time.\nBringing recruitment solutions that are suitable for each business and accompanying businesses in the process of developing a long-term human resource team."
+            },
+            "vision": {
+                "title": "2. Vision",
+                "description": "We aim to become the leading recruitment company in Vietnam, outstanding for innovation and quality of service. We look forward to connecting excellent candidates with businesses, contributing to the development of quality human resources."
+            }
+        },
+        "values": {
+            "title": "Core Values",
+            "responsibility": {
+                "title": "1. Responsibility",
+                "description": "We build trust based on clear and transparent commitments, demonstrating responsibility through each action to ensure sustainable value for customers."
+            },
+            "creative": {
+                "title": "2. Creative",
+                "description": "The development process must be constantly creative to create new value. We are not only looking for the right people, but also people who are open-minded, willing to learn, and contribute to building a potential team."
+            },
+            "connect": {
+                "title": "3. Connect",
+                "description": "Listening to customers becomes a reliable bridge for the company. We always not only meet but also exceed expectations, bringing optimal solutions and dedicated services to become a reliable partner on every journey."
+            }
+        },
+        "contact": {
+            "title": "Contact",
+            "company": "MATCHUPFAST COMPANY LIMITED",
+            "address": "Address: 68 Nguyen Hue, Ben Nghe Ward, District 1, Ho Chi Minh City, Vietnam",
+            "phone": "Phone: 0703066003",
+            "email": "Email: matchupfast@matchupf.com",
+            "website": "Website: https://www.matchupf.com",
+            "button": "Contact now"
+        },
+        "companies": {
+            "title": "Top Listed companies",
+            "description": "Explore leading organizations known for excellence and innovation in their industries.",
+            "explore": "Explore All",
+            "jobs": "Jobs Open"
+        },
+        "testimonials": {
+            "title": "Success Stories",
+            "subtitle": "Hear What Our Users Have to Say!"
+        },
+        "talent": {
+            "title": "Discover Exceptional Talent",
+            "description": "Discover Exceptional Talent: Identify, attract, and nurture top-tier professionals to drive innovation and success."
+        }
+    }
+} 

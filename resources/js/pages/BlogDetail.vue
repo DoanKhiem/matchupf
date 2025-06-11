@@ -3,11 +3,11 @@
         <section id="hero" class="main-banner">
             <div class="container">
                 <div class="breadcrumb-block" data-aos="fade-up">
-                    <h1 class="_48-px-white-heading">Blog Details</h1>
+                    <h1 class="_48-px-white-heading">{{ t('blogDetail.title') }}</h1>
                     <div class="text-merge">
-                        <a href="/" class="breadcrumb">Home</a>
+                        <a href="/" class="breadcrumb">{{ t('blogDetail.breadcrumb.home') }}</a>
                         <div class="breadcrumb">/</div>
-                        <a href="/blogs" class="breadcrumb">Blog</a>
+                        <a href="/blogs" class="breadcrumb">{{ t('blogDetail.breadcrumb.blogs') }}</a>
                         <div class="breadcrumb">/</div>
                         <div class="breadcrumb">{{ blog.title }}</div>
                     </div>
@@ -34,14 +34,14 @@
                                     class="blog-search-field w-input"
                                     maxlength="256"
                                     name="query"
-                                    placeholder="Search…"
+                                    :placeholder="t('blogDetail.search.placeholder')"
                                     type="search"
                                     id="search"
                                     required
                                 /><input type="submit" class="search-button w-button" value="" />
                             </form>
                             <div class="widget">
-                                <div class="sidebar-title">Popular Post</div>
+                                <div class="sidebar-title">{{ t('blogDetail.sidebar.popularPost') }}</div>
                                 <div class="w-dyn-list">
                                     <div role="list" class="featured-properties-wrapper w-dyn-items">
                                         <div role="listitem" class="w-dyn-item" v-for="popularBlog in popularBlogs" :key="popularBlog.id">
@@ -112,7 +112,7 @@
                                 </div>
                             </div> -->
                                 <div class="tag-block">
-                                    <div class="_18px-title">SHARE:</div>
+                                    <div class="_18px-title">{{ t('blogDetail.share.title') }}</div>
                                     <div class="social-share-icon-container">
                                         <a
                                             :href="`https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`"
@@ -149,6 +149,9 @@ import { usePage } from '@inertiajs/vue3';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { computed, onMounted } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 interface Blog {
     id: number;
