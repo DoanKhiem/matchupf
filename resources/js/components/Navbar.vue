@@ -55,12 +55,7 @@
                                         <div>CV</div>
                                         <div
                                             class="icon-20px"
-                                            style="
-                                                transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg)
-                                                    skew(0deg, 0deg);
-                                                transform-style: preserve-3d;
-                                            "
-                                        >
+                                           >
                                             keyboard_arrow_down
                                         </div>
                                     </div>
@@ -68,14 +63,7 @@
                                         class="dropdown-options w-dropdown-list"
                                         id="w-dropdown-list-1"
                                         aria-labelledby="w-dropdown-toggle-1"
-                                        style="
-                                            display: none;
-                                            opacity: 0;
-                                            transform: translate3d(0px, 20px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg)
-                                                skew(0deg, 0deg);
-                                            transform-style: preserve-3d;
-                                        "
-                                    >
+                                        >
                                         <div class="nav-dropdown-contents-fastfood">
                                             <Link
                                                 href="/about"

@@ -4545,7 +4545,7 @@ label {
 .hero-section {
     /* background-color: #000d83; */
     padding-top: 24px;
-    padding-bottom: 120px;
+    padding-bottom: 50px;
     overflow: hidden;
 }
 
@@ -5304,7 +5304,7 @@ label {
 }
 
 .cta-banner {
-    background-color: #f13400;
+    background-color: #FEFBCE;
     background-image: url('/images/Bg_Vector_4.png');
     background-position: 50%;
     background-repeat: no-repeat;
@@ -5340,7 +5340,7 @@ label {
 }
 
 .cta-heading {
-    color: #e6e7f3;
+    color: #F13400;
     margin-top: 6px;
     margin-bottom: 0;
     font-size: 58px;
