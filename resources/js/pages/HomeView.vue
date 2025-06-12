@@ -11,6 +11,35 @@ import News from './home/News.vue';
 
 const { t } = useI18n();
 
+interface Category {
+    id: number;
+    title: string;
+    description: string;
+    jobs_count: number;
+}
+
+interface Job {
+    id: number;
+    title: string;
+    location: string;
+    salary: string;
+    type: 'full_time' | 'part_time';
+    work_type: 'remote' | 'in_house';
+}
+
+interface Blog {
+    id: number;
+    title: string;
+    image: string;
+    slug: string;
+}
+
+defineProps<{
+    categories: Category[];
+    jobs: Job[];
+    blogs: Blog[];
+}>();
+
 onMounted(() => {
     AOS.init({
         duration: 800,
@@ -23,6 +52,7 @@ onMounted(() => {
 
 <template>
     <AppLayout>
+
         <Head title="Home" />
         <section data-w-id="2d078ec3-5ddf-3dd2-d4c8-7b67748eb155" class="hero-section">
             <div class="container">
@@ -37,78 +67,49 @@ onMounted(() => {
                                 <form action="/search" class="job-form-wrapper w-form">
                                     <div class="full-width">
                                         <label for="field" class="_14px-500">{{ t('home.hero.search.label') }}</label>
-                                        <input
-                                            class="job-search-field w-input"
-                                            maxlength="256"
-                                            name="query"
-                                            :placeholder="t('home.hero.search.placeholder')"
-                                            type="search"
-                                            id="search-2"
-                                            required
-                                        />
+                                        <input class="job-search-field w-input" maxlength="256" name="query"
+                                            :placeholder="t('home.hero.search.placeholder')" type="search" id="search-2"
+                                            required />
                                     </div>
-                                    <input type="submit" class="job-search-absolute-button w-button" :value="t('home.hero.search.button')" />
+                                    <input type="submit" class="job-search-absolute-button w-button"
+                                        :value="t('home.hero.search.button')" />
                                 </form>
                             </div>
                             <div class="pink-blur-block"></div>
                         </div>
                         <div class="margin-left-25px">
-                            <div
-                                class="w-layout-hflex text-merge _12px-gap"
-                                style="
+                            <div class="w-layout-hflex text-merge _12px-gap" style="
                                     opacity: 1;
                                     transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
                                     transform-style: preserve-3d;
-                                "
-                            >
+                                ">
                                 <div class="_16px-500 black">{{ t('home.hero.search.popular') }}</div>
                                 <p class="neutral-100">{{ t('home.hero.search.popularJobs') }}</p>
                             </div>
                         </div>
                         <div data-w-id="5456d97f-c42d-2653-f8f6-615f9178405b" class="logo-slider-wrapper">
-                            <div
-                                style="
+                            <div style="
                                     transform: translate3d(-28.4154%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg)
                                         skew(0deg, 0deg);
                                     transform-style: preserve-3d;
                                     will-change: transform;
-                                "
-                                class="logo-container"
-                            >
+                                " class="logo-container">
                                 <img src="/images/Frame.svg" loading="lazy" alt="" class="logo-image" /><img
-                                    src="/images/logo-5.svg"
-                                    loading="lazy"
-                                    alt=""
-                                    class="logo-image"
-                                /><img src="/images/logo-77.svg" loading="lazy" alt="" class="logo-image" /><img
-                                    src="/images/logo-74.svg"
-                                    loading="lazy"
-                                    alt=""
-                                    class="logo-image"
-                                /><img src="/images/logo-4.svg" loading="lazy" alt="" class="logo-image" /><img
-                                    src="/images/logo-4.svg"
-                                    loading="lazy"
-                                    alt=""
-                                    class="logo-image"
-                                /><img src="/images/logo-5.svg" loading="lazy" alt="" class="logo-image" /><img
-                                    src="/images/logo-77.svg"
-                                    loading="lazy"
-                                    alt=""
-                                    class="logo-image"
-                                />
+                                    src="/images/logo-5.svg" loading="lazy" alt="" class="logo-image" /><img
+                                    src="/images/logo-77.svg" loading="lazy" alt="" class="logo-image" /><img
+                                    src="/images/logo-74.svg" loading="lazy" alt="" class="logo-image" /><img
+                                    src="/images/logo-4.svg" loading="lazy" alt="" class="logo-image" /><img
+                                    src="/images/logo-4.svg" loading="lazy" alt="" class="logo-image" /><img
+                                    src="/images/logo-5.svg" loading="lazy" alt="" class="logo-image" /><img
+                                    src="/images/logo-77.svg" loading="lazy" alt="" class="logo-image" />
                             </div>
                         </div>
                         <div class="blur-div-470px-size"></div>
                     </div>
                     <div data-aos="fade-left" data-aos-delay="200" class="image-wrapper-40">
-                        <img
-                            src="/images/banner.jpg"
-                            loading="lazy"
-                            sizes="(max-width: 479px) 93vw, (max-width: 991px) 95vw, 39vw"
-                            alt=""
-                            class="hero-image"
-                            style="border-radius: 20px;"
-                        />
+                        <img src="/images/banner.jpg" loading="lazy"
+                            sizes="(max-width: 479px) 93vw, (max-width: 991px) 95vw, 39vw" alt="" class="hero-image"
+                            style="border-radius: 20px;" />
                         <!-- <div
                             data-w-id="f9e01134-9500-fcd2-017e-10e2a476cf65"
                             class="w-layout-hflex floating-card top-left"
@@ -166,9 +167,8 @@ onMounted(() => {
         </section>
 
         <div class="page-wrapper">
-            <Categories />
-
-            <Jobs />
+            <Categories :categories="categories" />
+            <Jobs :jobs="jobs" />
 
             <!-- <section class="primary-bg-section">
                 <div class="container">
@@ -259,36 +259,18 @@ onMounted(() => {
                 <div class="container">
                     <div data-aos="fade-up" class="_2-column-block _100px-gap">
                         <div class="image-wrapper-46">
-                            <div
-                                class="rotate-image"
-                                style="
-                                    will-change: transform;
-                                    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0.0125deg)
-                                        skew(0deg, 0deg);
-                                    transform-style: preserve-3d;
-                                "
-                            >
-                                <img
-                                    src="/images/banner-2.png"
-                                    loading="lazy"
-                                    sizes="(max-width: 479px) 93vw, (max-width: 991px) 95vw, 43vw"
-                                    alt=""
-                                    class="man-image"
-                                />
-                                <div class="absolute-banner-bg"></div>
+                            <div class="rotate-image">
+                                <img src="/images/banner-2.png" loading="lazy"
+                                    sizes="(max-width: 479px) 93vw, (max-width: 991px) 95vw, 43vw" alt=""
+                                    class="man-image" style="border-radius: 20px;" />
+                                <!-- <div class="absolute-banner-bg"></div> -->
                             </div>
-                            <img
+                            <!-- <img
                                 src="/images/MaskGroup.png"
                                 loading="lazy"
                                 alt=""
                                 class="_200px-absolute-image"
-                                style="
-                                    will-change: transform;
-                                    transform: translate3d(-56.9715px, 33.983px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg)
-                                        skew(0deg, 0deg);
-                                    transform-style: preserve-3d;
-                                "
-                            />
+                                /> -->
                             <!-- <div class="floating-card-man">
                                 <img src="/images/text1.svg" loading="lazy" alt="" class="image-50px" />
                                 <h6 class="heading">Cutting-Edge Job <br />Matching Technology</h6>
@@ -457,13 +439,14 @@ onMounted(() => {
                             <p class="_16px-500-neutral-50">{{ t('home.coreValues.subtitle') }}</p>
                         </div>
                     </div>
-                    
+
                     <div data-aos="fade-up" data-aos-delay="100" class="testimonial-slider-3-col">
                         <div class="mask-31 w-slider-mask" id="w-slider-mask-1">
                             <div class="margin-right-30px w-slide">
                                 <div class="testiimonial-wrapper">
                                     <div class="testimonial-card-med" style="padding-top: 70px;">
-                                        <input type="submit" data-wait="Please wait..." class="newsletter-submit-button w-button icon-value" value="💌" />
+                                        <input type="submit" data-wait="Please wait..."
+                                            class="newsletter-submit-button w-button icon-value" value="💌" />
                                         <div class="_20px-500">{{ t('home.coreValues.dedication.title') }}</div>
                                         <p class="_16px-500">{{ t('home.coreValues.dedication.description') }}</p>
                                     </div>
@@ -472,7 +455,8 @@ onMounted(() => {
                             <div class="margin-right-30px w-slide">
                                 <div class="testiimonial-wrapper">
                                     <div class="testimonial-card-med" style="padding-top: 70px;">
-                                        <input type="submit" data-wait="Please wait..." class="newsletter-submit-button w-button icon-value" value="📦" />
+                                        <input type="submit" data-wait="Please wait..."
+                                            class="newsletter-submit-button w-button icon-value" value="📦" />
                                         <div class="_20px-500">{{ t('home.coreValues.development.title') }}</div>
                                         <p class="_16px-500">{{ t('home.coreValues.development.description') }}</p>
                                     </div>
@@ -481,7 +465,8 @@ onMounted(() => {
                             <div class="margin-right-30px w-slide">
                                 <div class="testiimonial-wrapper">
                                     <div class="testimonial-card-med" style="padding-top: 70px;">
-                                        <input type="submit" data-wait="Please wait..." class="newsletter-submit-button w-button icon-value" value="⚠️" />
+                                        <input type="submit" data-wait="Please wait..."
+                                            class="newsletter-submit-button w-button icon-value" value="⚠️" />
                                         <div class="_20px-500">{{ t('home.coreValues.professionalism.title') }}</div>
                                         <p class="_16px-500">{{ t('home.coreValues.professionalism.description') }}</p>
                                     </div>
@@ -584,15 +569,15 @@ onMounted(() => {
                 </div>
             </section>
 
-           <News/>
+            <News :blogs="blogs" />
         </div>
     </AppLayout>
 </template>
 
 <style scoped>
 @import '@css/main.css';
-.icon-value { 
+
+.icon-value {
     inset: 14px auto 0 25px;
 }
-
 </style>

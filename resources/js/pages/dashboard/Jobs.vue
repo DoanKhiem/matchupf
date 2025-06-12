@@ -242,7 +242,7 @@ const deleteJob = (id: number) => {
             <Modal v-model:open="showModal" :title="isEdit ? 'Edit Job' : 'Add Job'" @cancel="closeModal" :footer="null">
                 <Form layout="vertical" @finish="saveJob">
                     <div v-if="error" class="mb-4 text-red-500">{{ error }}</div>
-                    <Form.Item label="Logo" name="logo" :validate-status="form.errors.logo ? 'error' : ''" :help="form.errors.logo">
+                    <!-- <Form.Item label="Logo" name="logo" :validate-status="form.errors.logo ? 'error' : ''" :help="form.errors.logo">
                         <div class="flex flex-col gap-2">
                             <div v-if="form.logo && typeof form.logo === 'string'" class="mb-2">
                                 <img :src="form.logo" alt="Logo" class="h-20 w-20 object-cover rounded" />
@@ -259,7 +259,7 @@ const deleteJob = (id: number) => {
                                     hover:file:bg-primary/90"
                             />
                         </div>
-                    </Form.Item>
+                    </Form.Item> -->
                     <Form.Item label="Title" required :validate-status="form.errors.title ? 'error' : ''" :help="form.errors.title">
                         <AInput v-model:value="form.title" placeholder="Job Title" />
                     </Form.Item>

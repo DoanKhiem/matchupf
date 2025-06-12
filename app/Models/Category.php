@@ -10,7 +10,8 @@ class Category extends Model
     use HasFactory;
 
     protected $fillable = [
-        'title'
+        'title',
+        'description'
     ];
 
     public function jobs()

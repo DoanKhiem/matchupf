@@ -1,5 +1,6 @@
 <template>
     <AppLayout>
+        <Head :title="t('jobDetail.title')" />
         <section id="hero" class="main-banner">
             <div class="container">
                 <div class="breadcrumb-block" data-aos="fade-up">
@@ -42,7 +43,7 @@
                                     </div>
                                 </div>
                                 <div class="w-layout-hflex job-info-block last">
-                                    <img src="/images/user-line.png" loading="lazy" alt="" class="image-24px margin-top-3px" />
+                                    <img src="/images/user-line-green.png" loading="lazy" alt="" class="image-24px margin-top-3px" />
                                     <div class="vertical-left-top _4px-gap">
                                         <div class="_20px-500">{{ t('jobDetail.info.experience') }}</div>
                                         <div class="text-merge">
@@ -165,6 +166,7 @@ import 'aos/dist/aos.css';
 import { onMounted } from 'vue';
 import { ref } from 'vue';
 import { useI18n } from 'vue-i18n';
+import { Head } from '@inertiajs/vue3';
 
 const { t } = useI18n();
 const props = defineProps<{ job: any }>();

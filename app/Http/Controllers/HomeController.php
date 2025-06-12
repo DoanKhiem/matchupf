@@ -10,6 +10,30 @@ use Inertia\Inertia;
 
 class HomeController extends Controller
 {
+    public function index()
+    {
+        $categories = Category::withCount('jobs')->take(4)->get();
+        $jobs = Job::with('company')->latest()->take(6)->get();
+        $blogs = Blog::select('id', 'title', 'slug', 'image', 'content', 'created_at')
+            ->latest()
+            ->take(4)
+            ->get()
+            ->map(function ($blog) {
+                return [
+                    'id' => $blog->id,
+                    'title' => $blog->title,
+                    'image' => $blog->image,
+                    'slug' => $blog->slug,
+                ];
+            });
+        
+        return Inertia::render('HomeView', [
+            'categories' => $categories,
+            'jobs' => $jobs,
+            'blogs' => $blogs
+        ]);
+    }
+
     public function jobs(Request $request)
     {
         $categories = Category::withCount('jobs')->get();
@@ -90,6 +114,50 @@ class HomeController extends Controller
         return Inertia::render('Blogs', [
             'blogs' => $blogs,
             'popularBlogs' => $popularBlogs
+        ]);
+    }
+
+    public function searchBlogs(Request $request)
+    {
+        $query = $request->input('query');
+        
+        $blogs = Blog::select('id', 'title', 'slug', 'image', 'content', 'created_at')
+            ->where('title', 'like', '%' . $query . '%')
+            ->orWhere('content', 'like', '%' . $query . '%')
+            ->latest()
+            ->get()
+            ->map(function ($blog) {
+                // Extract a short description from content
+                $desc = substr(strip_tags($blog->content), 0, 120) . '...';
+                
+                return [
+                    'id' => $blog->id,
+                    'title' => $blog->title,
+                    'img' => $blog->image,
+                    'desc' => $desc,
+                    'slug' => $blog->slug,
+                    'created_at' => $blog->created_at,
+                ];
+            });
+        
+        // Get 5 popular blogs for sidebar
+        $popularBlogs = Blog::select('id', 'title', 'slug', 'image')
+            ->latest()
+            ->take(5)
+            ->get()
+            ->map(function ($blog) {
+                return [
+                    'id' => $blog->id,
+                    'title' => $blog->title,
+                    'image' => $blog->image,
+                    'slug' => $blog->slug,
+                ];
+            });
+        
+        return Inertia::render('Blogs', [
+            'blogs' => $blogs,
+            'popularBlogs' => $popularBlogs,
+            'searchQuery' => $query
         ]);
     }
 

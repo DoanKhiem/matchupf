@@ -10,6 +10,7 @@ import { computed, h, ref } from 'vue';
 interface Category {
     id: number;
     title: string;
+    description: string;
 }
 
 const page = usePage();
@@ -23,6 +24,7 @@ const editingId = ref<number | null>(null);
 
 const form = useForm({
     title: '',
+    description: '',
 });
 
 const columns: ColumnsType<Category> = [
@@ -36,6 +38,11 @@ const columns: ColumnsType<Category> = [
         title: 'Title',
         dataIndex: 'title',
         key: 'title',
+    },
+    {
+        title: 'Description',
+        dataIndex: 'description',
+        key: 'description',
     },
     {
         title: 'Actions',
@@ -77,6 +84,7 @@ const openEdit = (category: Category) => {
     isEdit.value = true;
     form.reset();
     form.title = category.title;
+    form.description = category.description;
     editingId.value = category.id;
     showModal.value = true;
 };
@@ -158,6 +166,9 @@ const deleteCategory = (id: number) => {
                     <div v-if="error" class="mb-4 text-red-500">{{ error }}</div>
                     <Form.Item label="Title" required :validate-status="form.errors.title ? 'error' : ''" :help="form.errors.title">
                         <AInput v-model:value="form.title" placeholder="Category Title" />
+                    </Form.Item>
+                    <Form.Item label="Description" required :validate-status="form.errors.description ? 'error' : ''" :help="form.errors.description">
+                        <AInput v-model:value="form.description" placeholder="Category Description" />
                     </Form.Item>
                     <div class="mt-4 flex justify-end gap-2">
                         <Button type="button" variant="secondary" @click="closeModal">Cancel</Button>
