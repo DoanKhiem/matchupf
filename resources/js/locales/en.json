@@ -11,6 +11,11 @@
                 "popularJobs": "Digital Marketer, Web Designer"
             }
         },
+        "news": {
+            "title": "Our Latest News",
+            "description": "Stay updated with the newest and finest developments, events, and achievements from our community.",
+            "readMore": "Read more"
+        },
         "join": {
             "subtitle": "Attracting Over 5K Top Talent",
             "title": "Join TNC Elite Network for Career Opportunities Today!",
@@ -32,6 +37,21 @@
                 "title": "Professionalism",
                 "description": "Professional process, fast interview & screening time. The entire recruitment process takes only 3-7 days."
             }
+        },
+        "categories": {
+            "title": "Trending Job Categories",
+            "description": "Discover the most sought-after job categories on Job TNC, from tech and healthcare to remote work.",
+            "viewJob": "View Job",
+            "jobs": "Jobs"
+        },
+        "jobs": {
+            "title": "Popular jobs",
+            "description": "Explore top career opportunities in high-demand fields, including technology, healthcare, finance, and creative industries.",
+            "applyNow": "Apply Now",
+            "partTime": "Part Time",
+            "fullTime": "Full Time",
+            "remote": "Remote",
+            "inHouse": "In house"
         }
     },
     "navbar": {

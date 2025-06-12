@@ -8,9 +8,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BlogController;
 
-Route::get('/', function () {
-    return Inertia::render('HomeView');
-})->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('dashboard', function () {
     return Inertia::render('dashboard/Index');
@@ -18,8 +16,8 @@ Route::get('dashboard', function () {
 
 // Blog routes
 Route::get('/blogs', [HomeController::class, 'blogs'])->name('blogs');
-
 Route::get('/blog/{slug}', [HomeController::class, 'blogDetail'])->name('blog.detail');
+Route::get('/search-blogs', [HomeController::class, 'searchBlogs'])->name('blogs.search');
 
 Route::get('/about', function () {
     return Inertia::render('About');

@@ -46,10 +46,10 @@
                                                 <p class="neutral-300">{{ blog.desc }}</p>
                                             </div>
                                         </div>
-                                        <router-link :to="{ name: 'blog-detail', params: { id: blog.slug } }" class="blog-button w-inline-block">
+                                        <a :href="`/blog/${blog.slug}`" class="blog-button w-inline-block">
                                             <div>{{ t('blogs.readMore') }}</div>
                                             <div class="_24px-icon" aria-hidden="true">navigate_next</div>
-                                        </router-link>
+                                        </a>
                                     </div>
                                 </div>
                             </SwiperSlide>
@@ -62,16 +62,11 @@
                     <div class="_2-column-block-top reverse">
                         <div
                             data-w-id="a06ac0ee-27f8-9df6-3154-f067caabc778"
-                            style="
-                                opacity: 1;
-                                transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                                transform-style: preserve-3d;
-                            "
                             class="sidebar _20px-gap"
                             data-aos="fade-right"
                             data-aos-delay="200"
                         >
-                            <form action="/search" class="search-block w-form">
+                            <form action="/search-blogs" method="GET" class="search-block w-form">
                                 <input
                                     class="blog-search-field w-input"
                                     maxlength="256"
@@ -172,11 +167,6 @@
                         <div class="full-width w-dyn-list">
                             <div
                                 data-w-id="6dae297c-b538-2197-6d8e-712641568c75"
-                                style="
-                                    opacity: 1;
-                                    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                                    transform-style: preserve-3d;
-                                "
                                 role="list"
                                 class="vertical-blog-list-40px w-dyn-items"
                                 data-aos="fade-left"
@@ -202,18 +192,10 @@
                                                 </div>
                                             </a>
                                             <div class="margin-top-40px">
-                                                <router-link
-                                                    :to="{
-                                                        name: 'blog-detail',
-                                                        params: {
-                                                            id: blog.slug,
-                                                        },
-                                                    }"
-                                                    class="blog-button w-inline-block"
-                                                >
+                                                <a :href="`/blog/${blog.slug}`" class="blog-button w-inline-block">
                                                     <div>{{ t('blogs.readMore') }}</div>
                                                     <div class="icon">east</div>
-                                                </router-link>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -286,7 +268,7 @@ onMounted(() => {
 }
 .swiper-button-next,
 .swiper-button-prev {
-    background-color: var(--primary-color, #333);
+    background-color: #36c2ce;
     color: white;
     width: 40px;
     height: 40px;
@@ -305,7 +287,7 @@ onMounted(() => {
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-    background-color: var(--secondary-color, #555);
+    background-color: #2499a3;
 }
 
 /* Chỉnh vị trí nút */

@@ -354,7 +354,7 @@ onMounted(() => {
 }
 .swiper-button-next,
 .swiper-button-prev {
-    background-color: var(--primary-color, #333);
+    background-color: #36c2ce;
     color: white;
     width: 40px;
     height: 40px;
@@ -373,7 +373,7 @@ onMounted(() => {
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-    background-color: var(--secondary-color, #555);
+    background-color: #2499a3;
 }
 
 .w-slider-dot {

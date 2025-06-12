@@ -41,7 +41,7 @@ class BlogController extends Controller
 
             // Handle image upload
             if ($request->hasFile('image')) {
-                $path = $request->file('image')->store('public/blogs');
+                $path = $request->file('image')->store('blogs', 'public');
                 $validated['image'] = Storage::url($path);
             }
 
@@ -82,11 +82,11 @@ class BlogController extends Controller
             if ($request->hasFile('image')) {
                 // Delete old image if exists
                 if ($blog->image) {
-                    $oldPath = str_replace('/storage/', 'public/', $blog->image);
-                    Storage::delete($oldPath);
+                    $oldPath = str_replace('/storage/', '', $blog->image);
+                    Storage::disk('public')->delete($oldPath);
                 }
                 
-                $path = $request->file('image')->store('public/blogs');
+                $path = $request->file('image')->store('blogs', 'public');;
                 $validated['image'] = Storage::url($path);
             }
 
@@ -106,8 +106,8 @@ class BlogController extends Controller
         
         // Delete image if exists
         if ($blog->image) {
-            $path = str_replace('/storage/', 'public/', $blog->image);
-            Storage::delete($path);
+            $oldPath = str_replace('/storage/', '', $blog->image);
+            Storage::disk('public')->delete($oldPath);
         }
         
         $blog->delete();

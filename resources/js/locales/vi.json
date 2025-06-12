@@ -11,6 +11,11 @@
                 "popularJobs": "Digital Marketer, Web Designer"
             }
         },
+        "news": {
+            "title": "Tin Tức Mới Nhất",
+            "description": "Cập nhật những phát triển, sự kiện và thành tựu mới nhất từ cộng đồng của chúng tôi.",
+            "readMore": "Đọc thêm"
+        },
         "join": {
             "subtitle": "Thu Hút Hơn 5K Nhân Tài Hàng Đầu",
             "title": "Tham Gia Mạng Lưới TNC Elite Cho Cơ Hội Nghề Nghiệp Ngay Hôm Nay!",
@@ -32,6 +37,21 @@
                 "title": "Chuyên Nghiệp",
                 "description": "Quy trình chuyên nghiệp, thời gian phỏng vấn & sàng lọc nhanh. Toàn bộ quá trình tuyển dụng chỉ mất 3-7 ngày."
             }
+        },
+        "categories": {
+            "title": "Danh Mục Việc Làm Nổi Bật",
+            "description": "Khám phá các danh mục việc làm được săn đón nhất trên Job TNC, từ công nghệ, y tế đến làm việc từ xa.",
+            "viewJob": "Xem Việc Làm",
+            "jobs": "Việc Làm"
+        },
+        "jobs": {
+            "title": "Việc Làm Phổ Biến",
+            "description": "Khám phá các cơ hội nghề nghiệp hàng đầu trong các lĩnh vực có nhu cầu cao, bao gồm công nghệ, y tế, tài chính và các ngành sáng tạo.",
+            "applyNow": "Ứng Tuyển Ngay",
+            "partTime": "Bán Thời Gian",
+            "fullTime": "Toàn Thời Gian",
+            "remote": "Từ Xa",
+            "inHouse": "Tại Văn Phòng"
         }
     },
     "navbar": {
