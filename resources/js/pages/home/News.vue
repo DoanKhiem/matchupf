@@ -40,7 +40,7 @@ defineProps<{
                                         class="featured-blog-list-thumbnail" />
                                 </a>
                                 <a :href="`/blog/${blogs[0].slug}`" class="margin-top-40px-bottom-50px w-inline-block">
-                                    <h4 class="heading" style="color: rgb(0, 13, 131)">{{ blogs[0].title }}</h4>
+                                    <h4 class="heading">{{ blogs[0].title }}</h4>
                                 </a>
                                 <a :href="`/blog/${blogs[0].slug}`" class="read-more-link w-inline-block">
                                     <div>{{ t('home.news.readMore') }}</div>
@@ -60,7 +60,7 @@ defineProps<{
                                 </a>
                                 <div class="w-layout-vflex blog-list-body">
                                     <a :href="`/blog/${blog.slug}`" class="mask w-inline-block">
-                                        <h6 class="heading" style="color: rgb(0, 13, 131)">{{ blog.title }}</h6>
+                                        <h6 class="heading">{{ blog.title }}</h6>
                                     </a>
                                     <a :href="`/blog/${blog.slug}`" class="read-more-link w-inline-block">
                                         <div>{{ t('home.news.readMore') }}</div>

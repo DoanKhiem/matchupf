@@ -3295,7 +3295,7 @@ label {
 }
 
 .social-share-icon:hover {
-    color: #36c2ce;
+    color: #83C75D;
     transform: translate(0, -3px);
 }
 
@@ -3316,7 +3316,7 @@ label {
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     border-radius: 6px;
-    background-color: #36c2ce;
+    background-color: #83C75D;
     color: #fff;
     justify-content: center;
     align-items: center;
@@ -3331,7 +3331,7 @@ label {
 
 .nav-button:hover,
 .nav-button.reverse {
-    background-color: #2499a3;
+    background-color: #5BBD2B;
 }
 
 .nav-button.reverse:hover {
@@ -3420,7 +3420,7 @@ label {
     grid-row-gap: 10px;
     border: 1px solid #36c2ce;
     border-radius: 6px;
-    background-color: #36c2ce;
+    background-color: #83C75D;
     font-family: 'Space Grotesk', sans-serif;
     color: #fff;
     justify-content: center;
@@ -3480,13 +3480,13 @@ label {
 }
 
 .blog-card-title:hover {
-    color: #36c2ce;
+    color: #83C75D;
 }
 
 .blog-button {
     grid-column-gap: 15px;
     grid-row-gap: 15px;
-    color: #36c2ce;
+    color: #83C75D;
     border-radius: 4px;
     justify-content: flex-start;
     align-items: center;
@@ -3554,7 +3554,7 @@ label {
 
 .breadcrumb {
     font-family: 'Space Grotesk', sans-serif;
-    color: #b0b4d9;
+    color: #fff;
     font-size: 20px;
     font-weight: 500;
     line-height: 30px;
@@ -3600,11 +3600,11 @@ label {
 }
 
 .color-box.secondary-color {
-    background-color: #36c2ce;
+    background-color: #83C75D;
 }
 
 .color-box.primary-color {
-    background-color: #000d83;
+    background-color: #5BBD2B;
 }
 
 .color-box.background-color {
@@ -3801,7 +3801,7 @@ label {
 }
 
 .post-title:hover {
-    color: #000d83;
+    color: #83C75D;
 }
 
 .property-category-block {
@@ -3843,7 +3843,7 @@ label {
 }
 
 .tag-button:hover {
-    background-color: #000d83;
+    background-color: #5BBD2B;
     color: #fff;
     box-shadow: 0 4px 10px #5d38ff1a;
 }
@@ -3913,7 +3913,7 @@ label {
 }
 
 .link-text:hover {
-    color: #36c2ce;
+    color: #83C75D;
 }
 
 .utility-page-content {
@@ -4036,7 +4036,7 @@ label {
 
 .nav-link:hover,
 .nav-link:focus {
-    /* color: #36c2ce; */
+    /* color: #83C75D; */
 }
 
 .nav-link:focus-visible {
@@ -4050,7 +4050,7 @@ label {
 }
 
 .nav-link.w--current {
-    /* color: #36c2ce; */
+    /* color: #83C75D; */
 }
 
 .submenu-link {
@@ -4066,12 +4066,12 @@ label {
 }
 
 .submenu-link:hover {
-    color: #36c2ce;
+    color: #83C75D;
     transform: translate(5px);
 }
 
 .submenu-link.w--current {
-    color: #36c2ce;
+    color: #83C75D;
 }
 
 .container {
@@ -4410,7 +4410,7 @@ label {
 
 .success-message {
     border-radius: 30px;
-    background-color: #000d83;
+    background-color: #5BBD2B;
     color: #fff;
     width: 100%;
     font-weight: 600;
@@ -4520,7 +4520,7 @@ label {
 }
 
 .newsletter-submit-button {
-    background-color: #36c2ce;
+    background-color: #83C75D;
     color: #fff;
     border-radius: 100%;
     width: 48px;
@@ -4538,12 +4538,12 @@ label {
 }
 
 .newsletter-submit-button:hover {
-    background-color: #2499a3;
+    background-color: #5BBD2B;
     transform: scale(1.1);
 }
 
 .hero-section {
-    /* background-color: #000d83; */
+    /* background-color: #5BBD2B; */
     padding-top: 24px;
     padding-bottom: 50px;
     overflow: hidden;
@@ -4588,7 +4588,7 @@ label {
 
 ._20px-title-secondary {
     font-family: 'Space Grotesk', sans-serif;
-    color: #36c2ce;
+    color: #83C75D;
     font-size: 20px;
     font-weight: 500;
     line-height: 30px;
@@ -4839,7 +4839,7 @@ label {
 }
 
 .category-icon {
-    background-color: #36c2ce;
+    background-color: #83C75D;
     border-radius: 50%;
     justify-content: center;
     align-items: center;
@@ -5013,7 +5013,7 @@ label {
 
 ._24px-title-secondary {
     font-family: 'Space Grotesk', sans-serif;
-    color: #36c2ce;
+    color: #83C75D;
     font-size: 24px;
     font-weight: 600;
     line-height: 34px;
@@ -5106,7 +5106,7 @@ label {
 }
 
 .primary-bg-section {
-    background-image: url('/images/Bg_MaskGroup_2.png'), linear-gradient(to bottom, #36c2ce, #36c2ce);
+    background-image: url('/images/Bg_MaskGroup_2.png'), linear-gradient(to bottom, #83C75D, #83C75D);
     background-position:
         50%,
         0 0;
@@ -5153,12 +5153,12 @@ label {
 }
 
 .how-it-works-card:hover {
-    border-color: #36c2ce;
+    border-color: #83C75D;
     transform: rotate(2deg);
 }
 
 .svg-wrapper-job {
-    background-color: #36c2ce;
+    background-color: #83C75D;
     border-radius: 6px;
     justify-content: center;
     align-items: center;
@@ -5256,7 +5256,7 @@ label {
 }
 
 .read-more-link:hover {
-    color: #36c2ce;
+    color: #83C75D;
 }
 
 .featured-blog {
@@ -5439,13 +5439,13 @@ label {
 }
 
 .job-category-link:hover {
-    border-bottom-color: #36c2ce;
-    color: #36c2ce;
+    border-bottom-color: #83C75D;
+    color: #83C75D;
     padding-left: 10px;
 }
 
 .job-category-link.w--current {
-    color: #36c2ce;
+    color: #83C75D;
     padding-left: 10px;
 }
 
@@ -5460,7 +5460,7 @@ label {
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     border-radius: 6px;
-    background-color: #000d83;
+    background-color: #5BBD2B;
     font-family: 'Space Grotesk', sans-serif;
     color: #fff;
     justify-content: center;
@@ -5477,7 +5477,7 @@ label {
 }
 
 .pagination-button:hover {
-    background-color: #36c2ce;
+    background-color: #83C75D;
     border-radius: 9px;
 }
 
@@ -5814,7 +5814,7 @@ label {
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     border-radius: 6px;
-    background-color: #36c2ce;
+    background-color: #83C75D;
     color: #fff;
     justify-content: center;
     align-items: center;
@@ -5828,7 +5828,7 @@ label {
 }
 
 .primary-button:hover {
-    background-color: #2499a3;
+    background-color: #5BBD2B;
 }
 
 .primary-button.full-button {
@@ -6003,7 +6003,7 @@ label {
 }
 
 .tab-link-pink.w--current {
-    background-color: #36c2ce;
+    background-color: #83C75D;
 }
 
 .pricing-card {
@@ -6067,7 +6067,7 @@ label {
 
 .blog-slider-arrow {
     border-radius: 4px;
-    background-color: #000d83;
+    background-color: #5BBD2B;
     font-family: 'Material Icons', sans-serif;
     justify-content: center;
     align-items: center;
@@ -6082,7 +6082,7 @@ label {
 }
 
 .blog-slider-arrow:hover {
-    background-color: #36c2ce;
+    background-color: #83C75D;
 }
 
 .blog-slider-arrow.right-arrow {
@@ -6202,7 +6202,7 @@ label {
 .faq-form {
     grid-column-gap: 10px;
     grid-row-gap: 10px;
-    background-color: #000d83;
+    background-color: #5BBD2B;
     border-radius: 10px;
     flex-direction: column;
     align-items: stretch;
@@ -6233,7 +6233,7 @@ label {
 .submit-button {
     grid-column-gap: 10px;
     grid-row-gap: 10px;
-    background-color: #36c2ce;
+    background-color: #83C75D;
     color: #fff;
     white-space: nowrap;
     border-radius: 4px;
@@ -6248,7 +6248,7 @@ label {
 }
 
 .submit-button:hover {
-    background-color: #2499a3;
+    background-color: #5BBD2B;
     color: #f5f5f5;
 }
 
@@ -6310,7 +6310,7 @@ label {
 }
 
 .contact-icon-wrapper-40px {
-    background-color: #36c2ce;
+    background-color: #83C75D;
     color: #fff;
     border-radius: 100%;
     justify-content: center;
@@ -6331,7 +6331,7 @@ label {
 }
 
 .contact-icon-wrapper-40px:hover {
-    background-color: #2499a3;
+    background-color: #5BBD2B;
     color: #fff;
 }
 
@@ -6527,7 +6527,7 @@ label {
 }
 
 .form-close-icon:hover {
-    color: #36c2ce;
+    color: #83C75D;
 }
 
 .cta-image {
@@ -6546,10 +6546,10 @@ label {
 }
 
 .job-search-field {
-    border: 0.5px solid #b0b4d9;
+    border: 0.5px solid #83C75D;
     border-radius: 4px;
-    background-color: #e6e7f3;
-    color: #04081b;
+    background-color: #fff;
+    color: #000;
     min-height: 50px;
     margin-top: 12px;
     margin-bottom: 0;
@@ -6558,14 +6558,14 @@ label {
 }
 
 .job-search-field::placeholder {
-    color: #000d83;
+    color: #000;
 }
 
 .job-search-absolute-button {
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     border-radius: 6px;
-    background-color: #36c2ce;
+    background-color: #83C75D;
     color: #fff;
     justify-content: center;
     align-items: center;
@@ -6578,7 +6578,7 @@ label {
 }
 
 .job-search-absolute-button:hover {
-    background-color: #2499a3;
+    background-color: #5BBD2B;
 }
 
 .featured-tag {
@@ -6674,7 +6674,7 @@ label {
 
 .input-field-60px:hover,
 .input-field-60px:focus {
-    border-color: #36c2ce;
+    border-color: #83C75D;
 }
 
 .input-field-60px.text-area-field {
@@ -6740,7 +6740,7 @@ label {
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     border-radius: 6px;
-    background-color: #000d83;
+    background-color: #5BBD2B;
     color: #fff;
     justify-content: center;
     align-items: center;
@@ -6754,7 +6754,7 @@ label {
 }
 
 .job-post-button:hover {
-    background-color: #36c2ce;
+    background-color: #83C75D;
     color: #04081b;
 }
 
@@ -6784,7 +6784,7 @@ label {
 }
 
 .login-link:hover {
-    color: #36c2ce;
+    color: #83C75D;
 }
 
 .hide-from-tablet-horizontal {
@@ -6996,9 +6996,11 @@ label {
 }
 
 .banner-search-input {
-    border: 1px solid #545dac;
-    background-color: #333d9c;
-    color: #fffc;
+    /* border: 1px solid #545dac; */
+    border: none;
+    outline: none;
+    background-color: #fff;
+    color: #000;
     border-radius: 6px;
     min-height: 70px;
     margin-bottom: 0;
@@ -7006,12 +7008,12 @@ label {
 }
 
 .banner-search-input::placeholder {
-    color: #fffc;
+    color: #000;
 }
 
 .search-button-material {
-    color: #fffc;
-    background-color: #3898ec00;
+    color: #000;
+    background-color: #fff;
     padding: 0;
     font-family:
         Material Icons Outlined,
@@ -7023,7 +7025,7 @@ label {
 }
 
 .widget-title {
-    background-color: #000d83;
+    background-color: #5BBD2B;
     color: #fff;
     margin-bottom: 10px;
     padding: 16px 15px 16px 30px;
@@ -7057,7 +7059,7 @@ label {
 
 .apply-button-with-hover:hover {
     border-color: #000d83;
-    background-color: #000d83;
+    background-color: #5BBD2B;
     color: #fff;
 }
 
@@ -7192,7 +7194,7 @@ label {
 }
 
 .login-link-white:hover {
-    color: #36c2ce;
+    color: #83C75D;
 }
 
 .user-form {
@@ -7240,7 +7242,7 @@ label {
 .user-button {
     grid-column-gap: 10px;
     grid-row-gap: 10px;
-    background-color: #000d83;
+    background-color: #5BBD2B;
     color: #fff;
     white-space: nowrap;
     border-radius: 6px;
@@ -7256,7 +7258,7 @@ label {
 }
 
 .user-button:hover {
-    background-color: #36c2ce;
+    background-color: #83C75D;
     color: #f5f5f5;
 }
 
@@ -7274,7 +7276,7 @@ label {
 }
 
 .tertiary-link:hover {
-    color: #36c2ce;
+    color: #83C75D;
 }
 
 .google-button {
@@ -7298,7 +7300,7 @@ label {
 }
 
 .google-button:hover {
-    background-color: #36c2ce;
+    background-color: #83C75D;
     color: #f5f5f5;
 }
 
@@ -7361,7 +7363,7 @@ label {
 }
 
 .hover-color-primary {
-    background-color: #000d83;
+    background-color: #5BBD2B;
     width: 100%;
     height: 0%;
     position: absolute;
@@ -7373,13 +7375,13 @@ label {
 }
 
 ._16px-700-uppercase-secondary {
-    color: #36c2ce;
+    color: #83C75D;
     text-transform: uppercase;
     font-weight: 700;
 }
 
 .category-hover {
-    background-color: #000d83d9;
+    background-color: #5BBD2Bd9;
     justify-content: center;
     align-items: center;
     display: none;
@@ -7426,7 +7428,7 @@ label {
 }
 
 .secondary-link {
-    color: #36c2ce;
+    color: #83C75D;
 }
 
 .remove-this-for-production {
@@ -7491,7 +7493,7 @@ label {
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     border: 1px solid #000d83;
-    background-color: #000d83;
+    background-color: #5BBD2B;
     border-radius: 6px;
     justify-content: center;
     align-items: center;
