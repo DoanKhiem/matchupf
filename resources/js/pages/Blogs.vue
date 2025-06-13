@@ -268,7 +268,7 @@ onMounted(() => {
 }
 .swiper-button-next,
 .swiper-button-prev {
-    background-color: #36c2ce;
+    background-color: #83C75D;
     color: white;
     width: 40px;
     height: 40px;
@@ -287,7 +287,7 @@ onMounted(() => {
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-    background-color: #2499a3;
+    background-color: #5BBD2B;
 }
 
 /* Chỉnh vị trí nút */

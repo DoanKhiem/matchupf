@@ -359,12 +359,12 @@ const changeLanguage = (langCode: string) => {
 
 <style scoped>
 .nav-link.w--current {
-    /* color: #36c2ce; */
+    /* color: #83C75D; */
     font-weight: 500;
 }
 
 .submenu-link.w--current {
-    /* color: #36c2ce; */
+    /* color: #83C75D; */
     font-weight: 500;
 }
 
