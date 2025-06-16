@@ -3397,6 +3397,7 @@ label {
 .heading {
     margin-top: 0;
     margin-bottom: 0;
+    transition: color 0.2s;
 }
 
 .heading.white {
@@ -3486,7 +3487,7 @@ label {
 .blog-button {
     grid-column-gap: 15px;
     grid-row-gap: 15px;
-    color: #83C75D;
+    color: #8c8d96;
     border-radius: 4px;
     justify-content: flex-start;
     align-items: center;
@@ -3497,7 +3498,7 @@ label {
 }
 
 .blog-button:hover {
-    color: #000d83;
+    color: #83C75D;
 }
 
 .main-banner {
@@ -3703,7 +3704,7 @@ label {
 }
 
 .blog-search-field:focus {
-    border-color: #b19470;
+    border-color: #83C75D;
 }
 
 .blog-search-field::placeholder {
@@ -4983,9 +4984,9 @@ label {
     z-index: 1;
     grid-column-gap: 12px;
     grid-row-gap: 12px;
-    border: 1px solid #000d83;
+    border: 1px solid #83C75D;
     background-color: #fff0;
-    color: #000d83;
+    color: #83C75D;
     border-radius: 6px;
     justify-content: flex-start;
     align-items: center;
@@ -5299,6 +5300,10 @@ label {
     width: 100%;
 }
 
+.blog-list-body .heading:hover, .featured-blog .heading:hover {
+    color: #83C75D;
+}
+
 .featured-blog-list-thumbnail {
     aspect-ratio: 3 / 2;
 }
@@ -5500,8 +5505,8 @@ label {
 }
 
 .job-grid-card:hover {
-    border-color: #fff0;
-    transform: translate(0);
+    /* border-color: #fff0; */
+    /* transform: translate(0); */
 }
 
 .job-grid-header {
