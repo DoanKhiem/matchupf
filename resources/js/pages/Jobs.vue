@@ -86,7 +86,7 @@
                                                                 <div>{{ job.type }}</div>
                                                             </div>
                                                             <div class="w-layout-hflex text-button">
-                                                                <div>{{ job.experience }} {{ t('jobs.job.experience') }}</div>
+                                                                <div>{{ job.experience }}</div>
                                                             </div>
                                                         </div>
                                                     </div>
