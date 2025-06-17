@@ -88,6 +88,8 @@ class BlogController extends Controller
                 
                 $path = $request->file('image')->store('blogs', 'public');;
                 $validated['image'] = Storage::url($path);
+            } else {
+                $validated['image'] = $blog->image;
             }
 
             $blog->update($validated);

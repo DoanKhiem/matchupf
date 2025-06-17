@@ -68,7 +68,7 @@ const goToCategory = (category: Category) => {
                                                 <div class="secondary-button w-inline-block" style="opacity: 0">
                                                     <div class="button-text-wrapper">
                                                         <div class="default-text">{{ t('home.categories.viewJob') }}</div>
-                                                        <div class="hover-text">{{ t('home.categories.viewJob') }}</div>
+                                                        <!-- <div class="hover-text">{{ t('home.categories.viewJob') }}</div> -->
                                                     </div>
                                                     <div class="icon-18px">chevron_right</div>
                                                 </div>

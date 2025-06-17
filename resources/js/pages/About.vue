@@ -114,7 +114,7 @@
                             <a data-w-id="6bcc436e-f391-e4e1-1e4d-674835ea7bde" href="/contact" class="primary-button w-inline-block">
                                 <div class="button-text-wrapper">
                                     <div class="default-text">{{ t('about.contact.button') }}</div>
-                                    <div class="hover-text">{{ t('about.contact.button') }}</div>
+                                    <!-- <div class="hover-text">{{ t('about.contact.button') }}</div> -->
                                 </div>
                                 <div class="icon-18px">chevron_right</div>
                             </a>
