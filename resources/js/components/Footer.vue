@@ -22,7 +22,7 @@ const { t } = useI18n();
                         <a href="/contact" class="primary-button w-inline-block">
                             <div class="button-text-wrapper">
                                 <div class="default-text">{{ t('footer.cta.button') }}</div>
-                                <div class="hover-text">{{ t('footer.cta.button') }}</div>
+                                <!-- <div class="hover-text">{{ t('footer.cta.button') }}</div> -->
                             </div>
                             <div class="icon-18px">chevron_right</div>
                         </a>

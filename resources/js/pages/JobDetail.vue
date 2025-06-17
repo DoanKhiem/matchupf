@@ -39,7 +39,7 @@
                                     <img src="/images/money-dollar-box-line.png" loading="lazy" alt="" class="image-24px margin-top-3px" />
                                     <div class="vertical-left-top _4px-gap">
                                         <div class="_20px-500">{{ t('jobDetail.info.salaryRange') }}</div>
-                                        <p class="_16px-500">${{ job.salary }}</p>
+                                        <p class="_16px-500">{{ job.salary }}</p>
                                     </div>
                                 </div>
                                 <div class="w-layout-hflex job-info-block last">
@@ -47,14 +47,14 @@
                                     <div class="vertical-left-top _4px-gap">
                                         <div class="_20px-500">{{ t('jobDetail.info.experience') }}</div>
                                         <div class="text-merge">
-                                            <p class="_16px-500">{{ job.experience }} {{ t('jobDetail.info.years') }}</p>
+                                            <p class="_16px-500">{{ job.experience }}</p>
                                         </div>
                                     </div>
                                 </div>
                                 <a data-w-id="081325f6-2dc0-8ac3-8042-83b3e7870577" href="#" class="primary-button full-button w-inline-block">
                                     <div class="button-text-wrapper">
                                         <div class="default-text">{{ t('jobDetail.apply.button') }}</div>
-                                        <div class="hover-text">{{ t('jobDetail.apply.button') }}</div>
+                                        <!-- <div class="hover-text">{{ t('jobDetail.apply.button') }}</div> -->
                                     </div>
                                     <div class="icon-18px">chevron_right</div>
                                 </a>

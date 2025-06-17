@@ -150,24 +150,12 @@
                     <Link data-w-id="d8d360e1-f645-321f-d65f-94a46da5403d" :href="route('login')" class="nav-button w-inline-block"
                         ><img src="/images/edit-line.svg" loading="lazy" alt="" height="Auto" class="image-24px" />
                         <div class="button-text-wrapper">
-                            <div
-                                class="default-text"
-                                style="
-                                    transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                                    transform-style: preserve-3d;
-                                "
-                            >
+                            <div class="default-text"  >
                                 {{ t('navbar.postJob') }}
                             </div>
-                            <div
-                                class="hover-text"
-                                style="
-                                    transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                                    transform-style: preserve-3d;
-                                "
-                            >
+                            <!-- <div class="hover-text" >
                                 {{ t('navbar.postJob') }}
-                            </div>
+                            </div> -->
                         </div>
                     </Link>
                 </div>

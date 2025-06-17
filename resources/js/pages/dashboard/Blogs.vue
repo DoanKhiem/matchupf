@@ -130,6 +130,11 @@ const saveBlog = () => {
         _method: isEdit.value ? 'PUT' : 'POST',
     });
 
+    // If editing and no new image is uploaded, set image to null
+    if (isEdit.value && !(form.image instanceof File)) {
+        payload.image = null;
+    }
+
     if (isEdit.value && editingId.value) {
         payload.post(`/dashboard/blogs/${editingId.value}`, {
             preserveScroll: true,

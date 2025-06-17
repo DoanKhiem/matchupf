@@ -291,7 +291,7 @@ onMounted(() => {
                             <a href="/contact" class="primary-button w-inline-block">
                                 <div class="button-text-wrapper">
                                     <div class="default-text">{{ t('home.join.button') }}</div>
-                                    <div class="hover-text">{{ t('home.join.button') }}</div>
+                                    <!-- <div class="hover-text">{{ t('home.join.button') }}</div> -->
                                 </div>
                                 <div class="icon-18px">chevron_right</div>
                             </a>
