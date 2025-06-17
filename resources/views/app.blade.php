@@ -38,6 +38,7 @@
         <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic%7CMaterial+Icons:regular%7CMaterial+Icons+Outlined:regular%7CAlegreya:regular,500,600,700,800,900%7CJost:300,regular,500,600,700,800%7CInter:300,regular,500,600,700%7CSpace+Grotesk:300,regular,500,600,700"
         media="all">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         @routes
         @vite(['resources/js/app.ts'])
         @inertiaHead

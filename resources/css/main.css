@@ -3658,6 +3658,7 @@ label {
 }
 
 ._18px-title {
+    font-family: Inter, sans-serif;
     color: #000;
     font-size: 18px;
     line-height: 28px;
@@ -3868,6 +3869,9 @@ label {
 }
 
 .rich-text-block {
+    font-family: Inter, sans-serif;
+    color: #575a66;
+
     margin-bottom: 20px;
 }
 

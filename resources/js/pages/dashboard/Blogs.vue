@@ -6,6 +6,7 @@ import { Input as AInput, Form, Modal, Table } from 'ant-design-vue';
 import type { ColumnsType } from 'ant-design-vue/es/table';
 import { Pencil, Plus, Trash2 } from 'lucide-vue-next';
 import { computed, h, ref } from 'vue';
+import RichTextEditor from '@/components/RichTextEditor.vue';
 
 interface Blog {
     id: number;
@@ -208,7 +209,7 @@ const deleteBlog = (id: number) => {
                         <AInput v-model:value="form.title" placeholder="Blog Title" />
                     </Form.Item>
                     <Form.Item label="Content" required :validate-status="form.errors.content ? 'error' : ''" :help="form.errors.content">
-                        <AInput.TextArea v-model:value="form.content" placeholder="Blog Content" :rows="6" />
+                        <RichTextEditor v-model="form.content" />
                     </Form.Item>
                     <Form.Item label="Image" required :validate-status="form.errors.image ? 'error' : ''" :help="form.errors.image">
                         <div class="flex flex-col gap-2">

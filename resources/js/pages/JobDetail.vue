@@ -129,23 +129,23 @@
                                     {{ paragraph }}
                                 </p>
                                 <h4>{{ t('jobDetail.description.responsibilities') }}</h4>
-                                <ul role="list">
-                                    <li v-for="(responsibility, index) in job.responsibilities" :key="index">
-                                        {{ responsibility }}
-                                    </li>
-                                </ul>
+                                <!-- <ul role="list"> -->
+                                    <p v-for="(responsibility, index) in job.responsibilities" :key="index">
+                                        <img src="/images/Bg_Vector.png" loading="lazy" alt="" class="image-24px my-0 mr-2" /> {{ responsibility }}
+                                    </p>
+                                <!-- </ul> -->
                                 <h4>{{ t('jobDetail.description.requiredSkills') }}</h4>
-                                <ul role="list">
-                                    <li v-for="(skill, index) in job.skills" :key="index">
-                                        {{ skill }}
-                                    </li>
-                                </ul>
+                                <!-- <ul role="list"> -->
+                                    <p v-for="(skill, index) in job.skills" :key="index">
+                                        <img src="/images/Bg_Vector.png" loading="lazy" alt="" class="image-24px my-0 mr-2" /> {{ skill }}
+                                    </p>
+                                <!-- </ul> -->
                                 <h4>{{ t('jobDetail.description.benefits') }}</h4>
-                                <ul role="list">
-                                    <li v-for="(benefit, index) in job.benefits" :key="index">
-                                        {{ benefit }}
-                                    </li>
-                                </ul>
+                                <!-- <ul role="list"> -->
+                                    <p v-for="(benefit, index) in job.benefits" :key="index">
+                                        <img src="/images/Bg_Vector.png" loading="lazy" alt="" class="image-24px my-0 mr-2" /> {{ benefit }}
+                                    </p>
+                                <!-- </ul> -->
                             </div>
                             <div class="blur-div-470px-size right-middle"></div>
                         </div>
@@ -184,4 +184,8 @@ onMounted(() => {
 
 <style scoped>
 @import '@css/main.css';
+.my-0 {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
 </style>

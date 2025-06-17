@@ -84,7 +84,7 @@
                             <p class="blog-date" data-aos="fade-up" data-aos-delay="450">{{ blog.created_at }}</p>
 
                             <div class="rich-text-block w-richtext" data-aos="fade-up" data-aos-delay="500"
-                                style="white-space: pre-wrap;">{{ blog.content }}</div>
+                                v-html="blog.content"></div>
 
                             <div class="tag-block" data-aos="fade-up" data-aos-delay="1000">
                                 <!-- <div class="tag-block">
@@ -179,5 +179,16 @@ onMounted(() => {
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 30px;
+}
+
+.rich-text-block :deep(p) {
+    margin-bottom: 1em;
+    white-space: pre-wrap;
+}
+
+.rich-text-block :deep(br) {
+    display: block;
+    content: "";
+    margin-top: 0.5em;
 }
 </style>
