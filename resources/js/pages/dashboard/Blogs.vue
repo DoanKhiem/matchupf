@@ -23,6 +23,7 @@ const error = ref('');
 const showModal = ref(false);
 const isEdit = ref(false);
 const editingId = ref<number | null>(null);
+const fileInput = ref<HTMLInputElement | null>(null);
 
 const form = useForm({
     title: '',
@@ -103,7 +104,11 @@ const openEdit = (blog: Blog) => {
 
 const closeModal = () => {
     showModal.value = false;
+    error.value = '';
     form.clearErrors();
+    if (fileInput.value) {
+        fileInput.value.value = '';
+    }
 };
 
 const handleFileChange = (e: Event) => {
@@ -192,7 +197,7 @@ const deleteBlog = (id: number) => {
                 <h2 class="text-2xl font-bold">Manage Blogs</h2>
                 <Button @click="openAdd" class="flex items-center gap-2" size="sm"> <Plus class="h-4 w-4" /> Add Blog </Button>
             </div>
-            <div v-if="error" class="mb-2 text-red-500">{{ error }}</div>
+            <!-- <div v-if="error" class="mb-2 text-red-500">{{ error }}</div> -->
 
             <Table :columns="columns" :data-source="blogs" :loading="loading" :pagination="{ pageSize: 10 }" row-key="id" />
 
@@ -213,7 +218,8 @@ const deleteBlog = (id: number) => {
                             <input
                                 type="file"
                                 accept="image/*"
-                                @change="handleFileChange"
+                                @change="handleFileChange" 
+                                ref="fileInput"
                                 class="block w-full text-sm text-gray-500
                                     file:mr-4 file:py-2 file:px-4
                                     file:rounded-md file:border-0
