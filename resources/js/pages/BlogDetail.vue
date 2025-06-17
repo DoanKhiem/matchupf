@@ -84,7 +84,7 @@
                             <p class="blog-date" data-aos="fade-up" data-aos-delay="450">{{ blog.created_at }}</p>
 
                             <div class="rich-text-block w-richtext" data-aos="fade-up" data-aos-delay="500"
-                                v-html="blog.content"></div>
+                                style="white-space: pre-wrap;">{{ blog.content }}</div>
 
                             <div class="tag-block" data-aos="fade-up" data-aos-delay="1000">
                                 <!-- <div class="tag-block">
