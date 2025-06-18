@@ -25,7 +25,7 @@ class BlogController extends Controller
             $validated = $request->validate([
                 'title' => 'required|string|max:255',
                 'content' => 'required|string',
-                'image' => 'required|image|max:2048',
+                'image' => 'required|image|max:5120',
             ]);
 
             // Generate slug from title
@@ -62,7 +62,7 @@ class BlogController extends Controller
             $validated = $request->validate([
                 'title' => 'required|string|max:255',
                 'content' => 'required|string',
-                'image' => 'nullable|image|max:2048',
+                'image' => 'nullable|image|max:5120',
             ]);
 
             // Generate new slug if title is being updated
