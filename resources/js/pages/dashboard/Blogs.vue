@@ -120,8 +120,8 @@ const handleFileChange = (e: Event) => {
             error.value = 'You can only upload image files!';
             return;
         }
-        if (file.size / 1024 / 1024 > 2) {
-            error.value = 'Image must be smaller than 2MB!';
+        if (file.size / 1024 / 1024 > 5) {
+            error.value = 'Image must be smaller than 5MB!';
             return;
         }
         form.image = file;
