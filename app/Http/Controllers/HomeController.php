@@ -5,7 +5,11 @@ namespace App\Http\Controllers;
 use App\Models\Job;
 use App\Models\Category;
 use App\Models\Blog;
+use App\Models\JobApplication;
+use App\Mail\JobApplicationMail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Storage;
 use Inertia\Inertia;
 
 class HomeController extends Controller
@@ -76,6 +80,59 @@ class HomeController extends Controller
         return Inertia::render('JobDetail', [
             'job' => $job
         ]);
+    }
+
+    public function applyForJob(Request $request, $id)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'cv' => 'required|file|mimes:pdf,doc,docx|max:10240', // 10MB max
+            'message' => 'nullable|string|max:5000',
+        ]);
+
+        $job = Job::with('company')->findOrFail($id);
+
+        // Store the CV file
+        $cvPath = null;
+        if ($request->hasFile('cv')) {
+            $cvPath = $request->file('cv')->store('job-applications/cv', 'public');
+        }
+
+        // Save application to database
+        $application = JobApplication::create([
+            'job_id' => $job->id,
+            'name' => $request->name,
+            'email' => $request->email,
+            'cv_path' => $cvPath,
+            'message' => $request->message,
+            'status' => 'pending',
+        ]);
+
+        $applicationData = [
+            'name' => $request->name,
+            'email' => $request->email,
+            'cv' => $request->file('cv'),
+            'message' => $request->message,
+            'cv_path' => $cvPath,
+        ];
+
+        try {
+            // Send email to admin/HR
+            $adminEmail = config('mail.from.address', 'admin@example.com');
+            Mail::to($adminEmail)->send(new JobApplicationMail($applicationData, $job));
+
+            // Send confirmation email to applicant
+            Mail::to($request->email)->send(new JobApplicationMail($applicationData, $job));
+
+            return back()->with('success', 'Your application has been submitted successfully!');
+        } catch (\Exception $e) {
+            // If email fails, still store the application data
+            // You might want to log this error
+            \Log::error('Job application email failed: ' . $e->getMessage());
+
+            return back()->with('success', 'Your application has been submitted successfully!');
+        }
     }
 
     public function blogs()
