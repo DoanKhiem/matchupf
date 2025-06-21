@@ -7,6 +7,7 @@ use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\JobApplicationController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
@@ -29,6 +30,7 @@ Route::get('/job-category/{slug}', [HomeController::class, 'jobsByCategory'])->n
 // Route::get('/search-jobs', [HomeController::class, 'searchJobs'])->name('jobs.search');
 
 Route::get('/job/{id}', [HomeController::class, 'jobDetail'])->name('job.detail');
+Route::post('/job/{id}/apply', [HomeController::class, 'applyForJob'])->name('job.apply');
 
 // Route::get('/post-job', function () {
 //     return Inertia::render('PostAJob');
@@ -53,6 +55,11 @@ Route::prefix('dashboard')->middleware(['auth', 'verified'])->group(function () 
     Route::resource('companies', CompanyController::class);
     Route::resource('categories', CategoryController::class)->except(['edit', 'show']);
     Route::resource('blogs', BlogController::class)->except(['edit', 'show']);
+    
+    // Job Applications routes (view-only)
+    Route::get('/applications', [JobApplicationController::class, 'index'])->name('dashboard.applications');
+    Route::get('/applications/{jobApplication}', [JobApplicationController::class, 'show'])->name('dashboard.applications.show');
+    Route::get('/applications/{jobApplication}/download', [JobApplicationController::class, 'downloadCV'])->name('dashboard.applications.download');
 });
 
 require __DIR__.'/settings.php';

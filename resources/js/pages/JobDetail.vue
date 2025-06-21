@@ -1,5 +1,6 @@
 <template>
     <AppLayout>
+
         <Head :title="t('jobDetail.title')" />
         <section id="hero" class="main-banner">
             <div class="container">
@@ -22,28 +23,32 @@
                         <div class="w-layout-vflex sidebar" data-aos="fade-right" data-aos-delay="100">
                             <div class="w-layout-vflex job-details-block-left-align">
                                 <div class="w-layout-hflex job-info-block">
-                                    <img src="/images/map-pin-line.png" loading="lazy" alt="" class="image-24px margin-top-3px" />
+                                    <img src="/images/map-pin-line.png" loading="lazy" alt=""
+                                        class="image-24px margin-top-3px" />
                                     <div class="vertical-left-top _4px-gap">
                                         <div class="_20px-500">{{ t('jobDetail.info.location') }}</div>
                                         <p class="_16px-500">{{ job.location }}</p>
                                     </div>
                                 </div>
                                 <div class="w-layout-hflex job-info-block">
-                                    <img src="/images/time-line.png" loading="lazy" alt="" class="image-24px margin-top-3px" />
+                                    <img src="/images/time-line.png" loading="lazy" alt=""
+                                        class="image-24px margin-top-3px" />
                                     <div class="vertical-left-top _4px-gap">
                                         <div class="_20px-500">{{ t('jobDetail.info.jobType') }}</div>
                                         <p class="_16px-500">{{ job.type }}</p>
                                     </div>
                                 </div>
                                 <div class="w-layout-hflex job-info-block">
-                                    <img src="/images/money-dollar-box-line.png" loading="lazy" alt="" class="image-24px margin-top-3px" />
+                                    <img src="/images/money-dollar-box-line.png" loading="lazy" alt=""
+                                        class="image-24px margin-top-3px" />
                                     <div class="vertical-left-top _4px-gap">
                                         <div class="_20px-500">{{ t('jobDetail.info.salaryRange') }}</div>
                                         <p class="_16px-500">{{ job.salary }}</p>
                                     </div>
                                 </div>
                                 <div class="w-layout-hflex job-info-block last">
-                                    <img src="/images/user-line-green.png" loading="lazy" alt="" class="image-24px margin-top-3px" />
+                                    <img src="/images/user-line-green.png" loading="lazy" alt=""
+                                        class="image-24px margin-top-3px" />
                                     <div class="vertical-left-top _4px-gap">
                                         <div class="_20px-500">{{ t('jobDetail.info.experience') }}</div>
                                         <div class="text-merge">
@@ -51,13 +56,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a data-w-id="081325f6-2dc0-8ac3-8042-83b3e7870577" href="#" class="primary-button full-button w-inline-block">
+                                <button class="primary-button full-button w-inline-block" @click="showForm = true">
                                     <div class="button-text-wrapper">
                                         <div class="default-text">{{ t('jobDetail.apply.button') }}</div>
                                         <!-- <div class="hover-text">{{ t('jobDetail.apply.button') }}</div> -->
                                     </div>
                                     <div class="icon-18px">chevron_right</div>
-                                </a>
+                                </button>
                             </div>
                             <!-- <div class="w-layout-vflex job-details-block">
                                 <img :src="job.company.logo" loading="lazy" alt="" class="image-60px" />
@@ -130,21 +135,24 @@
                                 </p>
                                 <h4>{{ t('jobDetail.description.responsibilities') }}</h4>
                                 <!-- <ul role="list"> -->
-                                    <p v-for="(responsibility, index) in job.responsibilities" :key="index">
-                                        <img src="/images/Bg_Vector.png" loading="lazy" alt="" class="image-24px my-0 mr-2" /> {{ responsibility }}
-                                    </p>
+                                <p v-for="(responsibility, index) in job.responsibilities" :key="index">
+                                    <img src="/images/Bg_Vector.png" loading="lazy" alt=""
+                                        class="image-24px my-0 mr-2" /> {{ responsibility }}
+                                </p>
                                 <!-- </ul> -->
                                 <h4>{{ t('jobDetail.description.requiredSkills') }}</h4>
                                 <!-- <ul role="list"> -->
-                                    <p v-for="(skill, index) in job.skills" :key="index">
-                                        <img src="/images/Bg_Vector.png" loading="lazy" alt="" class="image-24px my-0 mr-2" /> {{ skill }}
-                                    </p>
+                                <p v-for="(skill, index) in job.skills" :key="index">
+                                    <img src="/images/Bg_Vector.png" loading="lazy" alt=""
+                                        class="image-24px my-0 mr-2" /> {{ skill }}
+                                </p>
                                 <!-- </ul> -->
                                 <h4>{{ t('jobDetail.description.benefits') }}</h4>
                                 <!-- <ul role="list"> -->
-                                    <p v-for="(benefit, index) in job.benefits" :key="index">
-                                        <img src="/images/Bg_Vector.png" loading="lazy" alt="" class="image-24px my-0 mr-2" /> {{ benefit }}
-                                    </p>
+                                <p v-for="(benefit, index) in job.benefits" :key="index">
+                                    <img src="/images/Bg_Vector.png" loading="lazy" alt=""
+                                        class="image-24px my-0 mr-2" /> {{ benefit }}
+                                </p>
                                 <!-- </ul> -->
                             </div>
                             <div class="blur-div-470px-size right-middle"></div>
@@ -156,6 +164,52 @@
                 </div>
             </section>
         </div>
+        <div :style="{ display: showForm ? 'flex' : 'none', opacity: showForm ? 1 : 0 }" class="form-fixed-wrapper">
+            <div class="apply-form-wrapper w-form">
+                <div class="vertical-center-align">
+                    <div class="margin-bottom-12px">
+                        <h2 class="heading">Ready to apply?</h2>
+                    </div>
+                    <div class="margin-bottom-20px">
+                        <p class="primary-200">Please fill out the form below to apply for this position. We will review your application and get back to you soon.</p>
+                    </div>
+                </div>
+                <form @submit.prevent="submitApplication" class="vertical-left-stretch">
+                    <input class="apply-input-field w-input" maxlength="256" name="name" data-name="Name"
+                        placeholder="Name" type="text" id="name" v-model="form.name" :required="true">
+                    <div v-if="form.errors.name" class="text-red-500 text-sm mt-1">{{ form.errors.name }}</div>
+                    
+                    <input class="apply-input-field w-input" maxlength="256" name="email" data-name="email"
+                        placeholder="Email" type="email" id="email" v-model="form.email" :required="true">
+                    <div v-if="form.errors.email" class="text-red-500 text-sm mt-1">{{ form.errors.email }}</div>
+                    
+                    <input class="apply-input-field w-input" name="cv" data-name="cv"
+                        placeholder="Upload CV" type="file" id="cv" @change="handleFileUpload" accept=".pdf,.doc,.docx" :required="true">
+                    <div v-if="form.errors.cv" class="text-red-500 text-sm mt-1">{{ form.errors.cv }}</div>
+                    
+                    <textarea placeholder="Message" maxlength="5000" id="message" name="message" data-name="message"
+                        class="apply-input-field min-height-100 w-input" v-model="form.message"></textarea>
+                    <div v-if="form.errors.message" class="text-red-500 text-sm mt-1">{{ form.errors.message }}</div>
+                    
+                    <button type="submit" :disabled="form.processing" class="primary-button w-button">
+                        {{ form.processing ? 'Submitting...' : 'Submit Application' }}
+                    </button>
+                </form>
+                
+                <!-- Success Message -->
+                <div v-if="showSuccess" class="w-form-done" tabindex="-1" role="region" aria-label="Application success">
+                    <div>{{ successMessage }}</div>
+                </div>
+                
+                <!-- Error Message -->
+                <div v-if="showError" class="w-form-fail" tabindex="-1" role="region" aria-label="Application failure">
+                    <div>{{ errorMessage }}</div>
+                </div>
+                
+                <div data-w-id="089958f4-c60d-d648-1d96-4d65f9081090" class="form-close-icon" @click="closeForm">
+                    close</div>
+            </div>
+        </div>
     </AppLayout>
 </template>
 
@@ -166,13 +220,44 @@ import 'aos/dist/aos.css';
 import { onMounted } from 'vue';
 import { ref } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { Head } from '@inertiajs/vue3';
+import { Head, useForm, usePage } from '@inertiajs/vue3';
 
 const { t } = useI18n();
+const page = usePage();
 const props = defineProps<{ job: any }>();
 const job = ref(props.job);
+const showForm = ref(false);
+const showSuccess = ref(false);
+const showError = ref(false);
+const successMessage = ref('');
+const errorMessage = ref('');
 
+const form = useForm({
+    name: '',
+    email: '',
+    cv: null as File | null,
+    message: ''
+});
+
+// Check for flash messages on component mount
 onMounted(() => {
+    const flash = page.props.flash as any;
+    if (flash?.success) {
+        successMessage.value = flash.success;
+        showSuccess.value = true;
+        setTimeout(() => {
+            showSuccess.value = false;
+        }, 5000);
+    }
+    
+    if (flash?.error) {
+        errorMessage.value = flash.error;
+        showError.value = true;
+        setTimeout(() => {
+            showError.value = false;
+        }, 5000);
+    }
+
     AOS.init({
         duration: 800,
         easing: 'ease-in-out',
@@ -180,12 +265,86 @@ onMounted(() => {
         mirror: false,
     });
 });
+
+const handleFileUpload = (event: Event) => {
+    const target = event.target as HTMLInputElement;
+    if (target.files && target.files[0]) {
+        form.cv = target.files[0];
+    }
+};
+
+const submitApplication = () => {
+    if (!form.cv) {
+        errorMessage.value = 'Please select a CV file.';
+        showError.value = true;
+        return;
+    }
+
+    showError.value = false;
+    showSuccess.value = false;
+
+    form.post(`/job/${job.value.id}/apply`, {
+        preserveScroll: true,
+        onSuccess: () => {
+            successMessage.value = 'Your application has been submitted successfully!';
+            showSuccess.value = true;
+            resetForm();
+            setTimeout(() => {
+                showForm.value = false;
+                showSuccess.value = false;
+            }, 3000);
+        },
+        onError: (errors) => {
+            // Validation errors will be automatically displayed in the form
+            // Only show generic error if no specific validation errors
+            if (!Object.keys(errors).length) {
+                errorMessage.value = 'An error occurred while submitting your application.';
+                showError.value = true;
+            }
+        },
+    });
+};
+
+const resetForm = () => {
+    form.reset();
+    // Reset file input
+    const fileInput = document.getElementById('cv') as HTMLInputElement;
+    if (fileInput) {
+        fileInput.value = '';
+    }
+};
+
+const closeForm = () => {
+    showForm.value = false;
+    showSuccess.value = false;
+    showError.value = false;
+    resetForm();
+};
 </script>
 
 <style scoped>
 @import '@css/main.css';
+
 .my-0 {
     margin-top: 0px !important;
     margin-bottom: 0px !important;
+}
+
+.w-form-done {
+    display: block !important;
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.w-form-fail {
+    display: block !important;
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
 }
 </style>
