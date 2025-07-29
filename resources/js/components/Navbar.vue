@@ -33,7 +33,7 @@
                                 <div class="nav-icon-and-text-wrapper"><a href="/companies"
                                         class="nav-link">Companies</a></div>
                             </li> -->
-                            <li class="nav-list-for-dropdown">
+                            <!-- <li class="nav-list-for-dropdown">
                                 <div
                                     data-hover="true"
                                     data-delay="0"
@@ -105,7 +105,7 @@
                                         </div>
                                     </nav>
                                 </div>
-                            </li>
+                            </li> -->
                             <li class="nav-list">
                                 <div class="nav-icon-and-text-wrapper">
                                     <Link :href="route('blogs')" class="nav-link" :class="{ 'w--current': $page.url.startsWith('/blogs') }">{{ t('navbar.news') }}</Link>
@@ -201,7 +201,7 @@
             <div class="nav-icon-and-text-wrapper"><a href="/companies"
                 class="nav-link">Companies</a></div>
           </li> -->
-                    <li class="nav-list-for-dropdown">
+                    <!-- <li class="nav-list-for-dropdown">
                         <div data-hover="true" data-delay="0" data-w-id="4ef02e47-0ea5-5857-a6ac-bbd1e53c8ba5" class="nav-link-dropdown w-dropdown">
                             <div
                                 class="nav-link w-dropdown-toggle"
@@ -268,7 +268,7 @@
                                 </div>
                             </nav>
                         </div>
-                    </li>
+                    </li> -->
                     <li class="nav-list">
                         <div class="nav-icon-and-text-wrapper">
                             <Link :href="route('blogs')" class="nav-link" :class="{ 'w--current': $page.url === '/blogs' }">{{ t('navbar.news') }}</Link>
